@@ -18,14 +18,14 @@
                         </thead>
 
                         <tbody>
-                        <tr v-for="(peer, index) in peers" :key="index">
-                            <td>{{ peer.name }}</td>
-                            <td>1584177960018</td>
-                            <td>1584219720094</td>
-                            <td>MW/Grin 3.1.0</td>
-                            <td>348</td>
-                            <td>348</td>
-                            <td>1</td>
+                        <tr v-for="(peer, index) in this.$dao.peers" :key="index">
+                            <td>{{ peer.ip }}</td>
+                            <td>{{ peer.first_seen }}</td>
+                            <td>{{ peer.last_seen }}</td>
+                            <td>{{ peer.user_agent }}</td>
+                            <td>{{ peer.total_uptime }}</td>
+                            <td>{{ peer.tries }}</td>
+                            <td>{{ Math.round(peer.average_uptime * 100) + '%' }}</td>
                         </tr>
                         </tbody>
 
@@ -47,18 +47,11 @@
   export default {
     name: "Challenge",
     data: () => ({
-      peers: [
-        {
-          name: 'test',
-        },
-        {
-          name: 'test',
-        },
-        {
-          name: 'test',
-        },
-      ]
+      peers: [],
     }),
+    mounted() {
+      this.$dao.getPeers();
+    }
   }
 </script>
 

@@ -127,7 +127,7 @@ export default {
   }
 
   .home_container {
-    max-width: 1010px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
   }

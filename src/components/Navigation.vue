@@ -1,11 +1,9 @@
 <template>
     <div class="navigation">
         <div class="navigation_logo">
-            <!--
             <a class="navigation_logo_link">
-                <img src="" alt="">
+                <img src="/images/grin-grin-logo.png" alt="">
             </a>
-            -->
             <h2>Grinnode.live</h2>
         </div>
         <nav class="menu">
@@ -59,8 +57,8 @@
 
     .navigation_logo_link {
         display: block;
-        width: 4rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         margin-right: 10px;
     }
 
