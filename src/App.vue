@@ -74,7 +74,7 @@ export default {
     background: rgba(255, 255, 255, 0.1);
   }
   table thead {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 30, 0.6);
   }
   table thead th {
     font-size: 15px;

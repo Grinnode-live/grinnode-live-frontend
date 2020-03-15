@@ -3,6 +3,18 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
+                    <h2 class="container_header">Join and get a chance to Win!</h2>
+                    <p>
+                        Host a public Grin node and get a chance to win one of the following prices:
+                    </p>
+                    <ol>
+                        <li>5x An unique GRIN fanshirt!</li>
+                        <li>1x 100 GRIN!</li>
+                        <li>4x 25 GRIN!</li>
+                    </ol>
+                    <p>
+                        Waddaya waiting for? You can follow the leaderboard down below.
+                    </p>
                     <h2 class="container_header">Challenge leaderboard</h2>
                     <table id="personDataTable" border="0">
                         <thead>
