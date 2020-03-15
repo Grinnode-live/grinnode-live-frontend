@@ -8,13 +8,18 @@ const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
 const shared = new Vue({
   data: {
     peers: [],
+    peersTime: 0,
     agents: [],
   },
   methods: {
     getPeers() {
+      const start_time = Date.now();
       fetch(PEERS_API_URL)
           .then(response => response.json())
           .then((result) => {
+            const end_time = Date.now();
+            const ping = Math.round((end_time - start_time)/2);
+            this.peersTime = ping + 'ms';
             this.peers = result;
           });
     },

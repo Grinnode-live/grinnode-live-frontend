@@ -31,8 +31,11 @@
 
                         <tfoot>
                         <tr>
-                            <td colspan="7">
+                            <td colspan="6">
                                 <a>Powered by Grinnode.live</a>
+                            </td>
+                            <td colspan="1">
+                                <a>Response time: {{ this.$dao.peersTime }}</a>
                             </td>
                         </tr>
                         </tfoot>

@@ -52,7 +52,7 @@
     .header_news_messages {
         display: flex;
         flex-wrap: wrap;
-        max-width: 80%;
+        max-width: 85%;
     }
 
     .header_news_messages li {
@@ -62,7 +62,7 @@
     .header_news_status {
         display: flex;
         flex-wrap: wrap;
-        max-width: 20%;
+        max-width: 15%;
         padding: 0 10px;
     }
 </style>

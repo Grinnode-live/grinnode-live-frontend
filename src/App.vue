@@ -89,10 +89,13 @@ export default {
   }
   table tfoot td:first-child {
     border-bottom-left-radius: 16px;
+  }
+  table tfoot td:last-child {
     border-bottom-right-radius: 16px;
   }
   table tfoot td {
-    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    background: rgba(255, 255, 255, 1);
   }
 
   #app {
