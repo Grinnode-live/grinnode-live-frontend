@@ -37,7 +37,7 @@
         height: 70px;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between;
+        justify-content: flex-start;
         background-color: rgba(255, 255, 255, 0.1);
         color: #ffffff;
         box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.05);
@@ -45,11 +45,8 @@
 
     .navigation_logo {
         position: relative;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
+        margin-right: 50px;
         flex-flow: wrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         height: 100%;
         width: auto;

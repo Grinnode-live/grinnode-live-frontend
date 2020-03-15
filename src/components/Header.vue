@@ -1,7 +1,13 @@
 <template>
     <header class="header">
         <div class="header__news">
-            <span>[14-03-2020] Welcome to our new website!</span>
+            <ol class="header_news_messages">
+                <li>[15-03-2020] Have you heard of our latest challenge? You can find more info on the challenge tab!</li>
+                <li>[14-03-2020] Welcome to our new website!</li>
+            </ol>
+            <div class="header_news_status">
+                <span style="margin-right: 10px;">API status:</span><span style="color: rgb(0, 255, 31);">online</span>
+            </div>
         </div>
         <Navigation></Navigation>
     </header>
@@ -34,7 +40,7 @@
         width: 100%;
         height: 30px;
         flex-flow: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         font-size: 0.8rem;
         font-weight: 500;
         line-height: 30px;
@@ -43,7 +49,20 @@
         overflow: hidden;
     }
 
-    .header__news span {
+    .header_news_messages {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 80%;
+    }
+
+    .header_news_messages li {
+        padding: 0 10px;
+    }
+
+    .header_news_status {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 20%;
         padding: 0 10px;
     }
 </style>

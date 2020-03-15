@@ -8,8 +8,8 @@
                         <thead>
                         <tr>
                             <th>IP address</th>
-                            <th>First seen (epoch)</th>
-                            <th>Last seen (epoch)</th>
+                            <th>First seen</th>
+                            <th>Last seen</th>
                             <th>User Agent</th>
                             <th>Total Uptime</th>
                             <th>Tries</th>
@@ -20,8 +20,8 @@
                         <tbody>
                         <tr v-for="(peer, index) in this.$dao.peers" :key="index">
                             <td>{{ peer.ip }}</td>
-                            <td>{{ peer.first_seen }}</td>
-                            <td>{{ peer.last_seen }}</td>
+                            <td>{{ new Date(+peer.first_seen).toLocaleDateString() }}</td>
+                            <td>{{ new Date(+peer.last_seen).toLocaleDateString() }}</td>
                             <td>{{ peer.user_agent }}</td>
                             <td>{{ peer.total_uptime }}</td>
                             <td>{{ peer.tries }}</td>
