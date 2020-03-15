@@ -11,6 +11,7 @@
             <router-link exact to="/challenge">Challenge</router-link>
             <router-link exact to="/stats">Stats</router-link>
         </nav>
+        <a class="action_button">Partner with Us</a>
     </div>
 </template>
 
@@ -89,5 +90,16 @@
 
     .menu > *:first-child {
         margin-left: 0;
+    }
+
+    .action_button {
+        margin-left: auto;
+        padding: 15px;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 1em;
+        font-weight: 600;
+        color: #FFFFFF;
+        cursor: pointer;
     }
 </style>
