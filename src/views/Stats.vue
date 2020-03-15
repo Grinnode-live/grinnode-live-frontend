@@ -9,6 +9,7 @@
                         <tr>
                             <th>User Agent</th>
                             <th>Seen</th>
+                            <th>Dominance</th>
                         </tr>
                         </thead>
 
@@ -16,12 +17,13 @@
                         <tr v-for="(ua, index) in this.$dao.agents" :key="index">
                             <td>{{ ua.user_agent }}</td>
                             <td>{{ ua.seen }}</td>
+                            <td>{{ Math.round(ua.dominance * 100) + '%' }}</td>
                         </tr>
                         </tbody>
 
                         <tfoot>
                         <tr>
-                            <td colspan="1">
+                            <td colspan="2">
                                 <a>Powered by Grinnode.live</a>
                             </td>
                             <td colspan="1">
