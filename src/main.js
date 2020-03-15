@@ -10,23 +10,28 @@ const shared = new Vue({
     peers: [],
     peersTime: 0,
     agents: [],
+    agentsTime: 0,
   },
   methods: {
     getPeers() {
-      const start_time = Date.now();
+      let start_time = Date.now();
       fetch(PEERS_API_URL)
           .then(response => response.json())
           .then((result) => {
-            const end_time = Date.now();
-            const ping = Math.round((end_time - start_time)/2);
+            let end_time = Date.now();
+            let ping = Math.round((end_time - start_time)/2);
             this.peersTime = ping + 'ms';
             this.peers = result;
           });
     },
     getAgents() {
+      let start_time = Date.now();
       fetch(AGENTS_API_URL)
           .then(response => response.json())
           .then((result) => {
+            let end_time = Date.now();
+            let ping = Math.round((end_time - start_time)/2);
+            this.agentsTime = ping + 'ms';
             this.agents = result;
           });
     },

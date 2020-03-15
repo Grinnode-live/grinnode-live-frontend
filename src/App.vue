@@ -59,7 +59,7 @@ export default {
   table {
     border-color: rgba(255, 255, 255, 0.1);
     width: 100%;
-    text-align: left;
+    text-align: center;
     border-collapse: collapse;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 20px 5px;
     border-radius: 16px;
@@ -87,10 +87,15 @@ export default {
   table thead th:last-child {
     border-top-right-radius: 16px;
   }
+  table tbody td:first-child {
+    text-align: left;
+  }
   table tfoot td:first-child {
+    text-align: left;
     border-bottom-left-radius: 16px;
   }
   table tfoot td:last-child {
+    text-align: right;
     border-bottom-right-radius: 16px;
   }
   table tfoot td {

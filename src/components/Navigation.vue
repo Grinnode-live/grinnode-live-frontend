@@ -9,6 +9,7 @@
         <nav class="menu">
             <router-link exact to="/">Home</router-link>
             <router-link exact to="/challenge">Challenge</router-link>
+            <router-link exact to="/stats">Stats</router-link>
         </nav>
     </div>
 </template>
