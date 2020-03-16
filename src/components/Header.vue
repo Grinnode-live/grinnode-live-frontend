@@ -6,7 +6,7 @@
                 <li>[14-03-2020] Welcome to our new website!</li>
             </ol>
             <div class="header_news_status">
-                <span style="margin-right: 10px;">API status:</span><span style="color: rgb(0, 255, 31);">online</span>
+                <span style="margin-right: 5px;">API status:</span><span :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
             </div>
         </div>
         <Navigation></Navigation>
@@ -17,7 +17,10 @@
   import Navigation from "@/components/Navigation";
   export default {
     name: "Header",
-    components: {Navigation}
+    components: {Navigation},
+    mounted() {
+      this.$dao.healthCheck();
+    },
   }
 </script>
 

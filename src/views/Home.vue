@@ -3,7 +3,7 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
-                    <h2 class="container_header">Grinnode.live API is <span style="color: rgb(0, 255, 31);">online</span></h2>
+                    <h2 class="container_header">Grinnode.live API is <span :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span></h2>
                     <h3>High Available (HA) API Calls</h3>
                     based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
 
