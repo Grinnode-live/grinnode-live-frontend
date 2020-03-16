@@ -2,9 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
-const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
-const PEERS_API_URL = 'https://grinnode.live:8080/peers';
-const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
+const HEALTH_CHECK_API_URL = 'http://localhost:8080/healthcheck';
+const PEERS_API_URL = 'http://localhost:8080/peers';
+const AGENTS_API_URL = 'http://localhost:8080/agents';
 
 const shared = new Vue({
   data: {

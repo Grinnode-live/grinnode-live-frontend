@@ -14,7 +14,7 @@
                         </thead>
 
                         <tbody>
-                        <tr v-for="(ua, index) in this.$dao.agents" :key="index">
+                        <tr v-for="(ua, index) in this.$dao.agents.result" :key="index">
                             <td>{{ ua.user_agent }}</td>
                             <td>{{ ua.seen }}</td>
                             <td>{{ Math.round(ua.dominance * 100) + '%' }}</td>
@@ -24,7 +24,7 @@
                         <tfoot>
                         <tr>
                             <td colspan="2">
-                                <a>Powered by Grinnode.live</a>
+                                <a>Last updated: {{ new Date(+this.$dao.agents.lastUpdated) }}</a>
                             </td>
                             <td colspan="1">
                                 <a>Response time: {{ this.$dao.agentsTime }}</a>

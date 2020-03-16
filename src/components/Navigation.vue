@@ -2,7 +2,7 @@
     <div class="navigation">
         <div class="navigation_logo">
             <a class="navigation_logo_link">
-                <img src="/images/grin-grin-logo.png" alt="">
+                <img src="/images/grin-logo.svg" alt="">
             </a>
             <h2>Grinnode.live</h2>
         </div>

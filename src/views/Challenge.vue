@@ -30,7 +30,7 @@
                         </thead>
 
                         <tbody>
-                        <tr v-for="(peer, index) in this.$dao.peers" :key="index">
+                        <tr v-for="(peer, index) in this.$dao.peers.result" :key="index">
                             <td>{{ peer.ip }}</td>
                             <td>{{ new Date(+peer.first_seen).toLocaleDateString() }}</td>
                             <td>{{ new Date(+peer.last_seen).toLocaleDateString() }}</td>
@@ -44,7 +44,7 @@
                         <tfoot>
                         <tr>
                             <td colspan="6">
-                                <a>Powered by Grinnode.live</a>
+                                <a>Last updated: {{ new Date(+this.$dao.peers.lastUpdated) }}</a>
                             </td>
                             <td colspan="1">
                                 <a>Response time: {{ this.$dao.peersTime }}</a>
