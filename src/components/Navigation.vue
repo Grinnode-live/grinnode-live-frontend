@@ -11,7 +11,7 @@
             <router-link exact to="/challenge">Challenge</router-link>
             <router-link exact to="/stats">Stats</router-link>
         </nav>
-        <a class="action_button">Partner with Us</a>
+        <a class="action_button">Donations & Sponsorships</a>
     </div>
 </template>
 
@@ -40,9 +40,8 @@
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: flex-start;
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-        box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.05);
+        background-color: var(--secondary-color);
+        color: var(--text-secondary-color);
     }
 
     .navigation_logo {
@@ -83,7 +82,7 @@
         line-height: 1;
         text-decoration: none;
         cursor: pointer;
-        color: #ffffff;
+        color: var(--text-secondary-color);
         margin-left: 5px;
         border-radius: 2px;
     }
@@ -93,13 +92,23 @@
     }
 
     .action_button {
+        background: var(--tertiary-color);
+        color: var(--text-primary-color);
         margin-left: auto;
         padding: 15px;
         border: none;
-        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
         font-size: 1em;
         font-weight: 600;
-        color: #FFFFFF;
         cursor: pointer;
+        /*
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.18);
+        */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .action_button:hover {
+        background: var(--text-primary-color);
+        color: var(--primary-color);
     }
 </style>

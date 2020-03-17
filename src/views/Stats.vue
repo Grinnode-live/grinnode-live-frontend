@@ -24,10 +24,10 @@
                         <tfoot>
                         <tr>
                             <td colspan="2">
-                                <a>Last updated: {{ new Date(+this.$dao.agents.lastUpdated) }}</a>
+                                <span>Last updated: {{ new Date(+this.$dao.agents.lastUpdated) }}</span>
                             </td>
                             <td colspan="1">
-                                <a>Response time: {{ this.$dao.agentsTime }}</a>
+                                <span>Response time: {{ this.$dao.agentsTime }}</span>
                             </td>
                         </tr>
                         </tfoot>

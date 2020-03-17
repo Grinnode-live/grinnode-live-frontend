@@ -21,11 +21,20 @@ export default {
 </script>
 
 <style>
+  :root {
+    --primary-color: #000000;
+    --secondary-color: #fee715ff;
+    --tertiary-color: #181818;
+    --text-primary-color: #ffffff;
+    --text-secondary-color: #111314;
+    --text-tertiary-color: #ffffff;
+  }
+
   body {
-    background: #021B79;  /* fallback for old browsers */
+    background: var(--primary-color);  /* fallback for old browsers */
     background-size: cover;
     font-family: "Roboto Light",sans-serif;
-    color: #fff;
+    color: var(--text-primary-color);;
     font-size: 14px;
     -webkit-text-size-adjust: none;
     overflow-x: hidden;
@@ -45,11 +54,11 @@ export default {
   }
 
   a {
-    color: #7ebeff;
+    color: var(--secondary-color);
   }
 
   pre {
-    background-color: rgb(10, 10, 30);
+    background-color: #222222;
     border-radius: 16px;
     padding: 1em;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -57,7 +66,7 @@ export default {
   }
 
   table {
-    border-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     width: 100%;
     text-align: center;
     border-collapse: collapse;
@@ -74,12 +83,12 @@ export default {
     background: rgba(255, 255, 255, 0.1);
   }
   table thead {
-    background: rgba(10, 10, 30, 0.6);
+    background: var(--text-primary-color);
+    color: var(--tertiary-color);
   }
   table thead th {
     font-size: 15px;
     font-weight: bold;
-    color: #FFFFFF;
   }
   table thead th:first-child {
     border-top-left-radius: 16px;
@@ -99,8 +108,9 @@ export default {
     border-bottom-right-radius: 16px;
   }
   table tfoot td {
-    font-weight: 600;
-    background: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    background: var(--text-primary-color);
+    color: var(--tertiary-color);
   }
 
   #app {
@@ -138,7 +148,7 @@ export default {
   }
 
   .home_container {
-    max-width: 1200px;
+    max-width: 80vw;
     margin: 0 auto;
     text-align: left;
   }

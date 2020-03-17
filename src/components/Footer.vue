@@ -2,9 +2,11 @@
     <footer class="footer">
         <div class="container footer__container">
             <div class="container">
+                <!--
                 <div class="sponsor-bar">
                     <h2 class="footer_header">Our Partners</h2>
                 </div>
+                -->
                 <div class="bottom-bar">
                     <div class="disclaimer">
                         <span style="color: #FFFFFF">© 2020 Grinnode.</span>
@@ -39,17 +41,20 @@
         margin: 0;
         padding: 30px 0;
         font-size: 2em;
-        color: rgba(255, 255, 255, 1);
     }
 
     .sponsor-bar {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
     }
 
     .bottom-bar {
-        border-top: 1px solid rgba(255,255,255,0.10);
         padding: 15px 0;
-        background-color: rgba(10, 10, 30, 0.6);
+        background-color: var(--tertiary-color);
+    }
+
+    .bottom-bar a {
+        color: var(--secondary-color);
     }
 
     .disclaimer {

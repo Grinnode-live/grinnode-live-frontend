@@ -44,10 +44,10 @@
                         <tfoot>
                         <tr>
                             <td colspan="6">
-                                <a>Last updated: {{ new Date(+this.$dao.peers.lastUpdated) }}</a>
+                                <span>Last updated: {{ new Date(+this.$dao.peers.lastUpdated) }}</span>
                             </td>
                             <td colspan="1">
-                                <a>Response time: {{ this.$dao.peersTime }}</a>
+                                <span>Response time: {{ this.$dao.peersTime }}</span>
                             </td>
                         </tr>
                         </tfoot>

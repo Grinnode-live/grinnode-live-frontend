@@ -33,6 +33,7 @@
         z-index: 10000;
         height: 100px;
         background-color: transparent;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.12);
     }
 
     .header__news {
@@ -45,10 +46,10 @@
         flex-flow: row;
         justify-content: space-between;
         font-size: 0.8rem;
-        font-weight: 500;
+        font-weight: normal;
         line-height: 30px;
-        color: #7ebeff;
-        background-color: rgba(10, 10, 30, 0.6);
+        color: var(--text-tertiary-color);
+        background-color: var(--tertiary-color);
         overflow: hidden;
     }
 
