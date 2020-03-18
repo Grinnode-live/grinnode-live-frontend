@@ -43,7 +43,6 @@ export default {
   body, li, ol, ul {
     margin: 0;
     padding: 0;
-    list-style: none;
   }
 
   * {
@@ -55,13 +54,22 @@ export default {
 
   a {
     color: var(--secondary-color);
+    cursor: pointer;
+  }
+
+  p {
+    max-width: 600px;
+  }
+
+  h3 {
+    color: var(--secondary-color);
   }
 
   pre {
+    font-size: 1vw;
     background-color: #222222;
     border-radius: 16px;
     padding: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 5px;
   }
 

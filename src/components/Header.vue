@@ -6,7 +6,7 @@
                 <li>[14-03-2020] Welcome to our new website!</li>
             </ol>
             <div class="header_news_status">
-                <span style="margin-right: 5px;">API status:</span><span :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+                <span style="margin-right: 5px;">API status:</span><span class="api_status" :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
             </div>
         </div>
         <Navigation></Navigation>
@@ -25,6 +25,10 @@
 </script>
 
 <style scoped>
+    ul, ol {
+        list-style: none;
+    }
+
     .header {
         position: absolute;
         top: 0;
@@ -56,7 +60,7 @@
     .header_news_messages {
         display: flex;
         flex-wrap: wrap;
-        max-width: 85%;
+        max-width: 80%;
     }
 
     .header_news_messages li {
@@ -66,7 +70,17 @@
     .header_news_status {
         display: flex;
         flex-wrap: wrap;
-        max-width: 15%;
+        max-width: 20%;
         padding: 0 10px;
+    }
+
+    .api_status {
+        color: rgb(255, 255, 255);
+        height: 20px;
+        line-height: 20px;
+        margin: 5px 0;
+        border-radius: 2px;
+        padding: 0 5px;
+        font-weight: bold;
     }
 </style>

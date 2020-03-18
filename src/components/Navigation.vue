@@ -10,8 +10,9 @@
             <router-link exact to="/">Home</router-link>
             <router-link exact to="/challenge">Challenge</router-link>
             <router-link exact to="/stats">Stats</router-link>
+            <router-link exact to="/faq">FAQ</router-link>
         </nav>
-        <a class="action_button">Donations & Sponsorships</a>
+        <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md" class="action_button">Donations & Sponsorships</a>
     </div>
 </template>
 
@@ -98,7 +99,6 @@
         padding: 15px;
         border: none;
         border-radius: 4px;
-        font-size: 1em;
         font-weight: 600;
         cursor: pointer;
         /*

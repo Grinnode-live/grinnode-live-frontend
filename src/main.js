@@ -2,9 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
-const HEALTH_CHECK_API_URL = 'http://localhost:8080/healthcheck';
-const PEERS_API_URL = 'http://localhost:8080/peers';
-const AGENTS_API_URL = 'http://localhost:8080/agents';
+const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
+const PEERS_API_URL = 'https://grinnode.live:8080/peers';
+const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
 
 const shared = new Vue({
   data: {
@@ -48,7 +48,7 @@ const shared = new Vue({
   },
   computed: {
     statusStyle() {
-      return (this.$dao.apiStatus === 'online') ? ({ color: 'rgb(5, 205, 30)' }) : ({ color: 'rgb(205, 5, 30)' });
+      return (this.$dao.apiStatus === 'online') ? ({ backgroundColor: 'rgb(5, 205, 30)' }) : ({ backgroundColor: 'rgb(205, 5, 30)' });
     },
   },
 });

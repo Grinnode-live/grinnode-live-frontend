@@ -3,18 +3,35 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
-                    <h2 class="container_header">Join and get a chance to Win!</h2>
+                    <h2 class="container_header">Grinnode.live Uptime Challenge</h2>
+                    <h3>How can you participate?</h3>
                     <p>
-                        Host a public Grin node and get a chance to win one of the following prices:
+                        It is simple, just run a Grin-Node over the measured time period
+                        from XX.XX.XXXX:XX:XX:XX to XX.XX.XXXX:XX:XX:XX and connect your
+                        Grin-Node to Grinnode.live
+                        (<router-link exact to="/faq">How to run a Grin-Node?</router-link>).
                     </p>
-                    <ol>
-                        <li>5x An unique GRIN fanshirt!</li>
-                        <li>1x 100 GRIN!</li>
-                        <li>4x 25 GRIN!</li>
-                    </ol>
+
+                    <h3>Prices / Free giveaways</h3>
                     <p>
-                        Waddaya waiting for? You can follow the leaderboard down below.
+                        The first TOP 20 (non commercial) nodes with highest up time are getting the following prices:
+
+                        PENDING
                     </p>
+
+                    <h3>How to claim your prize?</h3>
+                    <p>
+                        Get in (contact)[https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md] with us and proof you own this node.
+                        We will publish the winners here and every winner gets a uniq URL which he has to visit from his Grin-Node IP address.
+                    </p>
+
+                    <h3>Why are we doing this?</h3>
+                    <p>
+                        To stabilize the GRIN-Network, we need to ensure we have enough running Grin-Nodes on the Main-Grin-Network.
+                        We are believing in GRIN and the future of GRIN, therefore we setting up this challenge.
+                        Also by asking the community to connect to our Grinnode.live infrastructure we can test our high-availability and stress-test the internal Servers.
+                    </p>
+
                     <h2 class="container_header">Challenge leaderboard</h2>
                     <table id="personDataTable" border="0">
                         <thead>

@@ -9,9 +9,11 @@
                 -->
                 <div class="bottom-bar">
                     <div class="disclaimer">
-                        <span style="color: #FFFFFF">© 2020 Grinnode.</span>
-                        <a>Terms of Service.</a>
-                        <a>Privacy Policy.</a>
+                        <span style="color: #FFFFFF">© 2020 Grinnode.live</span>
+                        <div class="legal">
+                            <router-link exact to="/terms-of-service">Terms of Service.</router-link>
+                            <router-link exact to="/privacy-policy">Privacy Policy.</router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,9 +60,13 @@
     }
 
     .disclaimer {
+        width: 95vw;
         display: flex;
         justify-content: space-between;
         margin: auto;
-        max-width: 400px;
+    }
+
+    .legal > *:last-child {
+        margin-left: 10px;
     }
 </style>

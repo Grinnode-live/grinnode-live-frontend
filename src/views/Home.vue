@@ -3,14 +3,11 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
-                    <h2 class="container_header">Grinnode.live API is <span :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span></h2>
+                    <h2 class="container_header">Grinnode.live API is online!</h2>
                     <h3>High Available (HA) API Calls</h3>
                     based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
 
-                    <p>Following HA GRIN-Node API /v1 & /v2 calls are available:</p>
-                    Last Update: 01/2020
-
-                    <h2>+++UPDATE+++</h2>
+                    <h3>Last Update: 01/2020 +++UPDATE+++</h3>
                     <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
 
                     <h3>Do I need a API secret?</h3>
@@ -50,7 +47,7 @@
                     </code></pre>
 
                     <h3>GRIN API v1:</h3>
-                    The following API-Calls are GRIN API v1 Calls
+                    <p>The following API-Calls are GRIN API v1 Calls:</p>
                     <ul>
                         <li><a href="https://grinnode.live/v1/status">/v1/status</a></li>
                         <ul>
@@ -114,16 +111,12 @@
                         <p>&nbsp;</p>
                     </blockquote>
 
-
-
-                    <p>Pictures from <a href="https://github.com/lovelygrin/artwork"> LovelyGrin & </a>Grinsun (https://www.grin-forum.org/t/grin-and-encouragement/5900/76) </p>
-
-                    contact:
+                    <h3>Contact:</h3>
                     <a href="https://github.com/MCM-Mike/grinnode.live">https://github.com/MCM-Mike/grinnode.live</a>
                     <a href="https://keybase.io/MCMMike/chat">Keybase encrypted Chat</a>
 
-                    GRIN Discord: https://discord.gg/VzyfyBf  (MCM-Mike)
-                    GitHub:<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">Donation contact</a>
+                    <p>GRIN Discord: https://discord.gg/VzyfyBf  (MCM-Mike)</p>
+                    <p>GitHub:<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">Donation contact</a></p>
 
 
                     <p style="text-decoration: underline;">Use Blocks not Bombs</p>
