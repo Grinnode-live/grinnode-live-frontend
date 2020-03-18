@@ -22,10 +22,10 @@ export default {
 
 <style>
   :root {
-    --primary-color: #000000;
+    --primary-color: #FFFFFF;
     --secondary-color: #fee715ff;
     --tertiary-color: #181818;
-    --text-primary-color: #ffffff;
+    --text-primary-color: #111314;
     --text-secondary-color: #111314;
     --text-tertiary-color: #ffffff;
   }
@@ -53,7 +53,7 @@ export default {
   }
 
   a {
-    color: var(--secondary-color);
+    color: dodgerblue;
     cursor: pointer;
   }
 
@@ -62,10 +62,11 @@ export default {
   }
 
   h3 {
-    color: var(--secondary-color);
+    color: var(--text-secondary-color);
   }
 
   pre {
+    color: #FFFFFF;
     font-size: 1vw;
     background-color: #222222;
     border-radius: 16px;
@@ -74,7 +75,7 @@ export default {
   }
 
   table {
-    color: #ffffff;
+    color: var(--text-primary-color);
     width: 100%;
     text-align: center;
     border-collapse: collapse;
@@ -88,11 +89,11 @@ export default {
     font-size: 13px;
   }
   table tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.05);
   }
   table thead {
     background: var(--text-primary-color);
-    color: var(--tertiary-color);
+    color: var(--primary-color);
   }
   table thead th {
     font-size: 15px;

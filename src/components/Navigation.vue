@@ -94,7 +94,7 @@
 
     .action_button {
         background: var(--tertiary-color);
-        color: var(--text-primary-color);
+        color: var(--primary-color);
         margin-left: auto;
         padding: 15px;
         border: none;
@@ -108,7 +108,7 @@
     }
 
     .action_button:hover {
-        background: var(--text-primary-color);
-        color: var(--primary-color);
+        color: var(--text-primary-color);
+        background: var(--primary-color);
     }
 </style>
