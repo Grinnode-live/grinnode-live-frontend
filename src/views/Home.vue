@@ -136,5 +136,7 @@
 </script>
 
 <style scoped>
-
+    ul {
+        list-style: inside;
+    }
 </style>

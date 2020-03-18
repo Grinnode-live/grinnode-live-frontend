@@ -3,6 +3,11 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
+                    <h2 class="container_header">Statistics</h2>
+                    <p>
+                        Public information of the Grinnode.live API.
+                    </p>
+
                     <h2 class="container_header">User Agents over the last 30 days</h2>
                     <table id="agentDataTable" border="0">
                         <thead>

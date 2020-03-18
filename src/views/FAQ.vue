@@ -38,6 +38,6 @@
 
 <style scoped>
     ul {
-        list-style: circle;
+        list-style: inside;
     }
 </style>

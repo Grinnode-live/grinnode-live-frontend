@@ -119,7 +119,7 @@ export default {
   table tfoot td {
     font-weight: bold;
     background: var(--text-primary-color);
-    color: var(--tertiary-color);
+    color: var(--primary-color);
   }
 
   #app {
