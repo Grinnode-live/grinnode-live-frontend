@@ -13,6 +13,7 @@ const shared = new Vue({
     peersTime: 0,
     agents: [],
     agentsTime: 0,
+    stickyNav: false,
   },
   methods: {
     healthCheck() {

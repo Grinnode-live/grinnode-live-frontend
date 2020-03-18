@@ -1,5 +1,5 @@
 <template>
-    <div class="navigation">
+    <div class="navigation" :class="getClass()">
         <div class="navigation_logo">
             <a class="navigation_logo_link">
                 <img src="/images/grin-logo.svg" alt="">
@@ -19,6 +19,17 @@
 <script>
   export default {
     name: "Navigation",
+    methods: {
+      getClass() {
+        return (this.$dao.stickyNav) ? 'sticky' : '';
+      },
+    },
+    mounted() {
+      const dao = this.$dao;
+      window.onscroll = function() {
+        dao.stickyNav = (window.pageYOffset >= 30);
+      };
+    },
   }
 </script>
 
@@ -110,5 +121,12 @@
     .action_button:hover {
         color: var(--text-primary-color);
         background: var(--primary-color);
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.12);
     }
 </style>
