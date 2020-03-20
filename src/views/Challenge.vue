@@ -36,6 +36,7 @@
                     <table id="personDataTable" border="0">
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>IP address</th>
                             <th>First seen</th>
                             <th>Last seen</th>
@@ -48,6 +49,7 @@
 
                         <tbody>
                         <tr v-for="(peer, index) in this.$dao.peers.result" :key="index">
+                            <td>{{ ++index }}</td>
                             <td>{{ peer.ip }}</td>
                             <td>{{ new Date(+peer.first_seen).toLocaleDateString() }}</td>
                             <td>{{ new Date(+peer.last_seen).toLocaleDateString() }}</td>
@@ -63,12 +65,14 @@
                             <td colspan="6">
                                 <span>Last updated: {{ new Date(+this.$dao.peers.lastUpdated) }}</span>
                             </td>
-                            <td colspan="1">
+                            <td colspan="2">
                                 <span>Response time: {{ this.$dao.peersTime }}</span>
                             </td>
                         </tr>
                         </tfoot>
                     </table>
+                    <br>
+                    <p>*Grinnode.live checks the connected peers every 30 minutes. When a peer is seen, it will get an additional uptime (As seen in total_uptime). The tries is the amount of times the peer was checked by Grinnode.live. The average_uptime is the total number of uptimes divided by tries/checks.</p>
                 </div>
             </section>
         </main>
