@@ -7,6 +7,10 @@ import FAQ from "@/views/FAQ";
 import ToS from "@/views/ToS";
 import PrivacyPolicy from "@/views/PrivacyPolicy";
 
+const SITE_SUB_FOLDER = process.env.NODE_ENV === 'production'
+    ? (process.env.SITE_SUB_FOLDER || '/challenge2020/')
+    : '/';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -43,6 +47,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  base: SITE_SUB_FOLDER,
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
