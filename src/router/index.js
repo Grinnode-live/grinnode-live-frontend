@@ -8,7 +8,7 @@ import ToS from "@/views/ToS";
 import PrivacyPolicy from "@/views/PrivacyPolicy";
 
 const SITE_SUB_FOLDER = process.env.NODE_ENV === 'production'
-    ? (process.env.SITE_SUB_FOLDER || '/challenge2020/')
+    ? (process.env.SITE_SUB_FOLDER || '/')
     : '/';
 
 Vue.use(VueRouter);
