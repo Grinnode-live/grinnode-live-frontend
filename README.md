@@ -12,8 +12,15 @@ npm run build
 
 ### Installation
 1. Clone the project folder and open it.
-2. Run "npm run build" (That will create the /dist folder).
-3. Publish the /dist folder.
+2. Create a new file named: ".env" and add the following content:
+
+````vue
+SITE_SUB_FOLDER='/'
+````
+3. If you are running your site behind a subfolder like: http://site/subfolder
+You need to set SITE_SUB_FOLDER='/subfolder/' .
+4. Run "npm run build" (That will create the /dist folder).
+5. Publish the /dist folder.
 
 ### Documentation
 This project was built with VueJS: https://vuejs.org/
