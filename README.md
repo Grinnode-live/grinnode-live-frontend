@@ -21,14 +21,14 @@ This project was built with VueJS: https://vuejs.org/
 #### Edit pages
 Every page is stored in the /views folder as a component. 
 To update a page, you simply open the .vue file of the page 
-and change text/images & other content in the <template> tags. 
-The logic is in the <script> tags and the styling is in the SCOPED <style> tags. 
+and change text/images & other content in the Template tags. 
+The logic is in the Script tags and the styling is in the SCOPED Style tags. 
 **Some styling may be handled in the App.vue component. Like color themes.**
 
 #### Add pages
 To add a new page, you create a new vue file in the /views directory 
 and name it according to your new page. 
-Then you copy the <template> from /views/PageTemplate to the <template> of your new vue file.
+Then you copy the Template contents from /views/PageTemplate to the Template of your new vue file.
 
 To make your page accessible, you'll have to add a route in /router/index.js like:
 ````vue
@@ -38,7 +38,12 @@ To make your page accessible, you'll have to add a route in /router/index.js lik
     component: NewPage,
 },
 ````
-To link to your new page you can add a <router-link>:
+To link to your new page you can add a Router-Link:
 ````vue
 <router-link exact to="/new-page">New Page</router-link>
 ````
+
+#### Header, Navigation & Footer
+Editing the Header, Navigation and Footer is the same as editing a page. 
+The only difference is that thse files are stored in /components instead of views 
+since they are used across different views.
