@@ -23,8 +23,8 @@
                 
                 
                 
-                
-                    <p> <h3> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a> </h3>
+                    <p><h3>Public Grinnode.live API examples </h3></p>
+                    <p> <h4> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a> </h4>
                 
                     When running grin with defaults, the V2 apis are available 
                  <p>
