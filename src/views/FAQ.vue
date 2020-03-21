@@ -12,12 +12,12 @@
                     <ul>
                         <li>Core Grin-Node (<a href="https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node">https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node</a>)</li>
                         <li>Core Grin-Node on Google-Cloud (<a href="https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free">https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free</a>)</li>
-                        <li>Grin++</li>
+                        <li><a href="https://grinplusplus.github.io/#/" target="_blank">Grin++</a></li>
                     </ul>
 
                     <h3>How are we calculating your Grin-Node uptime?</h3>
                     <p>
-                        We are querying our publicly available Grin-API (https://grinnode.live) every 30 minutes. These results will be stored in a database and compared.
+                        We are querying our publicly available Grin-API (https://grinnode.live) every 10 minutes. These results will be stored in a database and compared.
                     </p>
 
                     <h3>Where can I see my Grin-Node rank?</h3>
