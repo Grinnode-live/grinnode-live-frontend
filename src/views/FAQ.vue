@@ -25,7 +25,7 @@
                             <li> PEERS_API_URL = <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
                             <li> AGENTS_API_URL = <a href="https://grinnode.live:8080/agents">https://grinnode.live:8080/agents</a></li>
                         </ul>
-                    </p>
+                    
 
                     <h3>Where can I see my Grin-Node rank?</h3>
                     <p>
