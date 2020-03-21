@@ -18,6 +18,12 @@
                     <h3>How are we calculating your Grin-Node uptime?</h3>
                     <p>
                         We are querying our publicly available Grin-API <router-link exact to="/home">https://grinnode.live</router-link> every 10 minutes. These results will be stored in a database and compared.
+                        <strong> Public API  </strong>
+                        <ul>
+                            <li> HEALTH_CHECK_API_URL = <a href="https://grinnode.live:8080/healthcheck"> https://grinnode.live:8080/healthcheck </a></li>
+                            <li> PEERS_API_URL = <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
+                            <li> AGENTS_API_URL = <a href="https://grinnode.live:8080/agents">https://grinnode.live:8080/agents</a></li>
+                        </ul>
                     </p>
 
                     <h3>Where can I see my Grin-Node rank?</h3>
