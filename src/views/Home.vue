@@ -12,8 +12,13 @@
                 
                 <h2> How to use Grinnode.live </h2>
                     <p> <h3> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2</a> </h3>
-                        <pre><code>
-                    <strong>example:</strong>
+                <p>
+                    When running grin with defaults, the V2 apis are available at
+                    <strong>https://grinnode.live/v2/owner for the owner API.
+                    https://grinnode.live/v2/foreign for the foreign API. </strong>
+                </p>
+                <pre><code>
+                    <strong>API v2 example:</strong>
 
                     curl -d '{"id":"json","method":"get_status","params":{} }' -o - https://grinnode.live/v2/owner
 
