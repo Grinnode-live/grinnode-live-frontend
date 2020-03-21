@@ -17,17 +17,20 @@
                     <p>2. Edit your Grin-Node <strong>grin-server.toml</strong> </p>
                         <pre>
                             <code>
-                                peers_preferred = [213.239.215.236:3414]
+ peers_preferred = [213.239.215.236:3414]
 
-                                #maximum number of inbound peer connections
-                                peer_max_inbound_count = 30
-                                #maximum number of outbound peer connections
-                                peer_max_outbound_count = 10
-                                #preferred minimum number of outbound peers
-                                peer_min_preferred_outbound_count = 10
-                                #amount of incoming connections temporarily allowed to exceed peer_max_inbound_count
-                                peer_listener_buffer_count = 5
-                            </code>
+#maximum number of inbound peer connections
+peer_max_inbound_count = 30
+
+#maximum number of outbound peer connections
+peer_max_outbound_count = 10
+
+#preferred minimum number of outbound peers
+peer_min_preferred_outbound_count = 10
+
+#temporarily allowed to exceed peer_max_inbound_count
+peer_listener_buffer_count = 5
+                           </code>
                         </pre>
                     
                     
