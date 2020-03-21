@@ -154,7 +154,7 @@
                     You can get in contact with us <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md">here</a>
 
                     <p style="text-decoration: underline;">Use Blocks not Bombs</p>
-                    <p><img width="300" height="121" src="images/blocks-not-bombs-878x1024.png" alt="Use Blocks not Bombs " /></p>
+                    <p><img width="200" height="190" src="images/blocks-not-bombs-878x1024.png" alt="Use Blocks not Bombs " /></p>
                 </div>
             </section>
         </main>
