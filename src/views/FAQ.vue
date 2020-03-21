@@ -24,6 +24,11 @@
                     <p>
                         You can view the current leaderboard <router-link exact to="/challenge">here</router-link>.
                     </p>
+                   <h3> Do I need a API secret?</h3>
+                   <p>
+                        No! All API's can be used without any API secret or owner secrets.
+                        No basic-auth must be set to use it.
+                   <p>
                 </div>
             </section>
         </main>
