@@ -11,6 +11,18 @@
                                         
                 
                 <h2> How to use Grinnode.live </h2>
+                  
+                  <h3>Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
+                    <p>1. Setup a GRIN Wallet </p>
+                    <p>2. Use it as <strong><a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node" target="_blank" rel="noopener">API Endpoint</a></strong> or <strong>add</strong> it to your <a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a></p>
+                    <blockquote>
+                        <p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;./grin-wallet --api_server_address "https://grinnode.live:3413"<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
+                        <p>&nbsp;</p>
+                    </blockquote>
+                
+                
+                
+                
                     <p> <h3> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a> </h3>
                 
                     When running grin with defaults, the V2 apis are available 
@@ -57,15 +69,6 @@
                     
                     <h3>Do I need any API secret to use Grinnode API?</h3>
                     No! see <router-link exact to="/faq">FAQ-Site.</router-link>
-
-                    
-
-                    <h3>GRIN API v2:</h3>
-                    Start date: September 30th, 2019
-                    More information can be found here: 
-
-
-                    
 
                     <h3>GRIN API v1:</h3>
                     <p>will be deprecated in grin fork version 4 - Switch to <strong>APIv2</strong> </p>
@@ -125,13 +128,7 @@
                     &nbsp;
                     &nbsp;
 
-                    <h3>Using HA-GRIN Node&nbsp;</h3>
-                    <p>1. Setup a GRIN Wallet e.g.&nbsp;<a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet">https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet<br /></a></p>
-                    <p>2. Use it as <strong><a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node" target="_blank" rel="noopener">API Endpoint</a></strong> or <strong>add</strong> it to your <a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a></p>
-                    <blockquote>
-                        <p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;./grin-wallet --api_server_address "https://grinnode.live:3413"<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
-                        <p>&nbsp;</p>
-                    </blockquote>
+                  
 
                     <h3>Contact:</h3>
                     You can get in contact with us here
