@@ -5,8 +5,12 @@
                 <div class="container home_container">
                 <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
                 
-                <h3> How to use Grinnode.live </h3>
-                    <p> <h2> Public Grin-API v2 </h2>
+                <h3>Last Update: 01/2020 +++UPDATE+++</h3>
+                    <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
+                    
+                
+                <h2> How to use Grinnode.live </h2>
+                    <p> <h3> Public Grin-API v2 </h3>
                         <pre><code>
                     <strong>example:</strong>
 
@@ -40,9 +44,6 @@
                     based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
                   
                     
-                    <h3>Last Update: 01/2020 +++UPDATE+++</h3>
-                    <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
-
                     <h3>Do I need any API secret to use Grinnode API?</h3>
                     No! see <router-link exact to="/faq">FAQ-Site.</router-link>
 
