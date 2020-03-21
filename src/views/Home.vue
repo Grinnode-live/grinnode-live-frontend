@@ -32,13 +32,8 @@
                                 peer_listener_buffer_count = 5
                             </code>
                         </pre>
-                    <p> Example grin-server.toml can be downloaded <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml">here</a> </p>
-                    <blockquote>
-                        <p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;./grin-wallet --api_server_address "https://grinnode.live:3413"<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
-                        <p>&nbsp;</p>
-                    </blockquote>
-                    <p> More Grin-Wallet example commands can be found <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/linux-grin-commands-collection.md">here</a></p>
-                
+                    
+                    
                 <h3>Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
                     <p>1. Setup a GRIN Wallet </p>
                     <p>2. Use it as <strong><a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node" target="_blank" rel="noopener">API Endpoint</a></strong> or <strong>add</strong> it to your <a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a></p>
