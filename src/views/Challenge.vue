@@ -55,7 +55,7 @@
 </tbody>
 </table>
 
-                        <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" target="_blank"><h3>Full price List</h3></a>
+                        <h3><a href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" target="_blank">Full price List</a></h3>
                     </p>
 
                     <h3>How to claim your prize?</h3>
