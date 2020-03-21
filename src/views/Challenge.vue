@@ -15,8 +15,47 @@
                     <h3>Prices / Free giveaways</h3>
                     <p>
                         The first TOP 20 (non commercial) nodes with highest up time are getting the following prices:
+                        <table>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>RANK</strong></td>
+<td style="text-align: center;"><strong>NODE</strong></td>
+<td style="text-align: center;"><strong>&nbsp;PRICE</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">winner will be announced</td>
+<td style="text-align: center;">200 GRIN's + GRIN T-Shirt</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">winner will be announced</td>
+<td style="text-align: center;">99 GRIN's + GRIN T-Shirt</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">winner will be announced</td>
+<td style="text-align: center;">75 GRIN's + GRIN T-Shirt</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">winner will be announced</td>
+<td style="text-align: center;">60 GRIN's</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">winner will be announced</td>
+<td style="text-align: center;">50 GRIN's</td>
+</tr>
+<tr>
+<td style="text-align: center;">[..]</td>
+<td style="text-align: center;">[..]</td>
+<td style="text-align: center;">[..]</td>
+</tr>
+</tbody>
+</table>
 
-                        PENDING
+                        <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" target="_blank">Full price List</a>
                     </p>
 
                     <h3>How to claim your prize?</h3>
