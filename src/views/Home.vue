@@ -19,6 +19,7 @@
                         <p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;./grin-wallet --api_server_address "https://grinnode.live:3413"<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
                         <p>&nbsp;</p>
                     </blockquote>
+                    <p> More Grin-Wallet example commands can be found <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/linux-grin-commands-collection.md">here</a></p>
                 
                 
                 
