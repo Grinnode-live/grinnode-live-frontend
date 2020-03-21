@@ -64,10 +64,7 @@
                     
                     
                 
-                    <h3>High Available (HA) API Calls</h3>
-                    based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
-                  
-                    
+                                       
                     <h3>Do I need any API secret to use Grinnode API?</h3>
                     No! see <router-link exact to="/faq">FAQ-Site.</router-link>
 
