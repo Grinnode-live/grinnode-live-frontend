@@ -17,7 +17,7 @@
                     <p>2. Edit your Grin-Node <strong>grin-server.toml</strong> </p>
                         <pre>
                             <code>
-peers_preferred = [213.239.215.236:3414]
+peers_preferred = ["213.239.215.236:3414"]
 
 #maximum number of inbound peer connections
 peer_max_inbound_count = 30
