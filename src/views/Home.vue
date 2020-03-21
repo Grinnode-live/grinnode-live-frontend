@@ -3,7 +3,7 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
-               <p> <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2></p>
+                <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
                 
                 <h3> How to use Grinnode.live </h3>
                     <p> <h2> Public Grin-API v2 </h2>
@@ -34,7 +34,7 @@
 
                     </code></pre>
                     
-                    </p>
+                    
                 
                     <h3>High Available (HA) API Calls</h3>
                     based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
