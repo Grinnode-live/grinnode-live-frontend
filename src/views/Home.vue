@@ -17,7 +17,7 @@
                     <p>2. Edit your Grin-Node <strong>grin-server.toml</strong> </p>
                         <pre>
                             <code>
- peers_preferred = [213.239.215.236:3414]
+peers_preferred = [213.239.215.236:3414]
 
 #maximum number of inbound peer connections
 peer_max_inbound_count = 30
@@ -58,31 +58,28 @@ peer_listener_buffer_count = 5
                     </strong>
                 </p>
                 <pre><code>
-                    <strong>API v2 example:</strong>
+<strong>API v2 example:</strong>
+curl -d '{"id":"json","method":"get_status","params":{} }' -o - https://grinnode.live/v2/owner
 
-                    curl -d '{"id":"json","method":"get_status","params":{} }' -o - https://grinnode.live/v2/owner
-
-                    <strong> answer:</strong>
-
-                    {
-                      "id": "json",
-                      "result": {
-                        "Ok": {
-                          "connections": 121,
-                          "protocol_version": 2,
-                          "sync_status": "no_sync",
-                          "tip": {
-                            "height": 527467,
-                            "last_block_pushed": "000001a81c92da17102079862b927134e7f8210ad56af892f494a072f5b77b92",
-                            "prev_block_to_last": "000024005775cf7e2155d8156e514b6b1f51d98483a7bdc220a22334d2b30749",
-                            "total_difficulty": 1456919673376722
-                          },
-                          "user_agent": "MW/Grin 3.1.0-beta.1"
-                        }
-                      }
-                    }
-
-                    </code></pre>
+<strong> answer:</strong>
+ {
+   "id": "json",
+   "result": {
+       "Ok": {
+              "connections": 121,
+              "protocol_version": 2,
+              "sync_status": "no_sync",
+              "tip": {
+              "height": 527467,
+              "last_block_pushed": "000001a81c92da17102079862b927134e7f8210ad56af892f494a072f5b77b92",
+              "prev_block_to_last": "000024005775cf7e2155d8156e514b6b1f51d98483a7bdc220a22334d2b30749",
+              "total_difficulty": 1456919673376722
+            },
+             "user_agent": "MW/Grin 3.1.0-beta.1"
+                   }
+                }
+              }
+ </code></pre>
                     
                     
                 
