@@ -3,23 +3,11 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
-                    <h2 class="container_header">Grinnode.live API is online!</h2>
-                    <h3>High Available (HA) API Calls</h3>
-                    based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
-
-                    <h3>Last Update: 01/2020 +++UPDATE+++</h3>
-                    <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
-
-                    <h3>Do I need a API secret?</h3>
-                    No!
-                    All API's can be used without any API secret or owner secrets.
-
-                    <h3>GRIN API v2:</h3>
-                    Start date: September 30th, 2019
-                    More information can be found here: <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">0007-node-api-v2.md</a>
-
-
-                    <pre><code>
+                <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
+                
+                <h3> How to use Grinnode.live </h3>
+                    <p> <h2> Public Grin-API v2 </h2>
+                        <pre><code>
                     <strong>example:</strong>
 
                     curl -d '{"id":"json","method":"get_status","params":{} }' -o - https://grinnode.live/v2/owner
@@ -45,6 +33,26 @@
                     }
 
                     </code></pre>
+                    
+                    </p>
+                
+                    <h3>High Available (HA) API Calls</h3>
+                    based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs.
+                  
+                    
+                    <h3>Last Update: 01/2020 +++UPDATE+++</h3>
+                    <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
+
+                    <h3>Do I need a API secret?</h3>
+                    No!
+                    All API's can be used without any API secret or owner secrets.
+
+                    <h3>GRIN API v2:</h3>
+                    Start date: September 30th, 2019
+                    More information can be found here: <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">0007-node-api-v2.md</a>
+
+
+                    
 
                     <h3>GRIN API v1:</h3>
                     <p>The following API-Calls are GRIN API v1 Calls:</p>
