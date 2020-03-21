@@ -17,7 +17,7 @@
 
                     <h3>How are we calculating your Grin-Node uptime?</h3>
                     <p>
-                        We are querying our publicly available Grin-API (<router-link exact to="/home">https://grinnode.live</router-link> every 10 minutes. These results will be stored in a database and compared.
+                        We are querying our publicly available Grin-API <router-link exact to="/home">https://grinnode.live</router-link> every 10 minutes. These results will be stored in a database and compared.
                     </p>
 
                     <h3>Where can I see my Grin-Node rank?</h3>
