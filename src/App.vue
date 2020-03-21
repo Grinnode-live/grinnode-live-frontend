@@ -71,6 +71,7 @@ export default {
     background-color: #222222;
     border-radius: 16px;
     padding: 1em;
+    max-width: 600px; 
     box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 5px;
   }
 
