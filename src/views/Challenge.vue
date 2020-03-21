@@ -7,7 +7,7 @@
                     <h3>How can you participate?</h3>
                     <p>
                         It is simple, just run a Grin-Node over the measured time period
-                        from XX.XX.XXXX:XX:XX:XX to XX.XX.XXXX:XX:XX:XX and connect your
+                        from 22.03.2020:12:00:00 to 22.04.2020:12:00:00 (UTC) and connect your
                         Grin-Node to Grinnode.live
                         (<router-link exact to="/faq">How to run a Grin-Node?</router-link>).
                     </p>
@@ -21,7 +21,7 @@
 
                     <h3>How to claim your prize?</h3>
                     <p>
-                        Get in (contact)[https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md] with us and proof you own this node.
+                        Get in <a target="_blank" href="https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md">contact</a> with us and proof you own this node.
                         We will publish the winners here and every winner gets a uniq URL which he has to visit from his Grin-Node IP address.
                     </p>
 
