@@ -3,7 +3,7 @@
         <main class="content">
             <section class="home">
                 <div class="container home_container">
-                <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
+               <p> <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2></p>
                 
                 <h3> How to use Grinnode.live </h3>
                     <p> <h2> Public Grin-API v2 </h2>
