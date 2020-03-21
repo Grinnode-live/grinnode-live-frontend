@@ -43,9 +43,10 @@
                     <h3>Last Update: 01/2020 +++UPDATE+++</h3>
                     <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
 
-                    <h3>Do I need a API secret?</h3>
-                    No!
-                    All API's can be used without any API secret or owner secrets.
+                    <h3>Do I need any API secret to use Grinnode API?</h3>
+                    No! see <router-link exact to="/faq">FAQ-Site.</router-link>
+
+                    
 
                     <h3>GRIN API v2:</h3>
                     Start date: September 30th, 2019
@@ -55,6 +56,7 @@
                     
 
                     <h3>GRIN API v1:</h3>
+                    <p>will be deprecated in grin fork version 4 - Switch to <strong>APIv2</strong> </p>
                     <p>The following API-Calls are GRIN API v1 Calls:</p>
                     <ul>
                         <li><a href="https://grinnode.live/v1/status">/v1/status</a></li>
