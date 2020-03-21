@@ -67,7 +67,7 @@ export default {
 
   pre {
     color: #FFFFFF;
-    font-size: 1vw;
+    font-size: 0.7vw;
     background-color: #222222;
     border-radius: 16px;
     padding: 1em;
