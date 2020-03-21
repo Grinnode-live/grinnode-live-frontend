@@ -5,12 +5,13 @@
                 <div class="container home_container">
                 <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
                 
-                <h3>Last Update: 01/2020 +++UPDATE+++</h3>
+                <h3>Last Update: 03/2020 </h3>
                     <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
-                    
+                    <p>new Website done by <a href="https://github.com/WarmBeer/">@WarmBeer</a>
+                                        
                 
                 <h2> How to use Grinnode.live </h2>
-                    <p> <h3> Public Grin-API v2 </h3>
+                    <p> <h3> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2</a> </h3>
                         <pre><code>
                     <strong>example:</strong>
 
@@ -51,7 +52,7 @@
 
                     <h3>GRIN API v2:</h3>
                     Start date: September 30th, 2019
-                    More information can be found here: <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">0007-node-api-v2.md</a>
+                    More information can be found here: 
 
 
                     
@@ -123,12 +124,7 @@
                     </blockquote>
 
                     <h3>Contact:</h3>
-                    <a href="https://github.com/MCM-Mike/grinnode.live">https://github.com/MCM-Mike/grinnode.live</a>
-                    <a href="https://keybase.io/MCMMike/chat">Keybase encrypted Chat</a>
-
-                    <p>GRIN Discord: https://discord.gg/VzyfyBf  (MCM-Mike)</p>
-                    <p>GitHub:<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">Donation contact</a></p>
-
+                    You can get in contact with us here
 
                     <p style="text-decoration: underline;">Use Blocks not Bombs</p>
                     <p><img width="200" height="121" src="images/blocks-not-bombs-878x1024.png" alt="Use Blocks not Bombs " /></p>
