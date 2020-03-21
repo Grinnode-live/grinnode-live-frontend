@@ -11,11 +11,16 @@
                                         
                 
                 <h2> How to use Grinnode.live </h2>
-                    <p> <h3> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2</a> </h3>
-                <p>
-                    When running grin with defaults, the V2 apis are available at
-                    <strong>https://grinnode.live/v2/owner for the owner API.
-                    https://grinnode.live/v2/foreign for the foreign API. </strong>
+                    <p> <h3> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a> </h3>
+                
+                    When running grin with defaults, the V2 apis are available 
+                 <p>
+                    <strong>
+                     <ul>
+                         <li>https://grinnode.live/v2/owner for the owner API.</li>
+                         <li>https://grinnode.live/v2/foreign for the foreign API.</li>
+                    </ul>
+                    </strong>
                 </p>
                 <pre><code>
                     <strong>API v2 example:</strong>
