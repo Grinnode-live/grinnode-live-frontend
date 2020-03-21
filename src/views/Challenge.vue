@@ -55,12 +55,12 @@
 </tbody>
 </table>
 
-                        <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" target="_blank">Full price List</a>
+                        <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" target="_blank"><h3>Full price List</h3></a>
                     </p>
 
                     <h3>How to claim your prize?</h3>
                     <p>
-                        Get in <a target="_blank" href="https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md">contact</a> with us and proof you own this node.
+                        Get in <a target="_blank" href="https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md">contact</a> with us and <a target="_blank" href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md#how-to-claim-your-price">proof you own this node</a>.
                         We will publish the winners here and every winner gets a uniq URL which he has to visit from his Grin-Node IP address.
                     </p>
 
