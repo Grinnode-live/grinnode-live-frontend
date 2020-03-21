@@ -2,8 +2,8 @@
     <header class="header">
         <div class="header__news">
             <ol class="header_news_messages">
-                <li>[15-03-2020] Have you heard of our latest challenge? You can find more info on the challenge tab!</li>
-                <li>[14-03-2020] Welcome to our new website!</li>
+                <li>[03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's</li>
+                <li>Welcome</li>
             </ol>
             <div class="header_news_status">
                 <span style="margin-right: 5px;">API status:</span><span class="api_status" :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
