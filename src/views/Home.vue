@@ -42,7 +42,9 @@ peer_listener_buffer_count = 5
                         <p>&nbsp;</p>
                     </blockquote>
                     <p> More Grin-Wallet example commands can be found <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/linux-grin-commands-collection.md">here</a></p>
-                
+                    <p> When using the Grinnode Wallet API , you are trusting us to run a Grin node. It is recommended to run your own Grin-Node and use it instead of our API which is better for your privacy.</p>
+
+
                 
                 
                     <h3>Public Grinnode.live API examples </h3>
