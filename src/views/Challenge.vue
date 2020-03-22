@@ -7,7 +7,7 @@
                     <h3>How can you participate?</h3>
                     <p>
                         It is simple, just run a Grin-Node over the measured time period
-                        from 22.03.2020:12:00:00 to 22.04.2020:12:00:00 (UTC) and connect your
+                        from 22.03.2020 12:00:00 noon to 22.04.2020 12:00:00 noon (UTC+0) and connect your
                         Grin-Node to Grinnode.live
                         (<router-link exact to="/faq">How to run a Grin-Node?</router-link>).
                     </p>
