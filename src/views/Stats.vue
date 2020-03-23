@@ -7,24 +7,32 @@
                     <p>
                         Public information of the Grinnode.live API.
                     </p>
-                     <h2 class="container_header">Total inbound and outbound Grin-Nodes connected</h2>
+                    <h2 class="container_header">Total inbound and outbound Grin-Nodes connected</h2>
                     <table id="ioDataTable" border="0">
                         <thead>
                         <tr>
-                            <th>lastUpdated</th>
                             <th>inbound</th>
                             <th>outbound</th>
                         </tr>
                         </thead>
                          <tbody>
-                        <tr v-for="(io, index) in this.$dao.io.result" :key="index">
-                            
-                            <td>{{ io.inbound }}</td>
-                            <td>{{ io.outbound }}</td>
+                        <tr>
+                            <td style="text-align: center;width: 50%;">{{ this.$dao.io.result.inbound }}</td>
+                            <td>{{ this.$dao.io.result.outbound }}</td>
                         </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="1">
+                                <span>Last updated: {{ new Date(+this.$dao.io.lastUpdated) }}</span>
+                            </td>
+                            <td colspan="1">
+                                <span>Response time: {{ this.$dao.ioTime }}</span>
+                            </td>
+                        </tr>
+                        </tfoot>
                     </table>
-                    
+
                     <h2 class="container_header">User Agents over the last 30 days</h2>
                     <table id="agentDataTable" border="0">
                         <thead>
@@ -42,7 +50,7 @@
                             <td>{{ Math.round(ua.dominance * 100) + '%' }}</td>
                         </tr>
                         </tbody>
-                        
+
                         <tfoot>
                         <tr>
                             <td colspan="2">
@@ -65,6 +73,7 @@
     name: "Stats",
     mounted() {
       this.$dao.getAgents();
+      this.$dao.ioCheck();
     }
   }
 </script>

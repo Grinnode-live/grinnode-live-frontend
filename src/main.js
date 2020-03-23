@@ -14,6 +14,14 @@ const shared = new Vue({
     peersTime: 0,
     agents: [],
     agentsTime: 0,
+    io: {
+      lastUpdate: 0,
+      result: {
+        inbound: 0,
+        outbound: 0
+      }
+    },
+    ioTime: 0,
     stickyNav: false,
   },
   methods: {
@@ -26,9 +34,13 @@ const shared = new Vue({
           });
     },
     ioCheck() {
+      let start_time = Date.now();
       fetch(IO_API_URL)
           .then(response => response.json())
           .then((result) => {
+            let end_time = Date.now();
+            let ping = Math.round((end_time - start_time)/2);
+            this.ioTime = ping + 'ms';
             this.io = result;
           });
     },
