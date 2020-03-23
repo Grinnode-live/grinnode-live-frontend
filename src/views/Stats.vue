@@ -7,6 +7,22 @@
                     <p>
                         Public information of the Grinnode.live API.
                     </p>
+                     <h2 class="container_header">Total inbound and outbound Grin-Nodes connected</h2>
+                    <table id="agentDataTable" border="0">
+                        <thead>
+                        <tr>
+                            <th>lastUpdated</th>
+                            <th>inbound</th>
+                            <th>outbound</th>
+                        </tr>
+                        </thead>
+                         <tbody>
+                        <tr v-for="(ua, index) in this.$dao.io.result" :key="index">
+                            <td>{{ lastUpdated }}</td>
+                            <td>{{ inbound }}</td>
+                            <td>{{ outbound }}</td>
+                        </tr>
+                        </tbody>
 
                     <h2 class="container_header">User Agents over the last 30 days</h2>
                     <table id="agentDataTable" border="0">
