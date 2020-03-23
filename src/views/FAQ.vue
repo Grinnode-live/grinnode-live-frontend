@@ -37,7 +37,7 @@
                         No basic-auth must be set to use it.
                    <p>
                    <h3>How to install and run a Grin Node with a DebianVPS</h3>
-                   <p>Tutorial: https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8 
+                   <p>Tutorial: <a href="https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8">https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8</a> 
                    </p>
                 </div>
             </section>
