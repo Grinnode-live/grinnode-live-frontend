@@ -39,6 +39,14 @@
                    <h3>How to install and run a Grin Node with a DebianVPS</h3>
                    <p>Tutorial: <a href="https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8">https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8</a> 
                    </p>
+                   <h3>Why is my IP address listed twice?</h3>
+                   <p>
+                         
+                        <code>[::ffff:213.239.215.236]:3414</code>
+                        This means your Grin-Node is connected to us as an inbound peer.
+                        <code>213.239.215.236:3414</code>
+                        This means your Grin-Node is connected to us as an outbound peer.
+                   </p>
                 </div>
             </section>
         </main>
