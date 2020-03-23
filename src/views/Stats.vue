@@ -17,10 +17,10 @@
                         </tr>
                         </thead>
                          <tbody>
-                        <tr v-for="(ua, index) in this.$dao.io.result" :key="index">
-                            <td>{{ lastUpdated }}</td>
-                            <td>{{ inbound }}</td>
-                            <td>{{ outbound }}</td>
+                        <tr v-for="(io, index) in this.$dao.io.result" :key="index">
+                            <td>{{ io.lastUpdated }}</td>
+                            <td>{{ io.inbound }}</td>
+                            <td>{{ io.outbound }}</td>
                         </tr>
                         </tbody>
 
