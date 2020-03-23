@@ -18,7 +18,7 @@
                         </thead>
                          <tbody>
                         <tr v-for="(io, index) in this.$dao.io.result" :key="index">
-                            <td>{{ io.lastUpdated }}</td>
+                            
                             <td>{{ io.inbound }}</td>
                             <td>{{ io.outbound }}</td>
                         </tr>
