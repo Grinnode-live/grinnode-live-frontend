@@ -46,6 +46,9 @@
                         This means your Grin-Node is connected to us as an inbound peer.
                         <pre>213.239.215.236:3414</pre>
                         This means your Grin-Node is connected to us as an outbound peer.
+                    <p>
+                    <p>
+                        Your highest Average Uptime will win. 
                    </p>
                 </div>
             </section>
