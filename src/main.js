@@ -5,6 +5,7 @@ import router from './router';
 const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
 const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
+const IO_API_URL = 'https://grinnode.live:8080/io';
 
 const shared = new Vue({
   data: {
@@ -22,6 +23,13 @@ const shared = new Vue({
           .then((result) => {
             this.apiStatus = 'offline';
             if (result.ok) this.apiStatus = 'online';
+          });
+    },
+    ioCheck() {
+      fetch(IO_API_URL)
+          .then(response => response.json())
+          .then((result) => {
+            this.peers = result;
           });
     },
     getPeers() {
