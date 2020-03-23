@@ -23,7 +23,8 @@
                             <td>{{ io.outbound }}</td>
                         </tr>
                         </tbody>
-
+                    </table>
+                    
                     <h2 class="container_header">User Agents over the last 30 days</h2>
                     <table id="agentDataTable" border="0">
                         <thead>
@@ -41,7 +42,7 @@
                             <td>{{ Math.round(ua.dominance * 100) + '%' }}</td>
                         </tr>
                         </tbody>
-
+                        
                         <tfoot>
                         <tr>
                             <td colspan="2">
