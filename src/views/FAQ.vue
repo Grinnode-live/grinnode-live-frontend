@@ -42,9 +42,9 @@
                    <h3>Why is my IP address listed twice?</h3>
                    <p>
                          
-                        <code>[::ffff:213.239.215.236]:3414</code>
+                        <pre>[::ffff:213.239.215.236]:3414</pre>
                         This means your Grin-Node is connected to us as an inbound peer.
-                        <code>213.239.215.236:3414</code>
+                        <pre>213.239.215.236:3414</pre>
                         This means your Grin-Node is connected to us as an outbound peer.
                    </p>
                 </div>
