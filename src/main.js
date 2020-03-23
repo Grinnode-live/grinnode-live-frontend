@@ -29,7 +29,7 @@ const shared = new Vue({
       fetch(IO_API_URL)
           .then(response => response.json())
           .then((result) => {
-            this.peers = result;
+            this.io = result;
           });
     },
     getPeers() {
