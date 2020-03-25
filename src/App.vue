@@ -75,6 +75,16 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 5px;
   }
 
+  pre2 {
+    color: #FFFFFF;
+    font-size: 0.7vw;
+    background-color: #222222;
+    border-radius: 16px;
+    padding: 1em;
+    max-width: 200px; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 5px;
+  }
+
   table {
     color: var(--text-primary-color);
     width: 100%;
