@@ -8,7 +8,7 @@
                         Public information of the Grinnode.live API.
                     </p>
                     <h2 class="container_header">Total inbound and outbound Grin-Nodes connected</h2>
-                    <table id="ioDataTable" border="0" width="50%">
+                    <table id="ioDataTable" border="0" width="200">
                         <thead>
                         <tr>
                             <th>inbound</th>
