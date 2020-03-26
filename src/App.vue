@@ -94,9 +94,9 @@ export default {
     border-radius: 16px;
   }
 
-  table2 {
+  table#ioDataTable {
     color: var(--text-primary-color);
-    width: 100%;
+    width: 50%;
     text-align: center;
     border-collapse: collapse;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 20px 5px;
