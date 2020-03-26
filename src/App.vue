@@ -93,6 +93,16 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 20px 5px;
     border-radius: 16px;
   }
+
+  table2 {
+    color: var(--text-primary-color);
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 20px 5px;
+    border-radius: 16px;
+  }
+
   table td, table th {
     padding: 20px;
   }
