@@ -53,4 +53,4 @@ To link to your new page you can add a Router-Link:
 #### Header, Navigation & Footer
 Editing the Header, Navigation and Footer is the same as editing a page. 
 The only difference is that these files are stored in /components instead of views 
-since they are reused by multiple views.
+since they are reused by multiple views..
