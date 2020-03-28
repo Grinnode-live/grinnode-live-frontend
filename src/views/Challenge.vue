@@ -59,8 +59,8 @@
     <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" target="_blank">FULL PRICE LIST HERE</a>
                     </p>
                     <p>
-                    <strong>Rule Update </strong>
-                    
+                    <h3>Rule Update</h3> 
+
                     If more than 20 Users <a href="https://forum.grin.mw/t/grin-node-challenge-2020-win-over-800-grin-coins-and-free-grin-merchandise/7166/11">replying to this Forum post</a> telling us, we have successfully setup a Grin-Node and connected 
                     to Grinnode.live, we will add 10 more T-Shirts to the winning pool.</p>
                     <p>
