@@ -6,10 +6,28 @@ const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
 const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
 const IO_API_URL = 'https://grinnode.live:8080/io';
+const GLOBAL_HEALTH_CHECK_API_URL = 'http://localhost:8080/globalhealthcheck';
 
 const shared = new Vue({
   data: {
     apiStatus: 'offline',
+    globalHealthCheck: {
+      checks: {
+        lastUpdated: 0,
+        result: {
+          grinnode_live_api: false,
+          grinnode_live_site: false,
+          grinnode_wallet_api: false,
+          grinnode_sync_1: false,
+          grinnode_sync_2: false,
+          grinnode_donation_wallet: false,
+        }
+      },
+      downtimes: {
+        lastUpdated: 0,
+        result: [],
+      },
+    },
     peers: [],
     peersTime: 0,
     agents: [],
@@ -64,6 +82,13 @@ const shared = new Vue({
             let ping = Math.round((end_time - start_time)/2);
             this.agentsTime = ping + 'ms';
             this.agents = result;
+          });
+    },
+    getGlobalHealthCheck() {
+      fetch(GLOBAL_HEALTH_CHECK_API_URL)
+          .then(response => response.json())
+          .then((result) => {
+            this.globalHealthCheck = result;
           });
     },
   },

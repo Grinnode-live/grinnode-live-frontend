@@ -6,7 +6,7 @@
                 <li>Welcome</li>
             </ol>
             <div class="header_news_status">
-                <span style="margin-right: 5px;">API status:</span><span class="api_status" :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+                <span style="margin-right: 5px;">API status:</span><span @click="$router.push('/global-health-check')" class="api_status" :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
             </div>
         </div>
         <Navigation></Navigation>
@@ -15,6 +15,7 @@
 
 <script>
   import Navigation from "@/components/Navigation";
+
   export default {
     name: "Header",
     components: {Navigation},
@@ -82,5 +83,6 @@
         border-radius: 2px;
         padding: 0 5px;
         font-weight: bold;
+        cursor: pointer;
     }
 </style>

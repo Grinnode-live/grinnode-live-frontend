@@ -6,6 +6,7 @@ import Stats from "@/views/Stats";
 import FAQ from "@/views/FAQ";
 import ToS from "@/views/ToS";
 import PrivacyPolicy from "@/views/PrivacyPolicy";
+import GlobalHealthCheck from "@/views/GlobalHealthCheck";
 
 const SITE_SUB_FOLDER = process.env.NODE_ENV === 'production'
     ? (process.env.SITE_SUB_FOLDER || '/')
@@ -43,6 +44,11 @@ const routes = [
     path: '/privacy-policy',
     name: 'pos',
     component: PrivacyPolicy,
+  },
+  {
+    path: '/global-health-check',
+    name: 'ghc',
+    component: GlobalHealthCheck,
   },
 ];
 
