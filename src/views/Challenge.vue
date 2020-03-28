@@ -60,7 +60,10 @@
                     </p>
                     <p>
                     <strong>Rule Update </strong>
-                    If more than 20 Users <a href="https://forum.grin.mw/t/grin-node-challenge-2020-win-over-800-grin-coins-and-free-grin-merchandise/7166/11">replying to this Forum post</a> telling us, we have successfully setup a Grin-Node and connected to Grinnode.live, we will add 10 more T-Shirts to the winning pool.
+                    
+                    If more than 20 Users <a href="https://forum.grin.mw/t/grin-node-challenge-2020-win-over-800-grin-coins-and-free-grin-merchandise/7166/11">replying to this Forum post</a> telling us, we have successfully setup a Grin-Node and connected 
+                    to Grinnode.live, we will add 10 more T-Shirts to the winning pool.</p>
+                    <p>
                     <ul>
                     <li>Winners will be randomly chosen from all connected nodes during the 4 week Challenge</li>
                     <li>Top20 Nodes can not win any additional T-Shirts</li>
