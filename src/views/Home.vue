@@ -45,7 +45,7 @@ seeding_type = "List"
 
 #If the seeding type is List, the list of peers to connect to can
 #be specified as follows:
-seeds = ["mainnet-seed.grinnode.live"]
+seeds = ["mainnet-seed.grinnode.live:3414"]
 
                             </code>
 
