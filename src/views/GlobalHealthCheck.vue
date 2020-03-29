@@ -8,7 +8,7 @@
                     <p>Grinnode.live WEB SITE: <span class="status" :style="grinWebSiteStyle()">{{ this.grinWebSite }}</span></p>
                     <p>Grinnode.live WALLET API: <span class="status" :style="grinWalletApiStyle()">{{ this.grinWalletApi }}</span></p>
                     <p>213.239.215.236:3414 NODE SYNC: <span class="status" :style="grinNodeSync1Style()">{{ this.grinNodeSync1 }}</span></p>
-                    <p>https://grinnode.live:3414 NODE SYNC: <span class="status" :style="grinNodeSync2Style()">{{ this.grinNodeSync2 }}</span></p>
+                    <p>http://grinnode.live:3414 NODE SYNC: <span class="status" :style="grinNodeSync2Style()">{{ this.grinNodeSync2 }}</span></p>
                     <p>Grinnode.live DONATION WALLET: <span class="status" :style="grinDonationWalletStyle()">{{ this.grinDonationWallet }}</span></p>
 
                     <h2 class="container_header">Scheduled Downtimes</h2>
