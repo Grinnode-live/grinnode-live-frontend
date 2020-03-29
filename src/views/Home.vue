@@ -6,6 +6,7 @@
                 <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
                 
                 <h3>Last Update: 03/2020 </h3>
+                    <p>Added Seed-Node: "mainnet-seed.grinnode.live" (29.03.2020)
                     <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
                     <p>new Website done by <a href="https://github.com/WarmBeer/">@WarmBeer</a>
                                         
@@ -32,6 +33,23 @@ peer_min_preferred_outbound_count = 10
 peer_listener_buffer_count = 5
                            </code>
                         </pre>
+
+                <h3>Use Grinnode.live High-Availale Seed-Node </h3>
+                <p> Connect to lot of Grin-Nodes fast using our Seed-Node by editing your grin-server.toml.
+                    Or download our example <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml">grin-server.toml</a>
+                </p>
+                    <pre>
+                            <code>
+#how to seed this server, can be None, List or DNSSeed
+seeding_type = "List"
+
+#If the seeding type is List, the list of peers to connect to can
+#be specified as follows:
+seeds = ["mainnet-seed.grinnode.live"]
+
+                            </code>
+
+                    </pre>
                     
                     
                 <h3>Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
