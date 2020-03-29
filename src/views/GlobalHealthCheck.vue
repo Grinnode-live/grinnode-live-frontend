@@ -8,16 +8,38 @@
                     <p>Grinnode.live WEB SITE: <span class="status" :style="grinWebSiteStyle()">{{ this.grinWebSite }}</span></p>
                     <p>Grinnode.live WALLET API: <span class="status" :style="grinWalletApiStyle()">{{ this.grinWalletApi }}</span></p>
                     <p>213.239.215.236:3414 NODE SYNC: <span class="status" :style="grinNodeSync1Style()">{{ this.grinNodeSync1 }}</span></p>
-                    <p>https://grinnode.live:3414 NODE SYNC: <span class="status" :style="grinNodeSync2Style()">{{ this.grinNodeSync2 }}</span></p>
+                    <p>http://grinnode.live:3414 NODE SYNC: <span class="status" :style="grinNodeSync2Style()">{{ this.grinNodeSync2 }}</span></p>
                     <p>Grinnode.live DONATION WALLET: <span class="status" :style="grinDonationWalletStyle()">{{ this.grinDonationWallet }}</span></p>
 
                     <h2 class="container_header">Scheduled Downtimes</h2>
-                    WIP
-                    <!--
-                    <div v-for="(entry, index) in this.$dao.globalHealthCheck.downtimes.result" :key="index">
-                        <span>{{ entry }}</span>
-                    </div>
-                    -->
+                    <table id="downtimeTable" border="0">
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr v-for="(dt, index) in this.downtimes" :key="index">
+                            <td>{{ dt.reason }}</td>
+                            <td>{{ new Date(+dt.start_datetime) }}</td>
+                            <td>{{ new Date(+dt.end_datetime) }}</td>
+                        </tr>
+                        </tbody>
+
+                        <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <span style="text-align: left">Last updated: {{ new Date(+this.$dao.globalHealthCheck.downtimes.lastUpdated) }}</span>
+                            </td>
+                            <td>
+                                Source: <a href="https://grinnode.live:8080/GlobalHealthCheck">Grinnode.live</a>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </section>
         </main>
@@ -48,6 +70,9 @@
       },
     },
     computed: {
+      downtimes() {
+        return this.$dao.globalHealthCheck.downtimes.result;
+      },
       grinWebApi() {
         return (this.$dao.globalHealthCheck.checks.result.grinnode_live_api) ? 'online' : 'offline';
       },
@@ -69,6 +94,7 @@
     },
     mounted() {
       this.$dao.getGlobalHealthCheck();
+      console.log(this.downtimes);
     }
   }
 </script>
@@ -82,5 +108,9 @@
         border-radius: 2px;
         padding: 0 5px;
         font-weight: bold;
+    }
+
+    table {
+        max-width: 600px;
     }
 </style>
