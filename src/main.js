@@ -6,7 +6,7 @@ const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
 const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
 const IO_API_URL = 'https://grinnode.live:8080/io';
-const GLOBAL_HEALTH_CHECK_API_URL = 'http://localhost:8080/globalhealthcheck';
+const GLOBAL_HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/globalhealthcheck';
 
 const shared = new Vue({
   data: {
