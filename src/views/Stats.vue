@@ -7,10 +7,7 @@
                     <p>
                         Public information of the Grinnode.live API.
                     </p>
-                    <p>
-                    
-<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="3709" data-base="USD"></div>
-                    </p>
+                   
                     <h3 class="container_header">Total inbound and outbound Grin-Nodes connections (last 30min)</h3>
                     <table id="ioDataTable" border="0" width="200">
                         <thead>
