@@ -5,7 +5,16 @@
                 <div class="container home_container">
                     <h2 class="container_header">Frequently Asked Questions</h2>
 
-                    <h3>How to run a Grin-Node?</h3>
+                   <h3>Check TOR address  </h3>
+		    <p>Check if the receiving TOR address is available. </p>
+			<ul>
+					<li>via HTTP:<a href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
+				 <li>via TOR:<a href="http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/">http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/</a>     </li>
+			</ul>
+			
+		    <p>by: https://github.com/davidtavarez/grinaddresschecker</p>
+
+		     <h3>How to run a Grin-Node?</h3>
                     <p>
                         There are different Grin-Nodes you can be running to participate in this challenge:
                     </p>
