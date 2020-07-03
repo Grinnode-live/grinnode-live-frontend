@@ -5,7 +5,11 @@
                 <div class="container home_container">
                 <h2 class="container_header">Grinnode.live high-available GRIN-API & Sync-Service</h2>
                 
-                <h3>Last Update: 05/2020 </h3>
+		<h3>Latest update: 07/2020  </h>
+		<p> All our Grin-Nodes will be upgraded to <a href="https://github.com/mimblewimble/grin/tree/current/4.0.x">Grin-Node version 4.0.x</a></p>
+		<p> <strong>We will deprecate the APIv1 prior to the next Hardfork v5.0.x</strong></p>
+
+                <h3>Update: 05/2020 </h3>
                     <p>Grinnode.live is not part of the Grin-Node DNS Seed list:<a href="https://github.com/mimblewimble/grin/pull/3282"> pull request</a></p>
                     <p>Added Seed-Node: "mainnet-seed.grinnode.live" (29.03.2020)
                     <p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
