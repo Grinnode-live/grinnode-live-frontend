@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueScrollTo from 'vue-scrollto'
 import App from './App.vue';
 import router from './router';
 
@@ -105,6 +106,7 @@ shared.install = function () {
   });
 };
 
+Vue.use(VueScrollTo)
 Vue.use(shared);
 Vue.config.productionTip = false;
 

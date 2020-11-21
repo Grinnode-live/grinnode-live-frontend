@@ -4,6 +4,18 @@
       <section class="home">
         <div class="container home_container">
           <h2 class="container_header">Frequently Asked Questions</h2>
+          <h3>What is Grin?</h3>
+          <p>Grin is a privacy-preserving digital currency built openly by developers distributed all over the world. It provides electronic transactions for all without censorship or restrictions. <router-link to="/https://grin.mw/">official website</router-link> for more information.</p>
+
+          <h3>What is a grin node?</h3>
+          <p>The Grin digital currency is a decentralized network of grin nodes. Those are the entry points to the network. Whenever you want to submit a new transaction or even simply check your balance by syncing your wallet you have to connect to one of the nodes.</p>
+
+          <h3>Can I use grinnode.live to sync my wallet instead of my own node?</h3>
+          <p>Yes! Check our <router-link to="/tutorials">tutorials page</router-link> for the instructions.</p>
+
+          <h3>If grinnode.live can replace a node, why would someone still run own node?</h3>
+          <p>First of all, grinnode.live is a network of nodes run by other users, so if nobody wants to run own node and <router-link to="/tutorials" v-scroll-to="'#tutorial-node-connect'">connect it</router-link> then grinnode.live would not provide node to anyone. Second of all, running own node provides a lot more security and privacy. The more nodes the healthier Grin network is. Our project was never intended to be a default solution for everyone, rather a backup plan in case of problems with running own node or a quick start solution for new users.</p>
+
           <h3>Check TOR address  </h3>
           <p>Check if the receiving TOR address is available. </p>
           <p>
