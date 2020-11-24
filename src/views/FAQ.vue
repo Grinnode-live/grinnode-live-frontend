@@ -8,12 +8,12 @@
           <p>Grin is a privacy-preserving digital currency built openly by developers distributed all over the world. It provides electronic transactions for all without censorship or restrictions. <router-link to="/https://grin.mw/">official website</router-link> for more information.</p>
 
           <h3>What is a grin node?</h3>
-          <p>The Grin digital currency is a decentralized network of grin nodes. Those are the entry points to the network. Whenever you want to submit a new transaction or even simply check your balance by syncing your wallet you have to connect to one of the nodes.</p>
+          <p>The Grin digital currency is a decentralized network of grin nodes. Those are the entry points to the network. Whenever you want to submit a new transaction or even simply check your balance, you must connect to a synced node.</p>
 
-          <h3>Can I use grinnode.live to sync my wallet instead of my own node?</h3>
-          <p>Yes! Check our <router-link to="/tutorials">tutorials page</router-link> for the instructions.</p>
+          <h3>Can I use my wallet with a grinnode.live node instead of running my own?</h3>
+          <p>Yes! Check our <router-link to="/tutorials">tutorials page</router-link> for instructions.</p>
 
-          <h3>If grinnode.live can replace a node, why would someone still run own node?</h3>
+          <h3>If grinnode.live can act as my node, why would I want to run my own?</h3>
           <p>First of all, grinnode.live is a network of nodes run by other users, so if nobody wants to run own node and <router-link to="/tutorials" v-scroll-to="'#tutorial-node-connect'">connect it</router-link> then grinnode.live would not provide node to anyone. Second of all, running own node provides a lot more security and privacy. The more nodes the healthier Grin network is. Our project was never intended to be a default solution for everyone, rather a backup plan in case of problems with running own node or a quick start solution for new users.</p>
 
           <h3>Check TOR address  </h3>
@@ -24,7 +24,7 @@
             <li>via TOR:<a href="http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/">http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/</a>     </li>
           </ul>
           </p>
-          <p>by: https://github.com/davidtavarez/grinaddresschecker</p>
+          <p>by: <a href="https://github.com/davidtavarez/grinaddresschecker">David Tavarez</a></p>
 
           <h3>How to run a Grin-Node?</h3>
           <p>There are different Grin-Nodes you can be running to participate in this challenge:</p>
@@ -44,8 +44,8 @@
           </ul>
           <h3>Where can I see my Grin-Node rank?</h3>
           <p>You can view the current leaderboard <router-link exact to="/challenge">here</router-link>.</p>
-          <h3> Do I need a API secret?</h3>
-          <p>No! All API's can be used without any API secret or owner secrets. No basic-auth must be set to use it.<p>
+          <h3> Do I need an API secret?</h3>
+          <p>No. All API's can be used without any API secret or owner secrets. No basic-auth must be set to use it.<p>
           <h3>How to install and run a Grin Node with a DebianVPS</h3>
           <p>Tutorial: <a href="https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8">https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8</a> </p>
           <h3>Why is my IP address listed twice?</h3>
