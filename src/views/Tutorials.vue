@@ -4,14 +4,19 @@
             <section class="home">
                 <div class="container home_container">
                     <h1 class="container_header">Tutorials</h1>
+                    <h2>Table of contents</h2>
                     <ul>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-wallet-connect'">Connect your GRIN-Wallet to Grinnode.live</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-seed'">Use Grinnode.live High-Available Seed-Node</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-node-connect'">Connect your GRIN-Node to Grinnode.live</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-api-examples'">Public Grinnode.live API examples</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-api-documentation'">GRIN API documentaion</router-link></li>
+                      <li><router-link to="" v-scroll-to="'#tutorial-grinnode'">How to use Grinnode.live</router-link>
+                        <ul>
+                          <li><router-link to="" v-scroll-to="'#tutorial-wallet-connect'">Connect your GRIN-Wallet to Grinnode.live</router-link></li>
+                          <li><router-link to="" v-scroll-to="'#tutorial-seed'">Use Grinnode.live High-Available Seed-Node</router-link></li>
+                          <li><router-link to="" v-scroll-to="'#tutorial-node-connect'">Connect your GRIN-Node to Grinnode.live</router-link></li>
+                          <li><router-link to="" v-scroll-to="'#tutorial-api-examples'">Public Grinnode.live API examples</router-link></li>
+                        </ul>
+                      </li>
+                      <li><router-link to="" v-scroll-to="'#tutorial-api-documentation'">GRIN API documentaion</router-link></li>
                     </ul>
-                    <h2> How to use Grinnode.live </h2>
+                    <h2 id="tutorial-grinnode"> How to use Grinnode.live </h2>
 
                     <h3 id="tutorial-wallet-connect">Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
                         <p>1. Setup a grin-wallet </p>
