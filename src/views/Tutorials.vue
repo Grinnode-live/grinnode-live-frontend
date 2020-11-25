@@ -5,16 +5,40 @@
                 <div class="container home_container">
                     <h1 class="container_header">Tutorials</h1>
                     <ul>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-node-connect'">How to connect connect your own node to grinnode.live</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-seed'">How to use grinnode.live as a seed node</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-wallet-connect'">How to connect your wallet to grinnode.live</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-api-examples'">API examples</router-link></li>
-                      <li><router-link to="#" v-scroll-to="'#tutorial-api-documentation'">API documentation</router-link></li>
-
-
-
+                      <li><router-link to="#" v-scroll-to="'#tutorial-wallet-connect'">Connect your GRIN-Wallet to Grinnode.live</router-link></li>
+                      <li><router-link to="#" v-scroll-to="'#tutorial-seed'">Use Grinnode.live High-Available Seed-Node</router-link></li>
+                      <li><router-link to="#" v-scroll-to="'#tutorial-node-connect'">Connect your GRIN-Node to Grinnode.live</router-link></li>
+                      <li><router-link to="#" v-scroll-to="'#tutorial-api-examples'">Public Grinnode.live API examples</router-link></li>
+                      <li><router-link to="#" v-scroll-to="'#tutorial-api-documentation'">GRIN API documentaion</router-link></li>
                     </ul>
                     <h2> How to use Grinnode.live </h2>
+
+                    <h3 id="tutorial-wallet-connect">Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
+                        <p>1. Setup a grin-wallet </p>
+                        <p>2. Use it as an <strong><a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node" target="_blank" rel="noopener">API Endpoint</a></strong> for wallet commands or <strong>add</strong> it to your <a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a>
+                        </p>
+                        <blockquote>
+                            <p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;grin-wallet -r "https://grinnode.live:3413" info<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
+                            <p>&nbsp;</p>
+                        </blockquote>
+                        <p> More Grin-Wallet example commands can be found <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/linux-grin-commands-collection.md">here</a></p>
+                        <p> When using the Grinnode Wallet API , you are trusting us to run a Grin node. We recommend to use your own node for better privacy.</p>
+
+                    <h3 id="tutorial-seed">Use Grinnode.live High-Available Seed-Node </h3>
+                        <p> Connect to lot of Grin-Nodes fast using our Seed-Node by editing your grin-server.toml.
+                            Or download our example <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml">grin-server.toml</a>
+                        </p>
+                            <pre>
+                                    <code>
+  #how to seed this server, can be None, List or DNSSeed
+  seeding_type = "List"
+
+  #If the seeding type is List, the list of peers to connect to can
+  #be specified as follows:
+  seeds = ["mainnet-seed.grinnode.live:3414"]
+                                    </code>
+                            </pre>
+
                     <h3 id="tutorial-node-connect">Connect your GRIN-Node to Grinnode.live&nbsp;</h3>
                       <p>Edit your Grin-Node <strong>grin-server.toml</strong> </p>
                           <pre>
@@ -34,31 +58,7 @@
   peer_listener_buffer_count = 5
                              </code>
                           </pre>
-                  <h3 id="tutorial-seed">Use Grinnode.live High-Available Seed-Node </h3>
-                  <p> Connect to lot of Grin-Nodes fast using our Seed-Node by editing your grin-server.toml.
-                      Or download our example <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml">grin-server.toml</a>
-                  </p>
-                      <pre>
-                              <code>
-  #how to seed this server, can be None, List or DNSSeed
-  seeding_type = "List"
 
-  #If the seeding type is List, the list of peers to connect to can
-  #be specified as follows:
-  seeds = ["mainnet-seed.grinnode.live:3414"]
-
-                              </code>
-                      </pre>
-                  <h3 id="tutorial-wallet-connect">Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
-                      <p>1. Setup a grin-wallet </p>
-                      <p>2. Use it as an <strong><a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node" target="_blank" rel="noopener">API Endpoint</a></strong> for wallet commands or <strong>add</strong> it to your <a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a>
-                      </p>
-                      <blockquote>
-                          <p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;grin-wallet -r "https://grinnode.live:3413" info<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
-                          <p>&nbsp;</p>
-                      </blockquote>
-                      <p> More Grin-Wallet example commands can be found <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/linux-grin-commands-collection.md">here</a></p>
-                      <p> When using the Grinnode Wallet API , you are trusting us to run a Grin node. We recommend to use your own node for better privacy.</p>
                   <h3 id="tutorial-api-examples">Public Grinnode.live API examples </h3>
                       <p> <h4> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a> </h4>
                       When running grin with defaults, the v2 API is available.
@@ -95,7 +95,7 @@
    </code></pre>
                       <h3>Do I need any API secret to use Grinnode API?</h3>
                       No! see <router-link exact to="/faq">FAQ-Site.</router-link>
-                      <h2 id='tutorial-api-documentation'> GRIN API documentaion</h2>
+                  <h2 id='tutorial-api-documentation'> GRIN API documentaion</h2>
                       <h3>GRIN API v1:</h3>
                       <p>will be deprecated in grin fork version 4 - Switch to <strong>APIv2</strong> </p>
                       <p>The following API-Calls are GRIN API v1 Calls:</p>
