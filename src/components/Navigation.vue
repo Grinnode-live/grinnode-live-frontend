@@ -8,9 +8,11 @@
         </div>
         <nav class="menu">
             <router-link exact to="/">Home</router-link>
+            <router-link exact to="/tutorials">Tutorials</router-link>
             <router-link exact to="/challenge">Challenge</router-link>
             <router-link exact to="/stats">Stats</router-link>
             <router-link exact to="/faq">FAQ</router-link>
+            <router-link exact to="/contact">Contact</router-link>
         </nav>
         <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md" class="action_button">Donations & Sponsorships</a>
     </div>

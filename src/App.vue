@@ -45,6 +45,10 @@ export default {
     padding: 0;
   }
 
+  ul > li {
+      margin-left: 15px;
+  }
+
   * {
     outline: none;
     -webkit-box-sizing: border-box;
@@ -71,7 +75,7 @@ export default {
     background-color: #222222;
     border-radius: 16px;
     padding: 1em;
-    max-width: 800px; 
+    max-width: 800px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 5px;
   }
 
@@ -81,7 +85,7 @@ export default {
     background-color: #222222;
     border-radius: 16px;
     padding: 1em;
-    max-width: 200px; 
+    max-width: 200px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 5px;
   }
 
