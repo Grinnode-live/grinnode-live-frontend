@@ -1,13 +1,29 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <router-view></router-view>
+  <div>
+
+  <v-app>
+    <v-main>
+<!--    <v-system-bar  >-->
+<!--      <span>[03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's</span>-->
+<!--    </v-system-bar>-->
+
+
+<!--  <div id="app">-->
+<!--    <Header></Header>-->
+    <HeaderMat></HeaderMat>
+
+    <v-content>
+        <router-view></router-view>
+    </v-content>
+    </v-main>
     <Footer></Footer>
+<!--  </div>-->
+  </v-app>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
+import HeaderMat from "@/components/HeaderMat";
 import Footer from "@/components/Footer";
 
 
@@ -15,7 +31,7 @@ export default {
   name: 'App',
   components: {
     Footer,
-    Header,
+    HeaderMat
   },
 }
 </script>
