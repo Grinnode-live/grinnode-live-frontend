@@ -9,15 +9,17 @@ export default new Vuetify({
         iconfont: 'md',  // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
     },
     theme: {
-        primary: "#fee715",
+        themes:{
+            light:{
+                primary:"#82603a",
+                secondary:"#fef102",
+                accent: "#b73b4f",
+                error:"#a05257",
+                warning:"#8e575f",
+                info:"#17151a"
+            }
+        }
 
     },
-    // themes: {
-    //     light: {
-    //
-    //         secondary: "#b0bec5",
-    //         accent: "#8c9eff",
-    //         error: "#b71c1c",
-    //     },
-    // },
+
 })

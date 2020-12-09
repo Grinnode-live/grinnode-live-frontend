@@ -1,95 +1,231 @@
 <template>
-  <div class="body_wrapper">
-    <main class="content">
-      <section class="home">
-        <div class="container home_container">
-          <h1 class="container_header">Frequently Asked Questions</h1>
-          <h2>Table of contents</h2>
-          <ul>
-            <li><router-link to="" v-scroll-to="'#faq-general'">General questions</router-link>
-              <ul>
-                <li><router-link to="" v-scroll-to="'#faq-general-grin'">What is Grin?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-general-node'">What is a grin node?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-general-motivation-grinnode-live'">Can I use my wallet with a grinnode.live node instead of running my own?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-motivation-node'">If grinnode.live can act as my node, why would I want to run my own?</router-link></li>
-              </ul>
-            </li>
-            <li><router-link to="" v-scroll-to="'#faq-technical'">Technical questions</router-link>
-              <ul>
-                <li><router-link to="" v-scroll-to="'#faq-technical-tor'">Check TOR address</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-node'">How to run a Grin-Node?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-uptime'">How are we calculating your Grin-Node uptime?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-public-api'">Public API</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-rank'">Where can I see my Grin-Node rank?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-api-secret'">Do I need an API secret?</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-debian-vps'">How to install and run a Grin Node with a DebianVPS</router-link></li>
-                <li><router-link to="" v-scroll-to="'#faq-technical-ip-twice'">Why is my IP address listed twice?</router-link></li>
-              </ul>
-            </li>
-          </ul>
 
-          <h2 id="faq-general">General questions</h2>
+  <v-row>
+    <v-col  cols="10" offset="1"  align="center">
+      <h1 class="text-h4 mb-6 "  >Frequently asked Questions</h1>
+      <h4 class="text-h6 text-left grey--text">Table of Contents</h4>
 
-          <h3 id="faq-general-grin">What is Grin?</h3>
-          <p>Grin is a privacy-preserving digital currency built openly by developers distributed all over the world. It provides electronic transactions for all without censorship or restrictions. <router-link to="/https://grin.mw/">official website</router-link> for more information.</p>
 
-          <h3 id="faq-general-node">What is a grin node?</h3>
-          <p>The Grin digital currency is a decentralized network of grin nodes. Those are the entry points to the network. Whenever you want to submit a new transaction or even simply check your balance, you must connect to a synced node.</p>
 
-          <h3 id="faq-general-motivation-grinnode-live">Can I use my wallet with a grinnode.live node instead of running my own?</h3>
-          <p>Yes! Check our <router-link to="/tutorials">tutorials page</router-link> for instructions.</p>
+    <v-list
+        class="nav text-left">
 
-          <h3 id="faq-motivation-node">If grinnode.live can act as my node, why would I want to run my own?</h3>
-          <p>First of all, grinnode.live is a network of nodes run by other users, so if nobody wants to run own node and <router-link to="/tutorials" v-scroll-to="'#tutorial-node-connect'">connect it</router-link> then grinnode.live would not provide node to anyone. Second of all, running own node provides a lot more security and privacy. The more nodes the healthier Grin network is. Our project was never intended to be a default solution for everyone, rather a backup plan in case of problems with running own node or a quick start solution for new users.</p>
+      <v-list-group
+          :value="true"
+          no-action
+          sub-group
+      >
+        <template v-slot:activator>
+          <v-list-item link to="" v-scroll-to="'#faq-general'" >
+            <v-list-item-title class="text-h6">
+              <router-link to="" v-scroll-to="'#faq-general'">General questions</router-link>
+            </v-list-item-title>
+          </v-list-item>
+        </template>
 
-          <h2 id="faq-technical">Technical questions</h2>
 
-          <h3 id="faq-technical-tor">Check TOR address  </h3>
-          <p>Check if the receiving TOR address is available. </p>
-          <p>
-          <ul>
-            <li>via HTTP:<a href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
-            <li>via TOR:<a href="http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/">http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/</a>     </li>
-          </ul>
-          </p>
-          <p>by: <a href="https://github.com/davidtavarez/grinaddresschecker">David Tavarez</a></p>
+        <v-list-item link to="" v-scroll-to="'#faq-general-grin'">
+          <v-list-item-action>
+            <router-link to="" v-scroll-to="'#faq-general-grin'">What is Grin?</router-link>
+          </v-list-item-action>
+        </v-list-item>
 
-          <h3 id="faq-technical-node">How to run a Grin-Node?</h3>
-          <p>There are different Grin-Nodes you can be running to participate in this challenge:</p>
-          <ul>
-            <li>Core Grin-Node Linux (<a href="https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node">https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node</a>)</li>
-            <li>Core Grin-Node Windows (<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md">https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md</a>)</li>
-            <li>Core Grin-Node on Google-Cloud (<a href="https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free">https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free</a>)</li>
-            <li><a href="https://grinplusplus.github.io/#/" target="_blank">Grin++</a></li>
-          </ul>
+       <v-list-item link to="" v-scroll-to="'#faq-general-node'">
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-general-node'">What is a grin node?</router-link>
+          </v-list-item-title>
+        </v-list-item>
 
-          <h3 id="faq-technical-uptime">How are we calculating your Grin-Node uptime?</h3>
-          <p>We are querying our publicly available Grin-API <router-link exact to="/home">https://grinnode.live</router-link> every 10 minutes. These results will be stored in a database and compared.</p>
+       <v-list-item link to="" v-scroll-to="'#faq-general-motivation-grinnode-live'">
+          <v-list-item-title >
+            <router-link  class="text-wrap"  to="" v-scroll-to="'#faq-general-motivation-grinnode-live'">
+              <span >Can I use my wallet with a grinnode.live node instead of running my own?</span></router-link>
+          </v-list-item-title>
+        </v-list-item>
 
-          <h3 id="faq-technical-public-api">Public API</h3>
-          <ul>
-            <li> HEALTH_CHECK_API_URL = <a href="https://grinnode.live:8080/healthcheck"> https://grinnode.live:8080/healthcheck </a></li>
-            <li> PEERS_API_URL = <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
-            <li> AGENTS_API_URL = <a href="https://grinnode.live:8080/agents">https://grinnode.live:8080/agents</a></li>
-          </ul>
+        <v-list-item link to="" v-scroll-to="'#faq-motivation-node'">
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-motivation-node'" class="text-wrap">If grinnode.live can act as my node, why would I want to run my own?</router-link>
+          </v-list-item-title>
+        </v-list-item>
 
-          <h3 id="faq-technical-rank">Where can I see my Grin-Node rank?</h3>
-          <p>You can view the current leaderboard <router-link exact to="/challenge">here</router-link>.</p>
 
-          <h3 id="faq-technical-api-secret">Do I need an API secret?</h3>
-          <p>No. All API's can be used without any API secret or owner secrets. No basic-auth must be set to use it.<p>
+      </v-list-group>
 
-          <h3 id="faq-technical-debian-vps">How to install and run a Grin Node with a DebianVPS</h3>
-          <p>Tutorial: <a href="https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8">https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8</a> </p>
 
-          <h3 id="faq-technical-ip-twice">Why is my IP address listed twice?</h3>
-          <p><pre>[::ffff:213.239.215.236]:3414</pre>
-          This means your Grin-Node is connected to us as an inbound peer.<pre>213.239.215.236:3414</pre>This means your Grin-Node is connected to us as an outbound peer.</p>
-          <p>Your highest Average Uptime will win.</p>
+      <v-list-group
+          :value="true"
+          no-action
+          sub-group
+      >
+
+        <template v-slot:activator>
+          <v-list-item link to="" v-scroll-to="'#faq-technical'">
+            <v-list-item-title class="text-h6">
+              <router-link to="" v-scroll-to="'#faq-technical'">Technical questions</router-link>
+            </v-list-item-title>
+          </v-list-item>
+        </template>
+        <v-list-item link to="" v-scroll-to="'#faq-technical-tor'">
+          <v-list-item-title>
+           <router-link to="" v-scroll-to="'#faq-technical-tor'">Check TOR address</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item link to="" v-scroll-to="'#faq-technical-node'">
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-technical-node'">How to run a Grin-Node?</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item link to="" v-scroll-to="'#faq-technical-uptime'">
+          <v-list-item-title>
+            <router-link class="text-wrap" to="" v-scroll-to="'#faq-technical-uptime'">How are we calculating your Grin-Node uptime?</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item link to="" v-scroll-to="'#faq-technical-public-api'">
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-technical-public-api'">Public API</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item link to="" v-scroll-to="'#faq-technical-rank'">
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-technical-rank'">Where can I see my Grin-Node rank?</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item link>
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-technical-api-secret'">Do I need an API secret?</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+
+        <v-list-item link to="" v-scroll-to="'#faq-technical-debian-vps'">
+          <v-list-item-title>
+            <router-link class="text-wrap" to="" v-scroll-to="'#faq-technical-debian-vps'">How to install and run a Grin Node with a DebianVPS</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+
+        <v-list-item link to="" v-scroll-to="'#faq-technical-ip-twice'">
+          <v-list-item-title>
+            <router-link to="" v-scroll-to="'#faq-technical-ip-twice'">Why is my IP address listed twice?</router-link>
+          </v-list-item-title>
+        </v-list-item>
+
+
+      </v-list-group>
+
+    </v-list>
+      <h3 class="text-h4 grey--text text--darken-2   my-12"  id="faq-general">General questions</h3>
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-grin">What is Grin?</h3>
+      <span class="">Grin is a privacy-preserving digital currency built openly by developers distributed all over the world. It provides electronic transactions for all without censorship or restrictions. <router-link to="/https://grin.mw/">official website</router-link> for more information.</span>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-node">What is a grin node?</h3>
+      <span>The Grin digital currency is a decentralized network of grin nodes. Those are the entry points to the network. Whenever you want to submit a new transaction or even simply check your balance, you must connect to a synced node.</span>
+      <v-divider class="my-12"></v-divider>
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-motivation-grinnode-live">Can I use my wallet with a grinnode.live node instead of running my own?</h3>
+      <span>Yes! Check our <router-link to="/tutorials">tutorials page</router-link> for instructions.</span>
+
+
+      <v-divider class="my-12"></v-divider>
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-motivation-node">If grinnode.live can act as my node, why would I want to run my own?</h3>
+      <span>First of all, grinnode.live is a network of nodes run by other users, so if nobody wants to run own node and <router-link to="/tutorials" v-scroll-to="'#tutorial-node-connect'">connect it</router-link> then grinnode.live would not provide node to anyone. Second of all, running own node provides a lot more security and privacy. The more nodes the healthier Grin network is. Our project was never intended to be a default solution for everyone, rather a backup plan in case of problems with running own node or a quick start solution for new users.</span>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h3 class="text-h4 grey--text text--darken-2   my-12"  id="faq-technical">Technical questions</h3>
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check TOR address  </h3>
+      <span >Check if the receiving TOR address is available. </span><br/>
+
+      <ul  class="text-left mt-4">
+      <li>via HTTP <a class="ml-4" href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
+       <li>via TOR <a class="ml-4" href="http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/">http://grinchck.ahcbagldgzdpa74g2mh74fvk5zjzpfjbvgqin6g3mfuu66tynv2gkiid.onion/</a>  </li>
+      </ul>
+      <p class="mt-4 caption">by: <a href="https://github.com/davidtavarez/grinaddresschecker">David Tavarez</a></p>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-node">How to run a Grin-Node?</h3>
+                <span >There are different Grin-Nodes you can be running to participate in this challenge:</span>
+
+
+        <ul   class="text-left mt-4 ">
+                  <li>Core Grin-Node Linux (<a href="https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node">https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node</a>)</li>
+                  <li>Core Grin-Node Windows (<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md">https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md</a>)</li>
+                  <li>Core Grin-Node on Google-Cloud (<a href="https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free">https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free</a>)</li>
+                  <li><a href="https://grinplusplus.github.io/#/" target="_blank">Grin++</a></li>
+                </ul>
+
+
+
+      <v-divider class="my-12"></v-divider>
+
+      <h3  class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-uptime">How are we calculating your Grin-Node uptime?</h3>
+       <span>We are querying our publicly available Grin-API <router-link exact to="/home">https://grinnode.live</router-link> every 10 minutes. These results will be stored in a database and compared.</span>
+
+
+      <v-divider class="my-12"></v-divider>
+
+                <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-public-api">Public API</h3>
+                <ul class="text-left">
+                  <li> HEALTH_CHECK_API_URL : <a href="https://grinnode.live:8080/healthcheck"> https://grinnode.live:8080/healthcheck </a></li>
+                  <li> PEERS_API_URL : <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
+                  <li> AGENTS_API_URL : <a href="https://grinnode.live:8080/agents">https://grinnode.live:8080/agents</a></li>
+                </ul>
+
+      <v-divider class="my-12"></v-divider>
+                <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-rank">Where can I see my Grin-Node rank?</h3>
+                <span>You can view the current leaderboard <router-link exact to="/challenge">here</router-link>.</span>
+
+
+      <v-divider class="my-12"></v-divider>
+
+       <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-api-secret">Do I need an API secret?</h3>
+       <span>No. All API's can be used without any API secret or owner secrets. No basic-auth must be set to use it. </span>
+      <v-divider class="my-12"></v-divider>
+
+
+
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-debian-vps">How to install and run a Grin Node with a DebianVPS</h3>
+      <span>Tutorial: <a href="https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8">https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8</a> </span>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h6 class="text-h6 grey--text text--darken-3 mt-2 mb-4" id="faq-technical-ip-twice">Why is my IP address listed twice?</h6>
+
+      <v-card outlined dark  color="grey darken-3" class="px-4 py-2 mb-4">
+        <div class="code text-left">
+          <span class=""> [::ffff:213.239.215.236]:3414</span><br/>
         </div>
-      </section>
-    </main>
-  </div>
+      </v-card>
+
+      <span>This means your Grin-Node is connected to us as an inbound peer.</span>
+
+      <v-card outlined dark  color="grey darken-3" class="px-4 py-2 my-4">
+        <div class="code text-left">
+          <span class=""> 213.239.215.236:3414</span><br/>
+        </div>
+      </v-card>
+
+      <span> This means your Grin-Node is connected to us as an outbound peer.</span><br/> <br/>
+      <span >Your highest Average Uptime will win.</span>
+
+
+
+    </v-col>
+  </v-row>
+
+
 </template>
 
 <script>
@@ -99,5 +235,9 @@
 </script>
 
 <style scoped>
+
+  ul{
+    list-style: none;
+  }
 
 </style>

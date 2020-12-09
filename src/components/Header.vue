@@ -1,88 +1,150 @@
 <template>
-    <header class="header">
-        <div class="header__news">
-            <ol class="header_news_messages">
-                <li>[03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's</li>
-                <li>Welcome</li>
-            </ol>
-            <div class="header_news_status">
-                <span style="margin-right: 5px;">API status:</span><span @click="$router.push('/global-health-check')" class="api_status" :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
-            </div>
-        </div>
-        <Navigation></Navigation>
-    </header>
+  <nav>
+
+    <v-system-bar  absolute   app dark class="grey darken-2">
+
+      <span class="hidden-sm-and-down">
+        [03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's
+      </span>
+
+      <v-spacer></v-spacer>
+      <span>API status:</span>
+      <span @click="$router.push('/global-health-check')" class="mx-2"
+            :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+    </v-system-bar>
+
+    <v-app-bar app absolute hide-on-scroll   elevation="0" dense  color="secondary">
+      <v-app-bar-nav-icon @click="drawer=!drawer" class="black--text  hidden-md-and-up ">
+
+      </v-app-bar-nav-icon>
+      <v-img class="mx-3"
+             contain
+             max-height="40"
+             max-width="40"
+             left
+             src="/images/grin-logo.svg"></v-img>
+
+      <v-toolbar-title>
+
+        <span class="text-h5">Grinnode.live</span>
+      </v-toolbar-title>
+
+      <v-spacer/>
+
+
+      <v-btn class="hidden-sm-and-down" color="info" medium
+             href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">
+        <span class="white--text">Donations & Sponsorships</span>
+
+      </v-btn>
+
+      <template v-slot:extension>
+
+        <v-tabs
+            centered
+            class="hidden-sm-and-down"
+            color="black"
+            v-model="tab"
+        >
+          <v-tabs-slider color="yellow"></v-tabs-slider>
+          <v-tab to="/">
+            <span>Home</span>
+            <v-icon right>home</v-icon>
+          </v-tab>
+          <v-tab to="/tutorials">
+            <span>Tutorials</span>
+            <v-icon right>receipt_long</v-icon>
+          </v-tab>
+          <v-tab to="/challenge">
+            <span>Challenge</span>
+            <v-icon right>watch</v-icon>
+          </v-tab>
+          <v-tab to="/stats">
+            <span>Stats</span>
+            <v-icon right>leaderboard</v-icon>
+          </v-tab>
+          <v-tab to="/faq">
+            <span>FAQ</span>
+            <v-icon right>question_answer</v-icon>
+          </v-tab>
+          <v-tab to="/contact">
+            <span>Contact</span>
+            <v-icon right>contact_page</v-icon>
+          </v-tab>
+
+
+        </v-tabs>
+      </template>
+
+
+    </v-app-bar>
+
+
+    <v-navigation-drawer v-model="drawer" app disable-resize-watcher class="white">
+      <v-list
+          nav
+          dark>
+
+        <v-list-item-group
+            active-class="yellow--text darken-4  "
+        >
+          <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
+            <v-list-item-action>
+              <v-icon class="black--text">{{ link.icon }}</v-icon>
+
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">{{ link.text }}</v-list-item-title>
+            </v-list-item-content>
+
+
+          </v-list-item>
+
+        </v-list-item-group>
+
+      </v-list>
+
+      <v-divider></v-divider>
+
+      <v-chip class="mt-4" dark label large color="info"
+              href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">
+        <v-icon left>mood</v-icon>
+        Donations & Sponsorships
+      </v-chip>
+      <!--      <v-chip class="hidden-sm-and-down" color="black" medium href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">-->
+      <!--        <span class="white&#45;&#45;text">Donations & Sponsorships</span>-->
+
+      <!--      </v-chip>-->
+
+
+    </v-navigation-drawer>
+
+  </nav>
+
 </template>
 
 <script>
-  import Navigation from "@/components/Navigation";
+export default {
+  name: "Header",
+  data() {
+    return {
+      tab: true,
+      drawer: false,
+      links: [
+        {icon: 'home', text: 'Home', route: '/'},
+        {icon: 'receipt_long', text: 'Tutorials', route: '/tutorials'},
+        {icon: 'watch', text: 'Challange', route: '/challenge'},
+        {icon: 'leaderboard', text: 'Stats', route: '/stats'},
+        {icon: 'question_answer', text: 'FAQ', route: '/faq'},
+        {icon: 'contact_page', text: 'Contact', route: '/contact'},
+      ],
+      headBarFixed: false
+    }
 
-  export default {
-    name: "Header",
-    components: {Navigation},
-    mounted() {
-      this.$dao.healthCheck();
-    },
   }
+}
 </script>
 
-<style scoped>
-    ul, ol {
-        list-style: none;
-    }
+<style>
 
-    .header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 10000;
-        height: 100px;
-        background-color: transparent;
-        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.12);
-    }
-
-    .header__news {
-        z-index: 8;
-        position: relative;
-        padding: 0 40px;
-        display: flex;
-        width: 100%;
-        height: 30px;
-        flex-flow: row;
-        justify-content: space-between;
-        font-size: 0.8rem;
-        font-weight: normal;
-        line-height: 30px;
-        color: var(--text-tertiary-color);
-        background-color: var(--tertiary-color);
-        overflow: hidden;
-    }
-
-    .header_news_messages {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 80%;
-    }
-
-    .header_news_messages li {
-        padding: 0 10px;
-    }
-
-    .header_news_status {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 20%;
-        padding: 0 10px;
-    }
-
-    .api_status {
-        color: rgb(255, 255, 255);
-        height: 20px;
-        line-height: 20px;
-        margin: 5px 0;
-        border-radius: 2px;
-        padding: 0 5px;
-        font-weight: bold;
-        cursor: pointer;
-    }
 </style>

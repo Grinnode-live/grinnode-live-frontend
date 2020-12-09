@@ -1,54 +1,92 @@
 <template>
-    <div class="body_wrapper">
-        <main class="content">
-            <section class="home">
-                <div class="container home_container">
-                    <h2 class="container_header">Global Health Check</h2>
-                    <p>Grinnode.live WEB API: <span class="status" :style="grinWebApiStyle()">{{ this.grinWebApi }}</span></p>
-                    <p>Grinnode.live WEB SITE: <span class="status" :style="grinWebSiteStyle()">{{ this.grinWebSite }}</span></p>
-                    <p>Grinnode.live WALLET API: <span class="status" :style="grinWalletApiStyle()">{{ this.grinWalletApi }}</span></p>
-                    <p>213.239.215.236:3414 NODE SYNC: <span class="status" :style="grinNodeSync1Style()">{{ this.grinNodeSync1 }}</span></p>
-                    <p>http://grinnode.live:3414 NODE SYNC: <span class="status" :style="grinNodeSync2Style()">{{ this.grinNodeSync2 }}</span></p>
-                    <p>Grinnode.live DONATION WALLET: <span class="status" :style="grinDonationWalletStyle()">{{ this.grinDonationWallet }}</span></p>
 
-                    <h2 class="container_header">Scheduled Downtimes</h2>
-                    <table id="downtimeTable" border="0">
-                        <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Start Time</th>
-                            <th>End Time</th>
-                        </tr>
-                        </thead>
+  <v-row>
 
-                        <tbody>
-                        <tr v-for="(dt, index) in this.downtimes" :key="index">
-                            <td>{{ dt.reason }}</td>
-                            <td>{{ new Date(+dt.start_datetime) }}</td>
-                            <td>{{ new Date(+dt.end_datetime) }}</td>
-                        </tr>
-                        </tbody>
+    <v-col cols="10" offset="1" align="center">
+      <h1 class="text-h4 text-center mb-6">Global Health Check</h1>
 
-                        <tfoot>
-                        <tr>
-                            <td colspan="2">
-                                <span style="text-align: left">Last updated: {{ new Date(+this.$dao.globalHealthCheck.downtimes.lastUpdated) }}</span>
-                            </td>
-                            <td>
-                                Source: <a href="https://grinnode.live:8080/GlobalHealthCheck">Grinnode.live</a>
-                            </td>
-                        </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </section>
-        </main>
-    </div>
+      <table>
+        <tr  >
+        <td class="pr-4">Grinnode.live WEB API </td>
+        <td><span class="status" :style="grinWebApiStyle()">{{ this.grinWebApi }}</span></td>
+        </tr>
+        <tr>
+          <td class="pr-4">Grinnode.live WEB SITE  </td>
+          <td> <span class="status" :style="grinWebSiteStyle()">{{ this.grinWebSite }}</span> </td>
+        </tr>
+
+        <tr>
+          <td class="pr-4"> Grinnode.live WALLET API </td>
+          <td> <span class="status" :style="grinWalletApiStyle()">{{ this.grinWalletApi }}</span> </td>
+        </tr>
+        <tr>
+          <td class="pr-4"> 213.239.215.236:3414 NODE SYNC </td>
+          <td><span class="status" :style="grinNodeSync1Style()">{{ this.grinNodeSync1 }}</span> </td>
+        </tr>
+        <tr>
+          <td class="pr-4"> http://grinnode.live:3414 NODE SYNC </td>
+          <td>   <span class="status" :style="grinNodeSync2Style()">{{ this.grinNodeSync2 }} </span></td>
+        </tr>
+        <tr>
+          <td class="pr-4"> Grinnode.live DONATION WALLET </td>
+          <td> <span class="status" :style="grinDonationWalletStyle()">{{ this.grinDonationWallet }}</span> </td>
+        </tr>
+
+
+      </table>
+
+
+
+    </v-col>
+
+
+
+
+
+
+    <v-col cols="10" offset="1" >
+      <h1 class="text-h4 text-center my-12">Scheduled Downtimes</h1>
+
+      <v-sheet height="50" class="d-flex  justify-space-between">
+        <v-btn     @click="$refs.calendar.prev()"      >
+          <v-icon color="primary" >west</v-icon>
+        </v-btn>
+
+        <span> {{calendar_year}}</span>
+
+        <v-btn     @click="$refs.calendar.next()"      >
+          <v-icon color="primary" >east</v-icon>
+        </v-btn>
+
+      </v-sheet>
+
+      <v-sheet height="600">
+      <v-calendar
+          ref ="calendar"
+          type="month"
+          v-model="calendar_value"
+          :events="downtimeEvents"
+      >
+
+      </v-calendar>
+
+      </v-sheet>
+    </v-col>
+
+
+  </v-row>
+
+
 </template>
 
 <script>
   export default {
     name: "GlobalHealthCheck",
+    data:function(){
+      return{
+        calendar_value : Date.now(),
+      }
+    },
     methods: {
       grinWebApiStyle() {
         return (this.grinWebApi === 'online') ? ({ backgroundColor: 'rgb(5, 205, 30)' }) : ({ backgroundColor: 'rgb(205, 5, 30)' });
@@ -70,6 +108,21 @@
       },
     },
     computed: {
+      calendar_year(){
+
+        return new Date(this.calendar_value).getFullYear();
+      },
+      downtimeEvents(){
+        let rows = []
+        this.$dao.globalHealthCheck.downtimes.result.forEach((dt)=>{
+          rows.push({
+            name : dt.reason,
+            start: new Date(+dt.start_datetime),
+            end: new Date(+dt.end_datetime),
+          });
+        });
+        return rows;
+      },
       downtimes() {
         return this.$dao.globalHealthCheck.downtimes.result;
       },
@@ -111,6 +164,11 @@
     }
 
     table {
-        max-width: 600px;
+
+
+
+    }
+    table td:first-child{
+
     }
 </style>

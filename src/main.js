@@ -6,7 +6,6 @@ import vuetify from "@/plugins/vuetify";
 import Vuetify from "vuetify";
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-
 const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
 const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
@@ -78,7 +77,7 @@ const shared = new Vue({
             this.peers = result;
           });
     },
-    getAgents() {
+      getAgents() {
       let start_time = Date.now();
       fetch(AGENTS_API_URL)
           .then(response => response.json())
