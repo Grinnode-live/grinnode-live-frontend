@@ -1,13 +1,14 @@
 <template>
   <v-row>
-    <v-col cols="10" offset="1" align="center">
+    <v-col cols="12"  align="center">
 
       <h1 class="text-h4 mb-6 ">Statistics</h1>
       <span>Public information of the Grinnode.live API.</span>
 
-      <h4 class="text-h5 my-8 grey--text text--darken-2">
-        Total inbound and outbound Grin-Nodes connections (last 30min)
+      <h4 class="text-h5 mt-4 grey--text text--darken-2">
+        Total inbound and outbound Grin-Nodes connections
       </h4>
+      <h4 class="text-h6 mt-2 mb-4 grey--text text--darken-1 "> (last 30min)</h4>
 
 
       <v-row>

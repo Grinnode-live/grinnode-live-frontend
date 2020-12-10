@@ -52,6 +52,7 @@ const shared = new Vue({
           .then(response => response.json())
           .then((result) => {
             this.apiStatus = 'offline';
+            console.log("checking health")
             if (result.ok) this.apiStatus = 'online';
           });
     },
@@ -98,7 +99,7 @@ const shared = new Vue({
   },
   computed: {
     statusStyle() {
-      return (this.$dao.apiStatus === 'online') ? ({ backgroundColor: 'rgb(5, 205, 30)' }) : ({ backgroundColor: 'rgb(205, 5, 30)' });
+      return (this.$dao.apiStatus === 'online') ? ({ backgroundColor: 'rgb(5, 205, 30)' ,cursor:'pointer'}) : ({ backgroundColor: 'rgb(205, 5, 30)' ,cursor:'pointer'});
     },
   },
 });

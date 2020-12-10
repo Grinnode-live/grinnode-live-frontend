@@ -9,6 +9,7 @@ export default new Vuetify({
         iconfont: 'md',  // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
     },
     theme: {
+        options: { customProperties: true }, // Enabled for accessing primary color css variable for span styling
         themes:{
             light:{
                 primary:"#82603a",
