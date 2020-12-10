@@ -52,7 +52,6 @@ const shared = new Vue({
           .then(response => response.json())
           .then((result) => {
             this.apiStatus = 'offline';
-            console.log("checking health")
             if (result.ok) this.apiStatus = 'online';
           });
     },
