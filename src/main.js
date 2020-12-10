@@ -2,6 +2,9 @@ import Vue from 'vue';
 import VueScrollTo from 'vue-scrollto'
 import App from './App.vue';
 import router from './router';
+import vuetify from "@/plugins/vuetify";
+import Vuetify from "vuetify";
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
@@ -74,7 +77,7 @@ const shared = new Vue({
             this.peers = result;
           });
     },
-    getAgents() {
+      getAgents() {
       let start_time = Date.now();
       fetch(AGENTS_API_URL)
           .then(response => response.json())
@@ -106,11 +109,13 @@ shared.install = function () {
   });
 };
 
+Vue.use(Vuetify);
 Vue.use(VueScrollTo)
 Vue.use(shared);
 Vue.config.productionTip = false;
 
 new Vue({
   router,
+    vuetify,
   render(h) { return h(App); },
 }).$mount('#app');
