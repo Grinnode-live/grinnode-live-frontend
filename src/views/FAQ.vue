@@ -1,7 +1,7 @@
 <template>
 
   <v-row>
-    <v-col  cols="10" offset="1"  align="center">
+    <v-col  cols="12"   align="center">
       <h1 class="text-h4 mb-6 "  >Frequently asked Questions</h1>
       <h4 class="text-h6 text-left grey--text">Table of Contents</h4>
 
@@ -160,7 +160,7 @@
 
 
         <ul   class="text-left mt-4 ">
-                  <li>Core Grin-Node Linux (<a href="https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node">https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node</a>)</li>
+                  <li >Core Grin-Node Linux (<a  href="https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node">https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node</a>)</li>
                   <li>Core Grin-Node Windows (<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md">https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md</a>)</li>
                   <li>Core Grin-Node on Google-Cloud (<a href="https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free">https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free</a>)</li>
                   <li><a href="https://grinplusplus.github.io/#/" target="_blank">Grin++</a></li>

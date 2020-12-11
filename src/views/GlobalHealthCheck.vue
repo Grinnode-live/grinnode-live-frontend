@@ -163,8 +163,8 @@
         font-weight: bold;
     }
 
-    table {
-
+    table tr {
+      height:4rem;
 
 
     }

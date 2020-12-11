@@ -98,7 +98,7 @@ const shared = new Vue({
   },
   computed: {
     statusStyle() {
-      return (this.$dao.apiStatus === 'online') ? ({ backgroundColor: 'rgb(5, 205, 30)' }) : ({ backgroundColor: 'rgb(205, 5, 30)' });
+      return (this.$dao.apiStatus === 'online') ? ({ backgroundColor: 'rgb(5, 205, 30)' ,cursor:'pointer'}) : ({ backgroundColor: 'rgb(205, 5, 30)' ,cursor:'pointer'});
     },
   },
 });

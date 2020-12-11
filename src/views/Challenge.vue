@@ -1,7 +1,7 @@
 <template>
 
   <v-row>
-    <v-col cols="10" offset="1" >
+    <v-col cols="12"  >
 
       <h1 class="text-h4 text-center mb-6 ">Grinnode.live Uptime Challenge</h1>
 

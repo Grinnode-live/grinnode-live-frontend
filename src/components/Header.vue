@@ -9,8 +9,10 @@
 
       <v-spacer></v-spacer>
       <span>API status:</span>
+
       <span @click="$router.push('/global-health-check')" class="mx-2"
             :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+
     </v-system-bar>
 
     <v-app-bar app absolute hide-on-scroll   elevation="0" dense  color="secondary">
@@ -106,7 +108,7 @@
 
       <v-divider></v-divider>
 
-      <v-chip class="mt-4" dark label large color="info"
+      <v-chip class="ml-2 mt-4" dark label large color="info"
               href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">
         <v-icon left>mood</v-icon>
         Donations & Sponsorships
@@ -141,6 +143,9 @@ export default {
       headBarFixed: false
     }
 
+  },
+  mounted(){
+    this.$dao.healthCheck();
   }
 }
 </script>
