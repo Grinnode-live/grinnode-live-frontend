@@ -68,7 +68,7 @@
 
       <div class="text-center">
       <v-chip  color="primary" outlined href="https://github.com/MCM-Mike/grinnode.live/blob/master/free-grin-challenge.md" >
-        FULL PRICE LIST
+        FULL PRIZE LIST
       </v-chip>
       </div>
       <v-divider class="my-8" ></v-divider>
