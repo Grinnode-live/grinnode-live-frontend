@@ -18,7 +18,7 @@
         <template v-slot:activator>
           <v-list-item link to="" v-scroll-to="'#faq-general'" >
             <v-list-item-title class="text-h6">
-              <router-link to="" v-scroll-to="'#faq-general'">General questions</router-link>
+              <a >General questions</a>
             </v-list-item-title>
           </v-list-item>
         </template>
@@ -26,26 +26,26 @@
 
         <v-list-item link to="" v-scroll-to="'#faq-general-grin'">
           <v-list-item-action>
-            <router-link to="" v-scroll-to="'#faq-general-grin'">What is Grin?</router-link>
+            <a >What is Grin?</a>
           </v-list-item-action>
         </v-list-item>
 
        <v-list-item link to="" v-scroll-to="'#faq-general-node'">
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-general-node'">What is a grin node?</router-link>
+            <a  >What is a grin node?</a>
           </v-list-item-title>
         </v-list-item>
 
        <v-list-item link to="" v-scroll-to="'#faq-general-motivation-grinnode-live'">
           <v-list-item-title >
-            <router-link  class="text-wrap"  to="" v-scroll-to="'#faq-general-motivation-grinnode-live'">
-              <span >Can I use my wallet with a grinnode.live node instead of running my own?</span></router-link>
+            <a  class="text-wrap"   >
+              <span >Can I use my wallet with a grinnode.live node instead of running my own?</span></a>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item link to="" v-scroll-to="'#faq-motivation-node'">
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-motivation-node'" class="text-wrap">If grinnode.live can act as my node, why would I want to run my own?</router-link>
+            <a class="text-wrap">If grinnode.live can act as my node, why would I want to run my own?</a>
           </v-list-item-title>
         </v-list-item>
 
@@ -62,57 +62,57 @@
         <template v-slot:activator>
           <v-list-item link to="" v-scroll-to="'#faq-technical'">
             <v-list-item-title class="text-h6">
-              <router-link to="" v-scroll-to="'#faq-technical'">Technical questions</router-link>
+              <a  >Technical questions</a>
             </v-list-item-title>
           </v-list-item>
         </template>
         <v-list-item link to="" v-scroll-to="'#faq-technical-tor'">
           <v-list-item-title>
-           <router-link to="" v-scroll-to="'#faq-technical-tor'">Check TOR address</router-link>
+           <a  >Check TOR address</a>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item link to="" v-scroll-to="'#faq-technical-node'">
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-technical-node'">How to run a Grin-Node?</router-link>
+            <a  >How to run a Grin-Node?</a>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item link to="" v-scroll-to="'#faq-technical-uptime'">
           <v-list-item-title>
-            <router-link class="text-wrap" to="" v-scroll-to="'#faq-technical-uptime'">How are we calculating your Grin-Node uptime?</router-link>
+            <a class="text-wrap"  >How are we calculating your Grin-Node uptime?</a>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item link to="" v-scroll-to="'#faq-technical-public-api'">
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-technical-public-api'">Public API</router-link>
+            <a >Public API</a>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item link to="" v-scroll-to="'#faq-technical-rank'">
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-technical-rank'">Where can I see my Grin-Node rank?</router-link>
+            <a  >Where can I see my Grin-Node rank?</a>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item link>
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-technical-api-secret'">Do I need an API secret?</router-link>
+            <a  >Do I need an API secret?</a>
           </v-list-item-title>
         </v-list-item>
 
 
         <v-list-item link to="" v-scroll-to="'#faq-technical-debian-vps'">
           <v-list-item-title>
-            <router-link class="text-wrap" to="" v-scroll-to="'#faq-technical-debian-vps'">How to install and run a Grin Node with a DebianVPS</router-link>
+            <a class="text-wrap"  >How to install and run a Grin Node with a DebianVPS</a>
           </v-list-item-title>
         </v-list-item>
 
 
         <v-list-item link to="" v-scroll-to="'#faq-technical-ip-twice'">
           <v-list-item-title>
-            <router-link to="" v-scroll-to="'#faq-technical-ip-twice'">Why is my IP address listed twice?</router-link>
+            <a  >Why is my IP address listed twice?</a>
           </v-list-item-title>
         </v-list-item>
 
