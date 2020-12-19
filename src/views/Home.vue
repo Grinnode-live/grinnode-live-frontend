@@ -36,8 +36,13 @@
         and reach us!
       </p>
       <v-divider class="mt-6"></v-divider>
+<!--      UPDATES-->
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
+
       <h6 class="text-h6 mb-3 grey--text">12/2020</h6>
+      <p>Grinnode.live Winter 2020 Bug Bash Challenge has begun with lots of prizes and giveaways. Both new and experienced users are welcome to participate.
+        Visit our <a href="https://github.com/Grinnode-live/2020-grin-bug-bash-challenge">github page</a> for details.</p>
+
       <p>Grinnode.live is updated to a responsive design with interactive data tables. </p>
 
       <h6 class="text-h6 mt-12 mb-3 grey--text">07/2020</h6>

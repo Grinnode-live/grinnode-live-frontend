@@ -1,13 +1,14 @@
 <template>
   <nav>
-
     <v-system-bar  absolute   app dark class="grey darken-2">
-
       <span class="hidden-sm-and-down">
         [03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's
       </span>
-
       <v-spacer></v-spacer>
+
+
+      <span  v-if="grinBTCPrice" class="mr-8" >{{grinBTCPrice}} / BTC ({{grinBTCPriceChange}} %) </span>
+
       <span>API status:</span>
 
       <span @click="$router.push('/global-health-check')" class="mx-2"
@@ -140,13 +141,34 @@ export default {
         {icon: 'question_answer', text: 'FAQ', route: '/faq'},
         {icon: 'contact_page', text: 'Contact', route: '/contact'},
       ],
-      headBarFixed: false
+      headBarFixed: false,
+      grinBTCPrice : "",
+      grinBTCPriceChange:""
     }
 
   },
   mounted(){
     this.$dao.healthCheck();
+    this.refreshGrinPrice();
+    setInterval(this.refreshGrinPrice,3000);
+  },
+  methods:{
+    refreshGrinPrice:function(){
+      fetch("https://api.coingecko.com/api/v3/coins/grin")
+      .then(response => response.json())
+      .then((result)=>{
+
+          this.grinBTCPrice = result['market_data']['current_price']['btc'];
+          let priceChange = result['market_data']['price_change_percentage_24h_in_currency']['btc'];
+          this.grinBTCPriceChange =priceChange.toFixed(1)+"";
+      })
+      .catch(()=>{
+        this.$data.grinBTCPrice="";
+        this.$data.grinBTCPriceChange="";
+      })
+    }
   }
+
 }
 </script>
 
