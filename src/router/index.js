@@ -28,7 +28,7 @@ const routes = [
     component: Tutorials,
   },
   {
-    path: '/challenge',
+    path: '/challenge/:tabid',
     name: 'challenge',
     component: Challenge,
   },
