@@ -17,7 +17,7 @@
 
             <v-tab-item     key="0">
               <v-card flat>
-                <h1 class="text-h4 text-center mt-12 mb-6 ">Bug Challenge</h1>
+                <h1 class="text-h4 text-center mt-12 mb-6 ">Winter 2020 Bug Bash Challenge</h1>
                 <p class="text-justify">At the beginning of December 2020 we discussed a possibility of performing another challenge before Hard Fork 4 network update planned for January 2021. Appropriate amount of funding has been secured and we announced the <a :href="bugChallengeData.forum_link" >grin.mv forum. </a> </p>
                 <p class="text-justify">We knew grin-wallet and grin-node could use an appropriate amount of testing but we did not know exactly how to organize such event. It was our first time and we had to improvise a lot. We came up with prizes and rewards and announced them on <a :href="bugChallengeData.github_link">github</a> . Many people from the grin keybase community have contributed and helped defined over {{bugChallengeData.number_of_tests}} test cases. We would like to give our special thanks to
                   <ul id="v-for-object">
