@@ -1,13 +1,13 @@
 <template>
   <nav>
-    <v-system-bar  absolute   app dark class="grey darken-2">
+    <v-system-bar absolute app dark class="grey darken-2">
       <span class="hidden-sm-and-down">
-        [03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's
+        [01/2021] The Grinnode.live Winter 2020 Bug Bash Challenge has concluded!
       </span>
       <v-spacer></v-spacer>
 
 
-      <span  v-if="grinBTCPrice" class="mr-8" >{{grinBTCPrice}} / BTC ({{grinBTCPriceChange}} %) </span>
+      <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC ({{ grinBTCPriceChange }} %) </span>
 
       <span>API status:</span>
 
@@ -16,7 +16,7 @@
 
     </v-system-bar>
 
-    <v-app-bar app absolute hide-on-scroll   elevation="0" dense  color="secondary">
+    <v-app-bar app absolute hide-on-scroll elevation="0" dense color="secondary">
       <v-app-bar-nav-icon @click="drawer=!drawer" class="black--text  hidden-md-and-up ">
 
       </v-app-bar-nav-icon>
@@ -32,6 +32,7 @@
         <span class="text-h5">Grinnode.live</span>
       </v-toolbar-title>
 
+
       <v-spacer/>
 
 
@@ -43,47 +44,58 @@
 
       <template v-slot:extension>
 
-        <v-tabs
-            centered
-            class="hidden-sm-and-down"
-            color="black"
-            v-model="tab"
-        >
-          <v-tabs-slider color="yellow"></v-tabs-slider>
-          <v-tab to="/">
-            <span>Home</span>
+        <v-sheet color="#fef102" class="mx-auto pb-0 hidden-sm-and-down negative-bottom-margin">
+          <v-chip medium to="/" color="#fef102" class="rounded-0 px-2  ">
+            <span class="text-subtitle-2 text--primary">HOME</span>
             <v-icon right>home</v-icon>
-          </v-tab>
-          <v-tab to="/tutorials">
-            <span>Tutorials</span>
+          </v-chip>
+          <v-chip to="/tutorials" color="#fef102" class="rounded-0">
+            <span class="text-subtitle-2 text--primary ">TUTORIALS</span>
             <v-icon right>receipt_long</v-icon>
-          </v-tab>
-          <v-tab to="/challenge">
-            <span>Challenge</span>
-            <v-icon right>watch</v-icon>
-          </v-tab>
-          <v-tab to="/stats">
-            <span>Stats</span>
+          </v-chip>
+          <v-menu offset-y>
+            <template v-slot:activator="{ on, attrs }">
+              <v-chip color="#fef102" class="rounded-0" v-bind="attrs" v-on="on">
+                <span class="text-subtitle-2 text--primary">CHALLENGES</span>
+                <v-icon right>watch</v-icon>
+              </v-chip>
+            </template>
+            <v-list color="#fef102">
+              <v-list-item key="0" @click="alert('clicked')" to="/challenge/0">
+                <v-list-item-title>Bug Challenge</v-list-item-title>
+              </v-list-item>
+              <v-list-item key="1" to="/challenge/1">
+                <v-list-item-title>Node Challenge</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+
+          <v-chip to="/stats" color="#fef102" class="rounded-0">
+            <span class="text-subtitle-2 text--primary">STATS</span>
             <v-icon right>leaderboard</v-icon>
-          </v-tab>
-          <v-tab to="/faq">
-            <span>FAQ</span>
+          </v-chip>
+          <v-chip to="/faq" color="#fef102" class="rounded-0">
+            <span class="text-subtitle-2 text--primary">FAQ</span>
             <v-icon right>question_answer</v-icon>
-          </v-tab>
-          <v-tab to="/contact">
-            <span>Contact</span>
+          </v-chip>
+          <v-chip to="/contact" color="#fef102" class="rounded-0">
+            <span class="text-subtitle-2 text--primary">CONTACT</span>
             <v-icon right>contact_page</v-icon>
-          </v-tab>
+          </v-chip>
 
 
-        </v-tabs>
+        </v-sheet>
+
       </template>
 
 
     </v-app-bar>
 
 
-    <v-navigation-drawer v-model="drawer" app disable-resize-watcher class="white">
+    <v-navigation-drawer v-model="drawer" app disable-resize-watcher>
+
+
       <v-list
           nav
           dark>
@@ -91,17 +103,64 @@
         <v-list-item-group
             active-class="yellow--text darken-4  "
         >
-          <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
-            <v-list-item-action>
-              <v-icon class="black--text">{{ link.icon }}</v-icon>
 
+
+          <v-list-item router key="HOME" to="/">
+            <v-list-item-action>
+              <v-icon class="black--text">home</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title class="black--text">{{ link.text }}</v-list-item-title>
+              <v-list-item-title class="black--text">HOME</v-list-item-title>
             </v-list-item-content>
-
-
           </v-list-item>
+
+          <v-list-item router key="TUTORIALS" to="/tutorials">
+            <v-list-item-action>
+              <v-icon class="black--text">receipt_long</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">TUTORIALS</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item router key="CHALLENGEs" to="/challenge/0">
+            <v-list-item-action>
+              <v-icon class="black--text">watch</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">CHALLENGES</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+
+          <v-list-item router key="STATS" to="/stats">
+            <v-list-item-action>
+              <v-icon class="black--text">leaderboard</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">STATS</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item router key="FAQ" to="/faq">
+            <v-list-item-action>
+              <v-icon class="black--text">question_answer</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">FAQ</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+
+          <v-list-item router key="CONTACT" to="/contact">
+            <v-list-item-action>
+              <v-icon class="black--text">contact_page</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Contact</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
 
         </v-list-item-group>
 
@@ -114,10 +173,6 @@
         <v-icon left>mood</v-icon>
         Donations & Sponsorships
       </v-chip>
-      <!--      <v-chip class="hidden-sm-and-down" color="black" medium href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">-->
-      <!--        <span class="white&#45;&#45;text">Donations & Sponsorships</span>-->
-
-      <!--      </v-chip>-->
 
 
     </v-navigation-drawer>
@@ -133,39 +188,32 @@ export default {
     return {
       tab: true,
       drawer: false,
-      links: [
-        {icon: 'home', text: 'Home', route: '/'},
-        {icon: 'receipt_long', text: 'Tutorials', route: '/tutorials'},
-        {icon: 'watch', text: 'Challange', route: '/challenge'},
-        {icon: 'leaderboard', text: 'Stats', route: '/stats'},
-        {icon: 'question_answer', text: 'FAQ', route: '/faq'},
-        {icon: 'contact_page', text: 'Contact', route: '/contact'},
-      ],
+
       headBarFixed: false,
-      grinBTCPrice : "",
-      grinBTCPriceChange:""
+      grinBTCPrice: "",
+      grinBTCPriceChange: ""
     }
 
   },
-  mounted(){
+  mounted() {
     this.$dao.healthCheck();
     this.refreshGrinPrice();
-    setInterval(this.refreshGrinPrice,3000);
+    setInterval(this.refreshGrinPrice, 3000);
   },
-  methods:{
-    refreshGrinPrice:function(){
+  methods: {
+    refreshGrinPrice: function () {
       fetch("https://api.coingecko.com/api/v3/coins/grin")
-      .then(response => response.json())
-      .then((result)=>{
+          .then(response => response.json())
+          .then((result) => {
 
-          this.grinBTCPrice = result['market_data']['current_price']['btc'];
-          let priceChange = result['market_data']['price_change_percentage_24h_in_currency']['btc'];
-          this.grinBTCPriceChange =priceChange.toFixed(1)+"";
-      })
-      .catch(()=>{
-        this.$data.grinBTCPrice="";
-        this.$data.grinBTCPriceChange="";
-      })
+            this.grinBTCPrice = result['market_data']['current_price']['btc'];
+            let priceChange = result['market_data']['price_change_percentage_24h_in_currency']['btc'];
+            this.grinBTCPriceChange = priceChange.toFixed(1) + "";
+          })
+          .catch(() => {
+            this.$data.grinBTCPrice = "";
+            this.$data.grinBTCPriceChange = "";
+          })
     }
   }
 
@@ -173,5 +221,9 @@ export default {
 </script>
 
 <style>
+
+.negative-bottom-margin {
+  margin-bottom: -1rem;
+}
 
 </style>

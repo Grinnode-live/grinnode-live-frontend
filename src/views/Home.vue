@@ -39,6 +39,12 @@
 <!--      UPDATES-->
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
+      <h6 class="text-h6 mb-3 grey--text">01/2021</h6>
+      <p>
+        The Grinnode.live Winter 2020 Bug Bash Challenge has concluded. After two weeks of work, 9 testers have performed 50 tests. No critical security vulnerabilities have been discovered during the tests. We distributed the overall of €2,070.00 EUR in BTC/Grin! For more details please visit <a href="/challenge/0">page! </a>
+
+      </p>
+
       <h6 class="text-h6 mb-3 grey--text">12/2020</h6>
       <p>Grinnode.live Winter 2020 Bug Bash Challenge has begun with lots of prizes and giveaways. Both new and experienced users are welcome to participate.
         Visit our <a href="https://github.com/Grinnode-live/2020-grin-bug-bash-challenge">github page</a> for details.</p>
@@ -91,6 +97,9 @@ export default {
   data: function () {
     return {
       current_height: 0,
+      number_of_testers:32,
+      number_of_tests:57,
+      overall_prize:120,
 
     }
   },

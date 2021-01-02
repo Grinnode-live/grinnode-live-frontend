@@ -9,6 +9,7 @@
        <v-img contain height="500" :src="imageSrc">
 
        </v-img>
+      <v-caption>Lovely art by <a href="https://github.com/lovelygrin">lovelygrin</a></v-caption>
     </v-col>
 
   </v-row>
