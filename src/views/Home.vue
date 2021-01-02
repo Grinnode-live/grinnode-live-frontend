@@ -41,7 +41,7 @@
 
       <h6 class="text-h6 mb-3 grey--text">01/2021</h6>
       <p>
-        The Grinnode.live Winter 2020 Bug Bash Challenge has concluded. After two weeks of work, {{number_of_testers}} testers have performed {{number_of_tests}} tests. No critical security vulnerabilities have been discovered during the tests. We distributed the overall of {{overall_prize}} EUR in BTC/Grin! For more details please visit <a href="/challenge/0">page! </a>
+        The Grinnode.live Winter 2020 Bug Bash Challenge has concluded. After two weeks of work, 9 testers have performed 50 tests. No critical security vulnerabilities have been discovered during the tests. We distributed the overall of €2,070.00 EUR in BTC/Grin! For more details please visit <a href="/challenge/0">page! </a>
 
       </p>
 

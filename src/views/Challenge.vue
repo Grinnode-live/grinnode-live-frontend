@@ -17,18 +17,23 @@
 
             <v-tab-item     key="0">
               <v-card flat>
-                <h1 class="text-h4 text-center mt-12 mb-6 ">Bug Challenge</h1>
+                <h1 class="text-h4 text-center mt-12 mb-6 ">Winter 2020 Bug Bash Challenge</h1>
                 <p class="text-justify">At the beginning of December 2020 we discussed a possibility of performing another challenge before Hard Fork 4 network update planned for January 2021. Appropriate amount of funding has been secured and we announced the <a :href="bugChallengeData.forum_link" >grin.mv forum. </a> </p>
-                <p class="text-justify">We knew grin-wallet and grin-node could use an appropriate amount of testing but we did not know exactly how to organize such event. It was our first time and we had to improvise a lot. We came up with prizes and rewards and announced them on <a :href="bugChallengeData.github_link">github</a> . Many people from the grin keybase community have contributed and helped defined over {{bugChallengeData.number_of_tests}} test cases. We would like to give our special thanks to {{bugChallengeData.contributersList}} for all the help in defining those cases.</p>
+                <p class="text-justify">We knew grin-wallet and grin-node could use an appropriate amount of testing but we did not know exactly how to organize such event. It was our first time and we had to improvise a lot. We came up with prizes and rewards and announced them on <a :href="bugChallengeData.github_link">github</a> . Many people from the grin keybase community have contributed and helped defined over {{bugChallengeData.number_of_tests}} test cases. We would like to give our special thanks to
+                  <ul id="v-for-object">
+                    <li v-bind:key="contributor" v-for="contributor of bugChallengeData.contributors_list">
+                      <a :href="'https://github.com/'+contributor.name">@{{ contributor.name }}</a>
+                    </li>
+                  </ul> for all the help in defining those cases.</p>
 
                 <p>
                   After two weeks of hard work of over {{bugChallengeData.number_of_testers}} testers the challenge has concluded and revealed three winners:
                 </p>
 
 <!--              <ul class="my-6">-->
-<!--                <li class="my-2">  🥇 <span class="subtitle-1" >{{bugChallengeData.winners[0]['name']}} </span> {{bugChallengeData.winners[0]['closed_cases']}} <span class="caption" >cases   </span></li>-->
-<!--                <li class="my-2">  🥇 <span class="subtitle-1" >{{bugChallengeData.winners[1]['name']}} </span> {{bugChallengeData.winners[1]['closed_cases']}} <span class="caption" >cases   </span></li>-->
-<!--                <li class="my-2">  🥇 <span class="subtitle-1" >{{bugChallengeData.winners[2]['name']}} </span> {{bugChallengeData.winners[2]['closed_cases']}} <span class="caption" >cases   </span></li>-->
+<!--                <li class="my-2">  {{bugChallengeData.winners[0]['emoji']}} <span class="subtitle-1" >{{bugChallengeData.winners[0]['name']}} </span> {{bugChallengeData.winners[0]['closed_cases']}} <span class="caption" >cases   </span></li>-->
+<!--                <li class="my-2">  {{bugChallengeData.winners[1]['emoji']}} <span class="subtitle-1" >{{bugChallengeData.winners[1]['name']}} </span> {{bugChallengeData.winners[1]['closed_cases']}} <span class="caption" >cases   </span></li>-->
+<!--                <li class="my-2">  {{bugChallengeData.winners[2]['emoji']}} <span class="subtitle-1" >{{bugChallengeData.winners[2]['name']}} </span> {{bugChallengeData.winners[2]['closed_cases']}} <span class="caption" >cases   </span></li>-->
 
 <!--              </ul>-->
 
@@ -37,10 +42,10 @@
 
 
                   <tbody>
-                    <tr class="my-2">  <td class="text-center subtitle-1" >Name </td>  <td class="text-left subtitle-1"> Cases</td></tr>
-                    <tr class="my-2">   <td class="text-center" > 🥇 {{bugChallengeData.winners[0]['name']}} </td> <td class="text-left" > {{bugChallengeData.winners[0]['closed_cases']}}</td> </tr>
-                    <tr class="my-2">   <td class="text-center" > 🥇{{bugChallengeData.winners[1]['name']}} </td> <td class="text-left">{{bugChallengeData.winners[1]['closed_cases']}}</td> </tr>
-                    <tr class="my-2">  <td class="text-center"> 🥇 {{bugChallengeData.winners[2]['name']}} </td> <td class="text-left">{{bugChallengeData.winners[2]['closed_cases']}}</td> </tr>
+                    <tr class="my-2">  <td class="text-center subtitle-1" >Award </td> <td class="text-center subtitle-1" >Name </td>  <td class="text-left subtitle-1"> Cases</td></tr>
+                    <tr class="my-2">   <td class="text-center" > {{bugChallengeData.winners[0]['emoji']}} </td> <td class="text-center" > <a :href="'https://github.com/'+bugChallengeData.winners[0]['name']">@{{bugChallengeData.winners[0]['name']}}</a> </td> <td class="text-left" > {{bugChallengeData.winners[0]['closed_cases']}}</td> </tr>
+                    <tr class="my-2">   <td class="text-center" > {{bugChallengeData.winners[1]['emoji']}} </td> <td class="text-center" > <a :href="'https://github.com/'+bugChallengeData.winners[1]['name']">@{{bugChallengeData.winners[1]['name']}} </a></td> <td class="text-left">{{bugChallengeData.winners[1]['closed_cases']}}</td> </tr>
+                    <tr class="my-2">  <td class="text-center"> {{bugChallengeData.winners[2]['emoji']}} </td> <td class="text-center"> <a :href="'https://github.com/'+bugChallengeData.winners[2]['name']">@{{bugChallengeData.winners[2]['name']}}</a> </td> <td class="text-left">{{bugChallengeData.winners[2]['closed_cases']}}</td> </tr>
 
 
                 </tbody>
@@ -49,13 +54,13 @@
                 </v-card>
 
                 <p class="text-justify">
-                  As well as some special distinctions for 🎖️ @goyle for an exceptional quality of reports, which included highest quality description and even bash scripts. For this we rewarded @goyle with an extra {{bugChallengeData.distinction_reward}} Grin!
+                  As well as some special distinctions for 🎖️<a :href="'https://github.com/'+bugChallengeData.winners[1]['name']">@{{bugChallengeData.winners[1]['name']}} </a> for an exceptional quality of reports, which included highest quality description and even bash scripts. For this we rewarded <a :href="'https://github.com/'+bugChallengeData.winners[1]['name']">@{{bugChallengeData.winners[1]['name']}} </a> with an extra {{bugChallengeData.distinction_reward}}!
                 </p>
                 <p class="text-justify">
-                  After the challenge we distributed an evaluation form to our testers. Their feedback has indicated the necessity of grinnode.live which indicates running local node is still problematic and there is space for improvements. The testers feedback also indicated how essential the Python API wrapper script {{bugChallengeData.api_wrapper_script_link}} was to complete the tests. For developing this script we send our special thanks to 🎖️ @xiaojay and 🎖️ @bladedoyle.
+                  After the challenge we distributed an evaluation form to our testers. Their feedback has indicated the necessity of grinnode.live which indicates running local node is still problematic and there is space for improvements. The testers feedback also indicated how essential the <a :href="'{{bugChallengeData.api_wrapper_script_link}}'">Python API wrapper script</a> was to complete the tests. For developing this script we send our special thanks to 🎖️<a href="https://github.com/xiaojay">@xiaojay</a> and 🎖️ <a href="https://github.com/bladedoyle">@bladedoyle</a>.
                 </p>
                 <p class="text-justify">
-                  The two weeks between 19.12.20 10am UTC+1 and on 02.01.21 10am UTC+1 was an intense and very productive time. In this time the overall of {{bugChallengeData.overall_prize_value}} EUR in BTC/Grin has been distributed. The results of this challenge work will remain on <a :href="bugChallengeData.github_link">github</a> in the issues section.
+                  The two weeks between 19.12.20 10am UTC+1 and on 02.01.21 10am UTC+1 was an intense and very productive time. In this time the overall of {{bugChallengeData.overall_prize_value}} in BTC/Grin has been distributed. The results of this challenge work will remain on <a :href="bugChallengeData.github_link">github</a> in the issues section.
                 </p>
 
                 <p class="text-justify">
@@ -223,17 +228,24 @@
       bugChallengeData:{
         forum_link:"https://forum.grin.mw/t/grinnode-live-winter-2020-bug-bash-challenge-and-free-grin-btc-prizes-giveaway/8060",
         github_link:"https://github.com/Grinnode-live/2020-grin-bug-bash-challenge",
-        api_wrapper_script_link:"api_wrapper_script_link",
-        contributers_list:"mo5itoo, goyle, jitr ",
-        number_of_tests: "55",
-        number_of_testers:"20",
+        api_wrapper_script_link:"https://github.com/grinfans/grin.py/blob/main/wallet_v3.py",
+        contributors_list: [
+          {name: "bladedoyle"},
+          {name: "marekyggdrasil"},
+          {name: "MCM-Mike"},
+          {name: "mojitoo"},
+          {name: "stakervali"},
+          {name: "DavidBurkett"},
+          {name: "phyro"}],
+        number_of_tests: "50",
+        number_of_testers:"9",
         winners:[
-          {name:"mo5itoo", closed_cases:32},
-          {name:"goyle", closed_cases:20},
-          {name:"jitr", closed_cases:10},
+          {name:"mojitoo", closed_cases:20, emoji: "🥇"},
+          {name:"goyle", closed_cases:11, emoji: "🥈"},
+          {name:"ndcroos", closed_cases:7, emoji: "🥉"},
         ],
-        distinction_reward: 120,
-        overall_prize_value : 1500
+        distinction_reward: "€125.00",
+        overall_prize_value : "€2,070.00"
       },
       peers: [],
       leaderboard_headers:[
