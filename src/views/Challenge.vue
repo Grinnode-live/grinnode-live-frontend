@@ -57,7 +57,7 @@
                   As well as some special distinctions for 🎖️<a :href="'https://github.com/'+bugChallengeData.winners[1]['name']">@{{bugChallengeData.winners[1]['name']}} </a> for an exceptional quality of reports, which included highest quality description and even bash scripts. For this we rewarded <a :href="'https://github.com/'+bugChallengeData.winners[1]['name']">@{{bugChallengeData.winners[1]['name']}} </a> with an extra {{bugChallengeData.distinction_reward}}!
                 </p>
                 <p class="text-justify">
-                  After the challenge we distributed an evaluation form to our testers. Their feedback has indicated the necessity of grinnode.live which indicates running local node is still problematic and there is space for improvements. The testers feedback also indicated how essential the <a :href="'{{bugChallengeData.api_wrapper_script_link}}'">Python API wrapper script</a> was to complete the tests. For developing this script we send our special thanks to 🎖️<a href="https://github.com/xiaojay">@xiaojay</a> and 🎖️ <a href="https://github.com/bladedoyle">@bladedoyle</a>.
+                  After the challenge we distributed an evaluation form to our testers. Their feedback has indicated the necessity of grinnode.live which indicates running local node is still problematic and there is space for improvements. The testers feedback also indicated how essential the <a :href="bugChallengeData.api_wrapper_script_link">Python API wrapper script</a> was to complete the tests. For developing this script we send our special thanks to 🎖️<a href="https://github.com/xiaojay">@xiaojay</a> and 🎖️ <a href="https://github.com/bladedoyle">@bladedoyle</a>.
                 </p>
                 <p class="text-justify">
                   The two weeks between 19.12.20 10am UTC+1 and on 02.01.21 10am UTC+1 was an intense and very productive time. In this time the overall of {{bugChallengeData.overall_prize_value}} in BTC/Grin has been distributed. The results of this challenge work will remain on <a :href="bugChallengeData.github_link">github</a> in the issues section.
@@ -266,7 +266,13 @@
 
       console.log("on mounted");
       console.log("setting this.tab to "+  this.$route.params.tabid);
-      this.tab = parseInt(this.$route.params.tabid);
+      let tabId = parseInt(this.$route.params.tabid);
+      if (tabId){
+        this.tab = tabId;
+      }else{
+        this.tab=0;
+      }
+
       const peers_url =  'https://grinnode.live:8080/peers';
       let start_time = Date.now();
       fetch(peers_url)
