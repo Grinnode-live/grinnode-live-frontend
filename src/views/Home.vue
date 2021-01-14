@@ -58,7 +58,7 @@
       <p><strong>We will deprecate the APIv1 prior to the next Hardfork v5.0.x</strong></p>
 
       <v-card elevation="0" id="hardforkclock">
-        <flip-countdown deadline="2021-01-17 02:37:00"></flip-countdown>
+        <flip-countdown deadline="2021-01-17 00:00:00"></flip-countdown>
         <p class="text-center text-h5 ">
 
           <span style="color:var(--v-primary-base);">{{ 1048320 - current_height }} </span> blocks remaining...</p>
