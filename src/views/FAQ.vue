@@ -72,14 +72,6 @@
           </v-list-item-title>
         </v-list-item>
 
-
-
-        <v-list-item link to="" v-scroll-to="'#faq-tor-block'">
-          <v-list-item-title>
-            <a>Tor is blocked in my country, How can I send/receive grin?</a>
-          </v-list-item-title>
-        </v-list-item>
-
         <v-list-item link to="" v-scroll-to="'#faq-technical-node'">
           <v-list-item-title>
             <a  >How to run a Grin-Node?</a>
@@ -163,25 +155,17 @@
 
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-tor-block">Tor is blocked in my country, How can I send/receive grin?</h3>
-      <span >You can use bridges via Grin++ wallet to circumvent blockage on publicly listed tor nodes. More info on <a href="https://davidtavarez.github.io/2020/bypass-internet-censorship-and-filtering-grinplusplus/">David Tavarez's blog.</a></span>
-
-
-
-
-      <v-divider class="my-12"></v-divider>
-
-
       <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-node">How to run a Grin-Node?</h3>
                 <span >There are different Grin-Nodes you can be running to participate in this challenge:</span>
 
 
-      <ul   class="text-left mt-4 ">
+        <ul   class="text-left mt-4 ">
                   <li >Core Grin-Node Linux (<a  href="https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node">https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node</a>)</li>
                   <li>Core Grin-Node Windows (<a href="https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md">https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/node/winodws-how-to-run-node.md</a>)</li>
                   <li>Core Grin-Node on Google-Cloud (<a href="https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free">https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free</a>)</li>
                   <li><a href="https://grinplusplus.github.io/#/" target="_blank">Grin++</a></li>
                 </ul>
+
 
 
       <v-divider class="my-12"></v-divider>
