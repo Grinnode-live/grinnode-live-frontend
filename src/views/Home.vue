@@ -66,14 +66,6 @@
 
       <p><strong>We will deprecate the APIv1 prior to the next Hardfork v5.0.x</strong></p>
 
-      <v-card elevation="0" id="hardforkclock">
-        <flip-countdown :deadline="deadline"></flip-countdown>
-        <p class="text-center text-h5 ">
-
-          <span style="color:var(--v-primary-base);">{{ 1048320 - current_height }} </span> blocks remaining...</p>
-
-
-      </v-card>
 
 
       <h6 class="text-h6 mt-12 mb-3 grey--text">05/2020</h6>
@@ -95,13 +87,13 @@
 </template>
 
 <script>
-import FlipCountdown from 'vue2-flip-countdown'
+
 
 
 export default {
   name: "Home",
   components: {
-    FlipCountdown
+
   },
   data: function () {
     return {
