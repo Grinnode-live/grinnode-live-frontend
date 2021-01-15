@@ -43,6 +43,7 @@ const shared = new Vue({
         outbound: 0
       }
     },
+    currentBlockHeight:0,
     ioTime: 0,
     stickyNav: false,
   },
@@ -95,6 +96,26 @@ const shared = new Vue({
             this.globalHealthCheck = result;
           });
     },
+      getBlockHeight(){
+          fetch("https://grinnode.live:3413/v2/owner",
+              {
+                  method: 'POST',
+                  body: JSON.stringify({
+                      "jsonrpc": "2.0",
+                      "method": "get_status",
+                      "params": [],
+                      "id": 1
+                  })
+              })
+              .then(response => {
+
+                  response.json().then(data=>{
+                      if(data){
+                          this.currentBlockHeight= data.result.Ok.tip.height;
+                      }
+                  })
+              });
+      }
   },
   computed: {
     statusStyle() {

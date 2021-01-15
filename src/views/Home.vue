@@ -58,7 +58,7 @@
       <p><strong>We will deprecate the APIv1 prior to the next Hardfork v5.0.x</strong></p>
 
       <v-card elevation="0" id="hardforkclock">
-        <flip-countdown deadline="2021-01-16 02:48:00"></flip-countdown>
+        <flip-countdown :deadline="deadline"></flip-countdown>
         <p class="text-center text-h5 ">
 
           <span style="color:var(--v-primary-base);">{{ 1048320 - current_height }} </span> blocks remaining...</p>
@@ -100,11 +100,38 @@ export default {
       number_of_testers:32,
       number_of_tests:57,
       overall_prize:120,
+      deadlineEpoch:0,
+      deadline:"2021-01-16 02:48:00"
 
     }
   },
+  computed:{
+
+    // deadline: function(){
+    //
+    //
+    //   let remainingBlockCount = 0;
+    //   if(current_height>0){
+    //     remainingBlockCount = 1048320- blockHeight;
+    //   }
+    //   let t =   new Date(Date.now()+ remainingBlockCount*60000) ;
+    //   console.log(t);
+    //   //2021-01-16 02:48:00
+    //   let tarih = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDay()} ${t.getHours()}:${t.getMinutes()}:${t.getSeconds()}`
+    //   console.log(tarih);
+    //   return tarih;
+    // }
+  },
   mounted() {
+
+
+
+
+
     this.updateRemainingBlocks();
+
+
+
     setInterval(this.updateRemainingBlocks, 15000);
   },
   methods: {
@@ -124,6 +151,13 @@ export default {
             response.json().then(data=>{
               if(data){
                 this.current_height = data.result.Ok.tip.height;
+
+                let newDeadlineEpoch = new Date().getTime() + ( 1048320-this.current_height) *60000;
+                if (Math.abs(newDeadlineEpoch-this.deadlineEpoch)>1000*30){
+                    this.deadlineEpoch = newDeadlineEpoch;
+                    let t = new Date(this.deadlineEpoch);
+                    this.deadline = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()} ${t.getHours()}:${t.getMinutes()}:${t.getSeconds()}`;
+                }
               }
             })
           });
