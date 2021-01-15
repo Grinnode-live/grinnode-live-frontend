@@ -104,7 +104,7 @@
             </v-list-item-title>
           </v-list-item>
 
-          <v-list-item link>
+          <v-list-item link to=""  v-scroll-to="'#faq-technical-api-secret'">
             <v-list-item-title>
               <a  >Do I need an API secret?</a>
             </v-list-item-title>

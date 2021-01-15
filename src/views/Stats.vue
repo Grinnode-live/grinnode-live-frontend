@@ -25,14 +25,22 @@
         </v-col>
       </v-row>
 
-
-
         <span class="pt-4 text-caption grey--text text--darken-2 text-left">
             Last updated: {{ new Date(+this.$dao.io.lastUpdated) }}
           </span ><br/>
       <span class="text-caption grey--text text--darken-2"  > Response time: {{ this.$dao.ioTime }}</span>
 
       <v-divider class="my-12" ></v-divider>
+
+      <v-row class="mb-2 ">
+        <v-col cols="4" offset="4">
+          <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</p>
+<!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
+              <span class="text-h4" > {{this.$dao.currentBlockHeight}}</span>
+        </v-col>
+      </v-row>
+
+      <v-divider class="my-12"></v-divider>
 
       <h4 class="text-h5 my-8 grey--text text--darken-2">
         User Agents over the last 30 days
@@ -66,6 +74,7 @@
 
       this.$dao.ioCheck();
       this.$dao.getAgents();
+      this.$dao.getBlockHeight();
       let agents_url = 'https://grinnode.live:8080/agents';
       fetch(agents_url)
       .then(response=> response.json())
@@ -73,6 +82,7 @@
         this.agents = result;
         this.agents_last_updated = Date.now();
       });
+
 
 
     },

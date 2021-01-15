@@ -14,7 +14,7 @@
             <template v-slot:activator>
               <v-list-item link to="" v-scroll-to="'#tutorial-grinnode'">
                 <v-list-item-title class="text-h6">
-                  <router-link  class="text-wrap" to="" v-scroll-to="'#tutorial-grinnode'">How to use Grinnode.live</router-link>
+                  <router-link to=""  class="text-wrap" >How to use Grinnode.live</router-link>
                 </v-list-item-title>
               </v-list-item>
             </template>
@@ -63,7 +63,7 @@
             <template v-slot:activator>
               <v-list-item link to="" v-scroll-to="'#tutorial-api-documentation'">
                 <v-list-item-title class="text-h6">
-                  <router-link  to="" v-scroll-to="'#tutorial-api-documentation'">GRIN API documentaion</router-link>
+                  <router-link  to=""  >GRIN API documentation</router-link>
                 </v-list-item-title>
               </v-list-item>
             </template>
@@ -150,8 +150,8 @@
       <h4 class=" mb-2"> <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a> </h4>
 
       <p> When running grin with defaults, the v2 API is available </p>
-      <p><a>https://grinnode.live/v2/owner for the owner API</a>.</p>
-            <p><a>https://grinnode.live/v2/foreign for the foreign API</a>.</p>
+      <p><a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md#owner-api-endpoints">https://grinnode.live/v2/owner for the owner API</a>.</p>
+      <p><a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md#foreign-api-endpoints">https://grinnode.live/v2/foreign for the foreign API</a>.</p>
 
 
       <v-card outlined dark  color="grey darken-3" class="pa-4">
@@ -191,64 +191,26 @@
 
       <v-divider class="my-12"></v-divider>
 
-
-
-
-
-      <h2 class="text-h4   my-12" id='tutorial-api-documentation'> GRIN API documentaion</h2>
-
-      <h6 class="text-h6 grey--text text--darken-2 text-left my-4"> GRIN API v2:</h6>
-
-      <p class="text-justify">
-
-
-
-      <a  href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">Public Grin-API v2 documentation</a>
+      <h2 class="text-h4   my-12" id='tutorial-api-documentation'> GRIN API Documentation</h2>
+      <p>GRIN API v1 is  deprecated after grin fork version 4. Documentation Grin-API v2 can be found <a  href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">here</a>.
+        New api is based on JSON-RPC and divided into two sections
       </p>
-
-      <h6 class="text-h6 grey--text text--darken-2 text-left mt-12 mb-4"> GRIN API v1:</h6>
-
-      <p class="text-justify"> <span class="font-weight-bold black--text"> GRIN API v1:</span> will be deprecated in grin fork version 4 - Switch to <strong>APIv2</strong> </p>
-      <p class="text-justify">The following API-Calls are GRIN API v1 Calls:</p>
 
       <table   >
 
         <tr>
-          <td class="text-right"><a   href="https://grinnode.live/v1/status">/v1/status</a></td>
-          <td class="text-start"> <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">Returns various information about the node and the network</a> </td>
+          <td class="text-right"><a   href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md#owner-api-endpoints">Owner API endpoints</a></td>
+          <td class="text-start"> API calls referred to node</td>
         </tr>
 
         <tr>
-          <td class="text-right">  <a href="https://grinnode.live/v1/blocks/">/v1/blocks</a></td>
-          <td class="text-start"> <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-blocks" target="_blank">Returns data about a specific block given a hash, a height or an unspent commit.</a> </td>
+          <td class="text-right"><a   href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md#foreign-api-endpoints">Foreign API endpoints</a></td>
+          <td class="text-start"> API calls to be consumed by wallet </td>
         </tr>
-
-        <tr>
-          <td class="text-right"> <a href="https://grinnode.live/v1/headers/">/v1/headers</a>  </td>
-          <td class="text-start"> <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-headers" target="_blank">Returns data about a block headers given either a hash or height or an output commit. </a>  </td>
-        </tr>
-        <tr>
-          <td class="text-right"> <span class="caption"> (only allowed Users)</span> <a href="https://grinnode.live/v1/peers/">/v1/peers</a>  </td>
-          <td class="text-start"> <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-peers-connected" target="_blank">Retrieves all connected peers - BAN and UNBAN not allowed</a>  </td>
-        </tr>
-        <tr>
-          <td class="text-right"> <a href="https://grinnode.live/v1/chain/">/v1/chain</a> </td>
-          <td class="text-start"> <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#chain-endpoint" target="_blank">Retrieves details about the state of the current fork tip</a> </td>
-        </tr>
-        <tr>
-          <td class="text-right"> <a href="https://grinnode.live/v1/txhashset/">/v1/txhashset</a> </td>
-          <td class="text-start"> <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#txhashset-endpoint" target="_blank">Retrieve the roots of the TxHashSet</a> </td>
-        </tr>
-      <tr>
-          <td class="text-right"><a href="https://grinnode.live/v1/pool/push">/v1/pool/push</a>  </td>
-          <td class="text-start"><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#pool-endpoint" target="_blank">Push new transaction to our local transaction pool. Add ?fluff at the end of the URL to bypass Dandelion relay.</a>  </td>
-        </tr>
-
-
 
       </table>
 
-
+      <v-divider class="my-12"></v-divider>
 
     </v-col>
   </v-row>
