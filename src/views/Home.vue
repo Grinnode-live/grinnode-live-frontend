@@ -35,17 +35,26 @@
         <router-link exact :to="{name: 'contact'}">contact page</router-link>
         and reach us!
       </p>
+
       <v-divider class="mt-6"></v-divider>
-<!--      UPDATES-->
+
+      <!--      UPDATES-->
+
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
       <h6 class="text-h6 mb-3 grey--text">01/2021</h6>
+        <h6 class="text-h6 grey--text text--darken-2 " >Grin 5.0 network upgrade</h6>
+      <p>
+         Grin network reached block height of 1,048,320 which was set as a target for Hard Fork 4. New upgrade brings better transcation fee calculation and difficulty adjustment algorithm. Please note that Grin API v1 is depreceated, users should move to <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md">Grin API v2. </a>.
+      </p>
+      <h6 class="text-h6 grey--text text--darken-2" >Grinnode.live Winter 2020 Bug Bash Challenge </h6>
       <p>
         The Grinnode.live Winter 2020 Bug Bash Challenge has concluded. After two weeks of work, 9 testers have performed 50 tests. No critical security vulnerabilities have been discovered during the tests. We distributed the overall of €2,070.00 EUR in BTC/Grin! For more details please visit <a href="/challenge/0">page! </a>
 
       </p>
 
       <h6 class="text-h6 mb-3 grey--text">12/2020</h6>
+
       <p>Grinnode.live Winter 2020 Bug Bash Challenge has begun with lots of prizes and giveaways. Both new and experienced users are welcome to participate.
         Visit our <a href="https://github.com/Grinnode-live/2020-grin-bug-bash-challenge">github page</a> for details.</p>
 
@@ -57,14 +66,6 @@
 
       <p><strong>We will deprecate the APIv1 prior to the next Hardfork v5.0.x</strong></p>
 
-      <v-card elevation="0" id="hardforkclock">
-        <flip-countdown :deadline="deadline"></flip-countdown>
-        <p class="text-center text-h5 ">
-
-          <span style="color:var(--v-primary-base);">{{ 1048320 - current_height }} </span> blocks remaining...</p>
-
-
-      </v-card>
 
 
       <h6 class="text-h6 mt-12 mb-3 grey--text">05/2020</h6>
@@ -86,13 +87,13 @@
 </template>
 
 <script>
-import FlipCountdown from 'vue2-flip-countdown'
+
 
 
 export default {
   name: "Home",
   components: {
-    FlipCountdown
+
   },
   data: function () {
     return {

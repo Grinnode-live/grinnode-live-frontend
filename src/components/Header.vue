@@ -2,7 +2,7 @@
   <nav>
     <v-system-bar absolute app dark class="grey darken-2">
       <span class="hidden-sm-and-down">
-        [01/2021] The Grinnode.live Winter 2020 Bug Bash Challenge has concluded!
+        [01/2021] Grin 5.0 network upgrade is here!
       </span>
       <v-spacer></v-spacer>
 
