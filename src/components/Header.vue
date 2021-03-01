@@ -198,7 +198,7 @@ export default {
   mounted() {
     this.$dao.healthCheck();
     this.refreshGrinPrice();
-    setInterval(this.refreshGrinPrice, 3000);
+    setInterval(this.refreshGrinPrice, 5000);
   },
   methods: {
     refreshGrinPrice: function () {
