@@ -278,7 +278,17 @@ export default {
 
       if (this.wallet_address.length>0){
         this.is_checking=true;
-        console.log("wallet address: "+ this.wallet_address);
+          // remove .onion from end of string
+          if (this.wallet_address.endsWith(".onion")){
+            this.wallet_address = this.wallet_address.replace(".onion","");
+          }
+          if (this.wallet_address.startsWith("http://")){
+            this.wallet_address = this.wallet_address.replace("http://","");
+          }
+          if (this.wallet_address.startsWith("https://")){
+            this.wallet_address = this.wallet_address.replace("https://","");
+          }
+
           fetch("http://172.104.134.155:3000/walletcheck/"+ this.wallet_address).then(response => response.json())
             .then((result) => {
               if(result.isWalletValid){
