@@ -120,7 +120,7 @@ export default {
     updateChart:function(){
       this.$refs['chartDiv'].innerHTML=" <svg id=\"healthScoreChart\"></svg>";
       let chart = new d3plus.BarChart();
-      chart.groupPadding(16);
+      chart.groupPadding(5);
       chart.label(function (d) {
         if ((d['score'] >= 0) && (d['score'] <= 5)) {
           return ""; // Disable label
@@ -214,7 +214,6 @@ export default {
           },
           // ticks:[1,2,3,4,5],
           tickSize: 0,
-
           title: "",
           titleConfig: {
             fontColor: "darkred",
