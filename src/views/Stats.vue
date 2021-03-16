@@ -94,7 +94,7 @@
           <p>
             <b>Nicehash score</b> calculation is based on comparison of instantenous nicehash graph rate/price to daily
             average values. Also cost of renting hashpower is analyzed with current grin/BTC value to deduce nicehash
-            secure.
+            profitability. Utilization of nicehash infrastructure despite being non-profit is inferred as suspicious activity.
             A score of 5 is that price ratio is balanced and nicehash graph rate is small compared to overall grin
             network graph rate. A score close to zero means that nicehash hashpower is most likely used for reorg attack
             and nicehash graph rate supplies more than half of overall grin network graph rate.
