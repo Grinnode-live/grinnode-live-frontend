@@ -15,7 +15,7 @@
         <v-col cols="4" offset="1" class="pb-2"
                style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">inbound
         </v-col>
-        <v-col cols="4" offset="1" class="pb-2"
+        <v-col cols="4" offset="2" class="pb-2"
                style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">outbound
         </v-col>
 
@@ -24,7 +24,7 @@
         <v-col cols="4" offset="1">
           <span class="text-h4">{{ this.$dao.io.result.inbound }}</span>
         </v-col>
-        <v-col cols="4" offset="1">
+        <v-col cols="4" offset="2">
           <span class="text-h4">{{ this.$dao.io.result.outbound }}</span>
         </v-col>
       </v-row>
@@ -61,7 +61,7 @@
         <v-col cols="4" offset="1" class="pb-2"
                style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Nicehash Score
         </v-col>
-        <v-col cols="4" offset="1" class="pb-2"
+        <v-col cols="4" offset="2" class="pb-2"
                style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Reorg Score
         </v-col>
       </v-row>
@@ -70,7 +70,7 @@
         <v-col cols="4" offset="1">
           <span class="text-h4">{{ latestHealthData.nicehash_score }}</span>
         </v-col>
-        <v-col cols="4" offset="1">
+        <v-col cols="4" offset="2">
           <span class="text-h4">{{ latestHealthData.reorg_score }}</span>
         </v-col>
       </v-row>
