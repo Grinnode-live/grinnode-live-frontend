@@ -157,7 +157,7 @@
 
 
         <v-form class="pt-4" @submit.prevent="checkWallet" >
-          <v-text-field outlined :loading="is_checking"  v-model="wallet_address"  @change="addressTextChanged" label="Enter wallet's address" />
+          <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter wallet's address" />
         </v-form>
         <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
         <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
@@ -268,10 +268,7 @@ export default {
     }
   },
   methods:{
-    addressTextChanged(){
-      console.log("addressTextChanged");
-      this.is_wallet_valid="";
-    },
+
     checkWallet(){
 
       this.is_wallet_valid="";
