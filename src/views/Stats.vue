@@ -44,7 +44,7 @@
       <v-divider class="my-12"/>
 
 
-      <v-row justify="center">
+      <v-row justify="center" id="health">
         <v-col cols="12">
           <h4 class="text-h5 mt-4  grey--text text--darken-2">
             Grin Network Health
