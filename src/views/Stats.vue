@@ -81,7 +81,7 @@
           <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Overall
             Health Score</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
-          <p class="text-h4"> {{ latestHealthData.health_score / 2 }}</p>
+          <p class="text-h4"> {{ latestHealthData.health_score}}</p>
         </v-col>
       </v-row>
 
