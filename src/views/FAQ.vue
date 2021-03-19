@@ -204,6 +204,10 @@
         <li> HEALTH_CHECK_API_URL : <a href="https://grinnode.live:8080/healthcheck"> https://grinnode.live:8080/healthcheck </a></li>
         <li> PEERS_API_URL : <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
         <li> AGENTS_API_URL : <a href="https://grinnode.live:8080/agents">https://grinnode.live:8080/agents</a></li>
+        <li> HEALTHSCORE_API_URL : <a href="https://grinnode.live:8080/healthscore">https://grinnode.live:8080/healthscore</a></li>
+        <li> PEERSCOUNTRIES_API_URL : <a href="https://grinnode.live:8080/peerscountries">https://grinnode.live:8080/peerscountries</a></li>
+        <li> WALLETCHECK_API_URL : <a href="https://grinnode.live:8080/walletcheck/cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd">https://grinnode.live:8080/walletcheck/your_wallet_address_</a></li>
+
       </ul>
 
       <v-divider class="my-12"></v-divider>
