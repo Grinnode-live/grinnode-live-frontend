@@ -2,6 +2,9 @@
 <div class="my-12" style="transform: scale(1,1)">
 
   <svg id="worldmap"   height="600"></svg>
+
+
+
 </div>
 </template>
 
