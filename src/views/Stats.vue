@@ -40,6 +40,11 @@
             Last updated: {{ new Date(+this.$dao.io.lastUpdated) }}
           </span><br/>
       <span class="text-caption grey--text text--darken-2"> Response time: {{ this.$dao.ioTime }}</span>
+      <br/>
+      <span class="text-caption grey--text text--darken-2">
+    Visualized with GeoLite2 data created by MaxMind, available from
+    <a href="https://www.maxmind.com">https://www.maxmind.com</a>.
+  </span>
 
       <v-divider class="my-12"/>
 
