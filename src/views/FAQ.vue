@@ -155,17 +155,12 @@
       <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check TOR address  </h3>
       <span  >Check if the receiving TOR address is available. </span><br/>
 
-
         <v-form class="pt-4" @submit.prevent="checkWallet" >
           <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter wallet's address" />
         </v-form>
         <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
         <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
           <v-btn class="mt-2 mb-8" flat color="primary" @click.prevent="checkWallet"  >Check</v-btn>
-
-
-
-
 
       <ul  class="text-left mt-4">
         <li>via HTTP <a class="ml-4" href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
@@ -279,12 +274,9 @@ export default {
           if (this.wallet_address.endsWith(".onion")){
             this.wallet_address = this.wallet_address.replace(".onion","");
           }
-          if (this.wallet_address.startsWith("http://")){
-            this.wallet_address = this.wallet_address.replace("http://","");
-          }
-          if (this.wallet_address.startsWith("https://")){
-            this.wallet_address = this.wallet_address.replace("https://","");
-          }
+
+          // If user enters an ordinary url, check stucks so it needs to be removed
+          this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
 
           fetch("http://172.104.134.155:3000/walletcheck/"+ this.wallet_address).then(response => response.json())
             .then((result) => {
@@ -302,7 +294,6 @@ export default {
       }else{
         this.is_wallet_valid = "";
         this.is_checking=false;
-
       }
     }
   },
