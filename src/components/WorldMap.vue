@@ -51,13 +51,14 @@ export default {
               }
               let chart = new d3plus.Geomap()
                   .config({
-                    colorScalePosition:'bottom',
-                    groupBy:'id',
-                    colorScale:"count",
-                    tiles:false,
-                    ocean:"transparent",
-                    zoom:true,
-                    topojsonFill: "#cccccc"
+                    colorScalePosition: 'bottom',
+                    groupBy: 'id',
+                    colorScale: "count",
+                    tiles: false,
+                    ocean: "transparent",
+                    topojsonFill: "#cccccc",
+                    zoom: true,
+                    zoomScroll:false
                   })
                   .data(countData)
                   .label(function(d){
