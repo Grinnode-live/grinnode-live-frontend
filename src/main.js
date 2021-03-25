@@ -6,16 +6,16 @@ import vuetify from "@/plugins/vuetify";
 import Vuetify from "vuetify";
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-// const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
-const HEALTH_CHECK_API_URL = 'http://172.104.134.155:3000/healthcheck';
+const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
+
 
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
 const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
 const IO_API_URL = 'https://grinnode.live:8080/io';
 
-// const GLOBAL_HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/globalhealthcheck';
-const GLOBAL_HEALTH_CHECK_API_URL = 'http://172.104.134.155:3000/globalhealthcheck';
-const GRIN_HEALTH_SCORE_URL = "http://172.104.134.155:3000/healthscore";
+const GLOBAL_HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/globalhealthcheck';
+
+const GRIN_HEALTH_SCORE_URL = "https://grinnode.live:8080/healthscore";
 
 const shared = new Vue({
   data: {
