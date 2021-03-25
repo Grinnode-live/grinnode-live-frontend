@@ -113,7 +113,7 @@ export default {
     this.$dao.getGrinHealthScore();
 
     setTimeout(this.updateChart,500);
-
+    setTimeout(this.updateChart,1500);
 
   },
   methods:{
