@@ -40,7 +40,7 @@ export default {
   name: "WorldMap",
   mounted() {
     this.initCountryCodeDict();
-    fetch("http://172.104.134.155:3000/peerscountries")
+    fetch("https://grinnode.live:8080/peerscountries")
         .then(response=>response.json()
             .then(data=>{
               let locs = data.result;
