@@ -282,7 +282,7 @@ export default {
           // If user enters an ordinary url, check stucks so it needs to be removed
           this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
 
-          fetch("http://172.104.134.155:3000/walletcheck/"+ this.wallet_address).then(response => response.json())
+          fetch("https://grinnode.live:8080/walletcheck/"+ this.wallet_address).then(response => response.json())
             .then((result) => {
               if(result.isWalletValid){
                   this.is_wallet_valid = "success";
