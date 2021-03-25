@@ -29,7 +29,7 @@
         </v-col>
       </v-row>
 
-      <v-row>
+      <v-row id="worldmap">
         <v-col cols="12">
           <WorldMap/>
 
@@ -92,11 +92,11 @@
 
       <v-row class="mb-2">
         <v-col cols="12">
-          <p>
+          <p  >
             <b>Reorg score</b> calculation is based on daily reorg attack count and depth of the attack. A score of 5
             means there is no reorg attack while 0 means that network is under severe attack.
           </p>
-          <p>
+          <p  >
             <b>Nicehash score</b> calculation is based on comparison of instantenous nicehash graph rate/price to daily
             average values. Also cost of renting hashpower is analyzed with current grin/BTC value to deduce nicehash
             profitability. Utilization of nicehash infrastructure despite being non-profit is inferred as suspicious activity.
@@ -104,7 +104,7 @@
             network graph rate. A score close to zero means that nicehash hashpower is most likely used for reorg attack
             and nicehash graph rate supplies more than half of overall grin network graph rate.
           </p>
-          <p>
+          <p  >
             <b>Overall Health score</b> is calculated by taking average of reorg score and nicehash score. Scores are
             given in a range of 0 to 5. The highest score of 5 means network is healthy and there is no attack.
           </p>
@@ -112,6 +112,7 @@
             Calculation formulas are based on <a href="https://github.com/j01tz/grin-health">joltz1 algorithm</a>.
           </p>
 
+          <p > Please consider donating to <a href="https://github.com/bladedoyle/grin_nicehash_defender/">Grin Nicehash Defender </a> for protection of grin network from outside attacks. Grin Nicehash Defender activates a defensive mechanism by increasing hashpower of network when abnormal activity is detected. Grinnode.live has donated to project and also running an instance of Grin Nicehash Defender. </p>
         </v-col>
 
       </v-row>
