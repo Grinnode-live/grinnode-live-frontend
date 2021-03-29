@@ -94,17 +94,60 @@
 
         Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
 
-      <p class="text-start">1. Setup a grin-wallet </p>
-      <p class="text-justify">2. Use it as an <strong><a
-          href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"
-          target="_blank" rel="noopener">API Endpoint</a></strong> for wallet commands or <strong>add</strong> it to
-        your <a
-            href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a>
-      </p>
+      <p class="text-left"> There are two options to use grin-wallet with connecting to grinnode.live.</p>
+
+      <p class="text-start">a) First option is to specify that you want to connect grinnode.live with -r flag.</p>
+
       <span class="blockquote">
-        <p><strong>CLI:<br/></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;grin-wallet -r "https://grinnode.live:3413" info<br/><br/><strong>grin-wallet.toml</strong>&nbsp;:<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
+        <p><strong>CLI:<br/></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;grin-wallet -r "https://grinnode.live:3413" info  &nbsp; &nbsp; </p>
         <p>&nbsp;</p>
       </span>
+      <p class="text-left"> b) Second option is to add it into the <a href="">wallet.toml</a> config file which can be found in wallet directory like below. </p>
+
+      <span class="blockquote">
+        <p> <strong>grin-wallet.toml</strong>&nbsp;:<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "https://grinnode.live:3413"</p>
+        <p>&nbsp;</p>
+      </span>
+
+      <p class="text-left" >Here are some examples to use grin-wallet</p>
+      <h4 class="text-h6 text-left">Initialize wallet</h4>
+      <p class="text-left">
+        Following command creates a new folder named <b>orange</b>  on your desktop and initialize a wallet for Windows operating system. You can create and use more than one wallet for testing and other purposes by this way.
+      (Don't forget to save your recovery phrase)
+      </p>
+      <v-card outlined dark color="grey darken-3" class="pa-4 my-4">
+        <div class="code text-left">
+          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange  </span><br/>
+        </div>
+      </v-card>
+
+
+      <p class="text-left">You can get an error for not being able to request and connect to node. This is a known issue, ignore for the time being.</p>
+
+
+      <h4 class="text-h6 text-left">Get info </h4>
+
+      <v-card outlined dark color="grey darken-3" class="pa-4 my-4">
+        <div class="code text-left">
+          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange info</span><br/>
+        </div>
+      </v-card>
+
+      <h4 class="text-h6 text-left">Listen for transcation </h4>
+
+      <v-card outlined dark color="grey darken-3" class="pa-4 my-4">
+        <div class="code text-left">
+          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange listen</span><br/>
+        </div>
+      </v-card>
+
+      <h4 class="text-h6 text-left">Send grin </h4>
+      <p class="text-left">Following command sends 2 grin to grin donation wallet. Change the grin address after -d flag to send to the desired address.</p>
+      <v-card outlined dark color="grey darken-3" class="pa-4 my-4">
+        <div class="code text-left">
+          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange send -d grin1zxwrf5yaxlyps4mpx3n7j9kp4su3gzgpdhfk2sgv56q0prcdlzls9e6e0y 2</span><br/>
+        </div>
+      </v-card>
 
       <p class="text-justify"> More Grin-Wallet example commands can be found <a
           href="https://github.com/MCM-Mike/grinnode.live/blob/master/linux-grin-commands-collection.md">here</a></p>
