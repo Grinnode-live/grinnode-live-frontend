@@ -1,10 +1,6 @@
 <template>
-<div class="my-12" style="transform: scale(1,1)">
-
-  <svg id="worldmap"   height="600"></svg>
-
-
-
+<div>
+  <svg id="worldmap" ></svg>
 </div>
 </template>
 
@@ -66,7 +62,7 @@ export default {
                   });
               chart.topojson("/data/worldtopo.json");
               chart.colorScaleConfig({color: [ "#6B6601","#ABA202", "#EBDF02", "#F7EB02", "#FEF102"]})
-              chart.height(400);
+              chart.height(600);
               chart.select("#worldmap").render();
             })
         );
