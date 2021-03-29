@@ -29,10 +29,9 @@
         </v-col>
       </v-row>
 
-      <v-row id="worldmap">
+      <v-row  >
         <v-col cols="12">
           <WorldMap/>
-
         </v-col>
       </v-row>
 
