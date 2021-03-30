@@ -8,7 +8,6 @@
           <v-radio label="Nicehash Score" value="Nicehash Score"></v-radio>
         </v-radio-group>
     </v-layout>
-      <p class="text-caption">(Time labels are given in UTC timezone)</p>
     </div>
     <div ref="chartDiv">
       <svg id="healthScoreChart"></svg>
