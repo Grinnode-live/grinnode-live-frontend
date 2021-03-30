@@ -2,21 +2,17 @@
   <div>
     <div>
     <v-layout justify-center >
-
         <v-radio-group row v-model="scoreType" @change="updateChart" class="align-content-center" >
           <v-radio label="Overall Health Score" value="Overall Health Score"></v-radio>
           <v-radio label="Reorg Score" value="Reorg Score"></v-radio>
           <v-radio label="Nicehash Score" value="Nicehash Score"></v-radio>
         </v-radio-group>
     </v-layout>
+      <p class="text-caption">(Time labels are given in UTC timezone)</p>
     </div>
-
     <div ref="chartDiv">
       <svg id="healthScoreChart"></svg>
     </div>
-
-
-
   </div>
 </template>
 
