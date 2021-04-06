@@ -153,7 +153,14 @@
       <h3 class="text-h4 grey--text text--darken-2   my-12"  id="faq-technical">Technical questions</h3>
 
       <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check TOR address  </h3>
-      <span >Check if the receiving TOR address is available. </span><br/>
+      <span  >Check if the receiving TOR address is available. </span><br/>
+
+        <v-form class="pt-4" @submit.prevent="checkWallet" >
+          <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter wallet's address" />
+        </v-form>
+        <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
+        <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
+          <v-btn class="mt-2 mb-8" flat color="primary" @click.prevent="checkWallet"  >Check</v-btn>
 
       <ul  class="text-left mt-4">
         <li>via HTTP <a class="ml-4" href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
@@ -197,6 +204,10 @@
         <li> HEALTH_CHECK_API_URL : <a href="https://grinnode.live:8080/healthcheck"> https://grinnode.live:8080/healthcheck </a></li>
         <li> PEERS_API_URL : <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
         <li> AGENTS_API_URL : <a href="https://grinnode.live:8080/agents">https://grinnode.live:8080/agents</a></li>
+        <li> HEALTHSCORE_API_URL : <a href="https://grinnode.live:8080/healthscore">https://grinnode.live:8080/healthscore</a></li>
+        <li> PEERSCOUNTRIES_API_URL : <a href="https://grinnode.live:8080/peerscountries">https://grinnode.live:8080/peerscountries</a></li>
+        <li> WALLETCHECK_API_URL : <a href="https://grinnode.live:8080/walletcheck/cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd">https://grinnode.live:8080/walletcheck/your_wallet_address_</a></li>
+
       </ul>
 
       <v-divider class="my-12"></v-divider>
@@ -246,11 +257,85 @@
 
 <script>
 export default {
-  name: "FAQ"
+  name: "FAQ",
+  data(){
+    return {
+      text:'',
+      wallet_address:"",
+      is_wallet_valid:"",
+      is_checking:false
+    }
+  },
+  methods:{
+
+    checkWallet(){
+
+      this.is_wallet_valid="";
+
+      if (this.wallet_address.length>0){
+        this.is_checking=true;
+          // remove .onion from end of string
+          if (this.wallet_address.endsWith(".onion")){
+            this.wallet_address = this.wallet_address.replace(".onion","");
+          }
+
+          // If user enters an ordinary url, check stucks so it needs to be removed
+          this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
+
+          fetch("https://grinnode.live:8080/walletcheck/"+ this.wallet_address).then(response => response.json())
+            .then((result) => {
+              if(result.isWalletValid){
+                  this.is_wallet_valid = "success";
+              }else{
+                this.is_wallet_valid = "fail";
+              }
+              this.is_checking=false;
+            }).catch((err)=>{
+              console.error(err);
+              this.is_wallet_valid = "error"
+              this.is_checking=false;
+          });
+      }else{
+        this.is_wallet_valid = "";
+        this.is_checking=false;
+      }
+    }
+  },
+  computed:{
+    walletCheckSuccess(){
+       return this.is_wallet_valid==='success';
+    },
+    walledCheckFail() {
+      return this.is_wallet_valid === 'fail'
+    }
+
+  }
 }
 </script>
 
 <style scoped>
+
+.success-message{
+  border: green solid thin;
+  border-radius: 4px;
+  color: green;
+  /*background-color: darkgreen;*/
+  font-size: larger;
+  width: 50%;
+  padding:6px;
+  cursor:default;
+}
+
+.error-message{
+  border:  red solid thin;
+  border-radius: 4px;
+  color:  red;
+  /*background-color: orangered;*/
+  font-size: larger;
+  width: 50%;
+  padding:6px;
+  cursor:default;
+}
 
 ul{
   list-style: none;

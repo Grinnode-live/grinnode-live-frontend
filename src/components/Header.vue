@@ -2,7 +2,7 @@
   <nav>
     <v-system-bar absolute app dark class="grey darken-2">
       <span class="hidden-sm-and-down">
-        [01/2021] Grin 5.0 network upgrade is here!
+        [03/2021] Grinnode.live is updated!
       </span>
       <v-spacer></v-spacer>
 
@@ -198,7 +198,7 @@ export default {
   mounted() {
     this.$dao.healthCheck();
     this.refreshGrinPrice();
-    setInterval(this.refreshGrinPrice, 3000);
+    setInterval(this.refreshGrinPrice, 5000);
   },
   methods: {
     refreshGrinPrice: function () {

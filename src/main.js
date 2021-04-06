@@ -7,10 +7,15 @@ import Vuetify from "vuetify";
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 const HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/healthcheck';
+
+
 const PEERS_API_URL = 'https://grinnode.live:8080/peers';
 const AGENTS_API_URL = 'https://grinnode.live:8080/agents';
 const IO_API_URL = 'https://grinnode.live:8080/io';
+
 const GLOBAL_HEALTH_CHECK_API_URL = 'https://grinnode.live:8080/globalhealthcheck';
+
+const GRIN_HEALTH_SCORE_URL = "https://grinnode.live:8080/healthscore";
 
 const shared = new Vue({
   data: {
@@ -43,6 +48,7 @@ const shared = new Vue({
         outbound: 0
       }
     },
+    grinHealthScoreData:{},
     currentBlockHeight:0,
     ioTime: 0,
     stickyNav: false,
@@ -107,15 +113,20 @@ const shared = new Vue({
                       "id": 1
                   })
               })
-              .then(response => {
-
-                  response.json().then(data=>{
+              .then(response => response.json()).then( (data)=>{
                       if(data){
                           this.currentBlockHeight= data.result.Ok.tip.height;
                       }
-                  })
-              });
-      }
+                  });
+
+      },
+     getGrinHealthScore(){
+        fetch(GRIN_HEALTH_SCORE_URL)
+            .then(response=>response.json()
+                .then(data=>{
+                    this.grinHealthScoreData  = data;
+                }));
+     }
   },
   computed: {
     statusStyle() {
