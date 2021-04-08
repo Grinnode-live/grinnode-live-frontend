@@ -42,13 +42,11 @@
 
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
-      <h6 class="text-h6 mb-3 grey--text">03/2021</h6>
+      <h6 class="text-h6 mb-3 grey--text">04/2021</h6>
       <h6 class="text-h6 grey--text text--darken-2 " >Grinnode.live</h6>
       <p>
-        We are happy to announce that grinnode.live is updated. You can check <a href="https://grinnode.live/stats#health">health</a> of grin network.
-        We have added a <a href="https://grinnode.live/stats#worldmap">world map</a> visualization of connected peers to grinnode.live.
-        A new service for checking if it is reachable by checking its tor address available at our <a href="https://grinnode.live/faq#faq-technical-tor">faq section</a>.
-        All these new services are reachable as grinnode.live <a href="https://grinnode.live/faq#faq-technical-public-api">public API endpoints</a>!
+        We are happy to announce that grinnode.live is updated with new health score API and much more. You can read the details <a href="https://grinnode-live.medium.com/grinnode-live-new-site-update-with-health-score-api-world-map-more-1050ad5c74ea"> here</a>.
+
       </p>
 
       <h6 class="text-h6 mb-3 grey--text">01/2021</h6>

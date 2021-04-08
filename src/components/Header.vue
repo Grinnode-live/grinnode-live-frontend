@@ -2,12 +2,13 @@
   <nav>
     <v-system-bar absolute app dark class="grey darken-2">
       <span class="hidden-sm-and-down">
-        [03/2021] Grinnode.live is updated!
+        [04/2021] Grinnode.live is updated!
       </span>
       <v-spacer></v-spacer>
 
 
       <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC ({{ grinBTCPriceChange }} %) </span>
+      <span v-if="grinUSDPrice" class="mr-8">{{ grinUSDPrice }} &#36; ({{ grinUSDPriceChange }} %) </span>
 
       <span>API status:</span>
 
@@ -191,7 +192,9 @@ export default {
 
       headBarFixed: false,
       grinBTCPrice: "",
-      grinBTCPriceChange: ""
+      grinBTCPriceChange: "",
+      grinUSDPrice:"",
+      grinUSDPriceChange:""
     }
 
   },
@@ -209,10 +212,16 @@ export default {
             this.grinBTCPrice = result['market_data']['current_price']['btc'];
             let priceChange = result['market_data']['price_change_percentage_24h_in_currency']['btc'];
             this.grinBTCPriceChange = priceChange.toFixed(1) + "";
+
+            this.grinUSDPrice = result['market_data']['current_price']['usd'];
+            let usdPriceChange = result['market_data']['price_change_percentage_24h_in_currency']['usd'];
+            this.grinUSDPriceChange = usdPriceChange.toFixed(1) + "";
           })
           .catch(() => {
             this.$data.grinBTCPrice = "";
             this.$data.grinBTCPriceChange = "";
+            this.$data.grinUSDPrice = "";
+            this.$data.grinUSDPriceChange = "";
           })
     }
   }
