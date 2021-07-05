@@ -49,7 +49,17 @@ export default {
       '/images/grinart/072_grinslime_500x.png',
       '/images/grinart/073_indaforestgrin_500x.png',
       '/images/grinart/074_cogrin_500x.png',
-      '/images/grinart/075_butwhatisagrin_500x.png'
+      '/images/grinart/075_butwhatisagrin_500x.png',
+      '/images/grinart/076_itsagrinthing_500x.png',
+      '/images/grinart/075_butwhatisagrin_500x.png',
+      '/images/grinart/077_reagav_500x.png',
+      '/images/grinart/078_abisonmimble_500x.png',
+      '/images/grinart/079_wildnatch2_500x.png',
+      '/images/grinart/080_grinflute_500x.png',
+      '/images/grinart/081-haeßga_grin-500x.png',
+      '/images/grinart/082-season_blossom_kind-500x.png',
+      '/images/grinart/083-intergrin-500x.png',
+      '/images/grinart/084-quelian-500x.png'
     ];
 
     let grinsunImageLinks =[
@@ -65,7 +75,7 @@ export default {
       '/images/grinsun/e70e473f42b6c0272d6764c5962dcc9031b16eed.png',
     ]
 
-    this.isGrinSun = Math.random() > 0.5;
+    this.isGrinSun = Math.random() > 0.8;
 
     if(this.isGrinSun){
       let index = Math.round(Math.random()*grinsunImageLinks.length);
