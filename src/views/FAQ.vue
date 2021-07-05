@@ -68,7 +68,7 @@
           </template>
           <v-list-item link to="" v-scroll-to="'#faq-technical-tor'">
             <v-list-item-title>
-              <a  >Check TOR address</a>
+              <a  >Check GRIN wallet address</a>
             </v-list-item-title>
           </v-list-item>
 
@@ -130,37 +130,37 @@
       </v-list>
       <h3 class="text-h4 grey--text text--darken-2   my-12"  id="faq-general">General questions</h3>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-grin">What is Grin?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-grin">What is Grin? <LinkButton copy-link="https://grinnode.live/faq#faq-general-grin" /> </h3>
       <span class="">Grin is a privacy-preserving digital currency built openly by developers distributed all over the world. It provides electronic transactions for all without censorship or restrictions. <router-link to="/https://grin.mw/">official website</router-link> for more information.</span>
 
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-node">What is a grin node?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-node">What is a grin node? <LinkButton copy-link="https://grinnode.live/faq#faq-general-node"/> </h3>
       <span>The Grin digital currency is a decentralized network of grin nodes. Those are the entry points to the network. Whenever you want to submit a new transaction or even simply check your balance, you must connect to a synced node.</span>
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-motivation-grinnode-live">Can I use my wallet with a grinnode.live node instead of running my own?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-general-motivation-grinnode-live">Can I use my wallet with a grinnode.live node instead of running my own? <LinkButton copy-link="https://grinnode.live/faq#faq-general-node"/>  </h3>
       <span>Yes! Check our <router-link to="/tutorials">tutorials page</router-link> for instructions.</span>
 
 
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-motivation-node">If grinnode.live can act as my node, why would I want to run my own?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-motivation-node">If grinnode.live can act as my node, why would I want to run my own? <LinkButton copy-link="https://grinnode.live/faq#faq-motivation-node"/>  </h3>
       <span>First of all, grinnode.live is a network of nodes run by other users, so if nobody wants to run own node and <router-link to="/tutorials" v-scroll-to="'#tutorial-node-connect'">connect it</router-link> then grinnode.live would not provide node to anyone. Second of all, running own node provides a lot more security and privacy. The more nodes the healthier Grin network is. Our project was never intended to be a default solution for everyone, rather a backup plan in case of problems with running own node or a quick start solution for new users.</span>
 
       <v-divider class="my-12"></v-divider>
 
       <h3 class="text-h4 grey--text text--darken-2   my-12"  id="faq-technical">Technical questions</h3>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check TOR address  </h3>
-      <span  >Check if the receiving TOR address is available. </span><br/>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check GRIN wallet address  <LinkButton copy-link="https://grinnode.live/faq#faq-technical-tor"/> </h3>
+      <span  >Check if the receiving grin wallet is available. </span><br/>
 
-        <v-form class="pt-4" @submit.prevent="checkWallet" >
-          <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter wallet's address" />
-        </v-form>
-        <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
-        <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
-          <v-btn class="mt-2 mb-8" flat color="primary" @click.prevent="checkWallet"  >Check</v-btn>
+      <v-form class="pt-4" @submit.prevent="checkWallet" >
+        <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter grin address such as grin1zxwrf..." />
+      </v-form>
+      <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
+      <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
+      <v-btn class="mt-2 mb-8"  color="primary" @click.prevent="checkWallet"  >Check</v-btn>
 
       <ul  class="text-left mt-4">
         <li>via HTTP <a class="ml-4" href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
@@ -170,7 +170,7 @@
 
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-tor-block">Tor is blocked in my country, How can I send/receive grin?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-tor-block">Tor is blocked in my country, How can I send/receive grin?  <LinkButton copy-link="https://grinnode.live/faq#faq-tor-block"/>  </h3>
       <span >You can use bridges via Grin++ wallet to circumvent blockage on publicly listed tor nodes. More info on <a href="https://davidtavarez.github.io/2020/bypass-internet-censorship-and-filtering-grinplusplus/">David Tavarez's blog.</a></span>
 
 
@@ -179,7 +179,7 @@
       <v-divider class="my-12"></v-divider>
 
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-node">How to run a Grin-Node?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-node">How to run a Grin-Node? <LinkButton copy-link="https://grinnode.live/faq#faq-technical-node"/>  </h3>
       <span >There are different Grin-Nodes you can be running to participate in this challenge:</span>
 
 
@@ -193,13 +193,13 @@
 
       <v-divider class="my-12"></v-divider>
 
-      <h3  class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-uptime">How are we calculating your Grin-Node uptime?</h3>
+      <h3  class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-uptime">How are we calculating your Grin-Node uptime? <LinkButton copy-link="https://grinnode.live/faq#faq-technical-uptime"/>  </h3>
       <span>We are querying our publicly available Grin-API <router-link exact to="/home">https://grinnode.live</router-link> every 10 minutes. These results will be stored in a database and compared.</span>
 
 
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-public-api">Public API</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-public-api">Public API  <LinkButton copy-link="https://grinnode.live/faq#faq-technical-public-api"/> </h3>
       <ul class="text-left">
         <li> HEALTH_CHECK_API_URL : <a href="https://grinnode.live:8080/healthcheck"> https://grinnode.live:8080/healthcheck </a></li>
         <li> PEERS_API_URL : <a href="https://grinnode.live:8080/peers">https://grinnode.live:8080/peers </a></li>
@@ -211,24 +211,24 @@
       </ul>
 
       <v-divider class="my-12"></v-divider>
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-rank">Where can I see my Grin-Node rank?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-rank">Where can I see my Grin-Node rank?  <LinkButton copy-link="https://grinnode.live/faq#faq-technical-rank"/> </h3>
       <span>You can view the current leaderboard <router-link exact to="/challenge">here</router-link>.</span>
 
 
       <v-divider class="my-12"></v-divider>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-api-secret">Do I need an API secret?</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-api-secret">Do I need an API secret? <LinkButton copy-link="https://grinnode.live/faq#faq-technical-api-secret"/></h3>
       <span>No. All API's can be used without any API secret or owner secrets. No basic-auth must be set to use it. </span>
       <v-divider class="my-12"></v-divider>
 
 
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-debian-vps">How to install and run a Grin Node with a DebianVPS</h3>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-debian-vps">How to install and run a Grin Node with a DebianVPS? <LinkButton copy-link="https://grinnode.live/faq#faq-technical-debian-vps"/></h3>
       <span>Tutorial: <a href="https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8">https://medium.com/@28e6d94f/how-to-install-and-run-a-grin-node-with-a-debianvps-dab8dcbe88d8</a> </span>
 
       <v-divider class="my-12"></v-divider>
 
-      <h6 class="text-h6 grey--text text--darken-3 mt-2 mb-4" id="faq-technical-ip-twice">Why is my IP address listed twice?</h6>
+      <h6 class="text-h6 grey--text text--darken-3 mt-2 mb-4" id="faq-technical-ip-twice">Why is my IP address listed twice? <LinkButton copy-link="https://grinnode.live/faq#faq-technical-ip-twice"/> </h6>
 
       <v-card outlined dark  color="grey darken-3" class="px-4 py-2 mb-4">
         <div class="code text-left">
@@ -256,8 +256,12 @@
 </template>
 
 <script>
+import LinkButton from "@/components/LinkButton";
+import {SERVER_NAME} from "../server_name";
+
 export default {
   name: "FAQ",
+  components:{LinkButton},
   data(){
     return {
       text:'',
@@ -274,27 +278,27 @@ export default {
 
       if (this.wallet_address.length>0){
         this.is_checking=true;
-          // remove .onion from end of string
-          if (this.wallet_address.endsWith(".onion")){
-            this.wallet_address = this.wallet_address.replace(".onion","");
-          }
+        // remove .onion from end of string
+        if (this.wallet_address.endsWith(".onion")){
+          this.wallet_address = this.wallet_address.replace(".onion","");
+        }
 
-          // If user enters an ordinary url, check stucks so it needs to be removed
-          this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
-
-          fetch("https://grinnode.live:8080/walletcheck/"+ this.wallet_address).then(response => response.json())
+        // If user enters an ordinary url, check stucks so it needs to be removed
+        this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
+        fetch(`${SERVER_NAME}/walletcheck/`+ this.wallet_address).then(response =>{
+          return response.json()})
             .then((result) => {
               if(result.isWalletValid){
-                  this.is_wallet_valid = "success";
+                this.is_wallet_valid = "success";
               }else{
                 this.is_wallet_valid = "fail";
               }
               this.is_checking=false;
             }).catch((err)=>{
-              console.error(err);
-              this.is_wallet_valid = "error"
-              this.is_checking=false;
-          });
+          console.error(err);
+          this.is_wallet_valid = "error"
+          this.is_checking=false;
+        });
       }else{
         this.is_wallet_valid = "";
         this.is_checking=false;
@@ -303,7 +307,7 @@ export default {
   },
   computed:{
     walletCheckSuccess(){
-       return this.is_wallet_valid==='success';
+      return this.is_wallet_valid==='success';
     },
     walledCheckFail() {
       return this.is_wallet_valid === 'fail'
