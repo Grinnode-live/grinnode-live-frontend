@@ -2,18 +2,26 @@
   <nav>
     <v-system-bar absolute app dark class="grey darken-2">
       <span class="hidden-sm-and-down">
-        [04/2021] Grinnode.live is updated!
+        [07/2021] Grinnode.live is updated!
       </span>
       <v-spacer></v-spacer>
 
+      <div class="d-none d-md-flex">
+      <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC
+      ({{ grinBTCPriceChange }} %) </span>
+        <span v-if="grinUSDPrice" class="mr-8"> &#36; &nbsp; {{ grinUSDPrice }} ({{ grinUSDPriceChange }} %) </span>
+        <span>API status:</span>
+        <span @click="$router.push('/global-health-check')" class="mx-2"
+              :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+      </div>
 
-      <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC ({{ grinBTCPriceChange }} %) </span>
-      <span v-if="grinUSDPrice" class="mr-8">{{ grinUSDPrice }} &#36; ({{ grinUSDPriceChange }} %) </span>
-
-      <span>API status:</span>
-
-      <span @click="$router.push('/global-health-check')" class="mx-2"
-            :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+      <div class="d-md-none">
+        <span v-if="grinBTCPrice" class="mr-4">{{ grinBTCPrice }} BTC    </span>
+        <span v-if="grinUSDPrice" class="mr-4"> &#36;{{ grinUSDPrice }}  </span>
+        <span>API :</span>
+        <span @click="$router.push('/global-health-check')" class="mx-2"
+              :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+      </div>
 
     </v-system-bar>
 
@@ -48,17 +56,17 @@
         <v-sheet color="#fef102" class="mx-auto pb-0 hidden-sm-and-down negative-bottom-margin">
           <v-chip medium to="/" color="#fef102" class="rounded-0 px-2  ">
             <span class="text-subtitle-2 text--primary">HOME</span>
-            <v-icon right>home</v-icon>
+            <HomeIcon/>
           </v-chip>
           <v-chip to="/tutorials" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary ">TUTORIALS</span>
-            <v-icon right>receipt_long</v-icon>
+            <TutorialIcon/>
           </v-chip>
           <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
               <v-chip color="#fef102" class="rounded-0" v-bind="attrs" v-on="on">
                 <span class="text-subtitle-2 text--primary">CHALLENGES</span>
-                <v-icon right>watch</v-icon>
+                <ChallengesIcon/>
               </v-chip>
             </template>
             <v-list color="#fef102">
@@ -74,15 +82,15 @@
 
           <v-chip to="/stats" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">STATS</span>
-            <v-icon right>leaderboard</v-icon>
+            <StatsIcon />
           </v-chip>
           <v-chip to="/faq" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">FAQ</span>
-            <v-icon right>question_answer</v-icon>
+            <FaqIcon />
           </v-chip>
           <v-chip to="/contact" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">CONTACT</span>
-            <v-icon right>contact_page</v-icon>
+            <ContactIcon />
           </v-chip>
 
 
@@ -108,7 +116,7 @@
 
           <v-list-item router key="HOME" to="/">
             <v-list-item-action>
-              <v-icon class="black--text">home</v-icon>
+              <HomeIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">HOME</v-list-item-title>
@@ -117,7 +125,7 @@
 
           <v-list-item router key="TUTORIALS" to="/tutorials">
             <v-list-item-action>
-              <v-icon class="black--text">receipt_long</v-icon>
+              <TutorialIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">TUTORIALS</v-list-item-title>
@@ -126,7 +134,7 @@
 
           <v-list-item router key="CHALLENGEs" to="/challenge/0">
             <v-list-item-action>
-              <v-icon class="black--text">watch</v-icon>
+              <ChallengesIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">CHALLENGES</v-list-item-title>
@@ -136,7 +144,7 @@
 
           <v-list-item router key="STATS" to="/stats">
             <v-list-item-action>
-              <v-icon class="black--text">leaderboard</v-icon>
+              <StatsIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">STATS</v-list-item-title>
@@ -145,7 +153,7 @@
 
           <v-list-item router key="FAQ" to="/faq">
             <v-list-item-action>
-              <v-icon class="black--text">question_answer</v-icon>
+              <FaqIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">FAQ</v-list-item-title>
@@ -155,7 +163,7 @@
 
           <v-list-item router key="CONTACT" to="/contact">
             <v-list-item-action>
-              <v-icon class="black--text">contact_page</v-icon>
+              <ContactIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">Contact</v-list-item-title>
@@ -171,7 +179,7 @@
 
       <v-chip class="ml-2 mt-4" dark label large color="info"
               href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">
-        <v-icon left>mood</v-icon>
+        <DonationIcon />
         Donations & Sponsorships
       </v-chip>
 
@@ -183,8 +191,16 @@
 </template>
 
 <script>
+import HomeIcon from "./icons/HomeIcon";
+import ChallengesIcon from "./icons/ChallengesIcon";
+import StatsIcon from "./icons/StatsIcon";
+import TutorialIcon from "./icons/TutorialIcon";
+import FaqIcon from "./icons/FaqIcon";
+import ContactIcon from "./icons/ContactIcon";
+import DonationIcon from "./icons/DonationIcon";
 export default {
   name: "Header",
+  components: {DonationIcon, ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon},
   data() {
     return {
       tab: true,
@@ -193,8 +209,8 @@ export default {
       headBarFixed: false,
       grinBTCPrice: "",
       grinBTCPriceChange: "",
-      grinUSDPrice:"",
-      grinUSDPriceChange:""
+      grinUSDPrice: "",
+      grinUSDPriceChange: ""
     }
 
   },

@@ -42,6 +42,12 @@
 
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
+      <h6 class="text-h6 mb-3 grey--text">07/2021</h6>
+      <h6 class="text-h6 grey--text text--darken-2 " >Grinnode.live</h6>
+      <p>
+        We have updated wallet address check tool for better usability, now you can enter directly your grin wallet address starting with <i>grin1...</i>. Current grin emmission is presented besides block height on stats page. Also you can share info on grinnode.live tutorials and faq pages with  <v-icon>M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7C4.24,7 2,9.24 2,12C2,14.76 4.24,17 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17C19.76,17 22,14.76 22,12C22,9.24 19.76,7 17,7Z</v-icon> buttons.
+      </p>
+
       <h6 class="text-h6 mb-3 grey--text">04/2021</h6>
       <h6 class="text-h6 grey--text text--darken-2 " >Grinnode.live</h6>
       <p>

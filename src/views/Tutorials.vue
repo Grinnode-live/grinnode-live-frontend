@@ -14,40 +14,40 @@
           <template v-slot:activator>
             <v-list-item link to="" v-scroll-to="'#tutorial-grinnode'">
               <v-list-item-title class="text-h6">
-                <router-link to="" class="text-wrap">How to use Grinnode.live</router-link>
+                <a>How to use Grinnode.live</a>
               </v-list-item-title>
             </v-list-item>
           </template>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-wallet-connect'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-wallet-connect'">Connect your GRIN-Wallet to
+              <a>Connect your GRIN-Wallet to
                 Grinnode.live
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-seed'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-seed'">Use Grinnode.live High-Available
+              <a>Use Grinnode.live High-Available
                 Seed-Node
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-node-connect'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-node-connect'">Connect your GRIN-Node to
+              <a>Connect your GRIN-Node to
                 Grinnode.live
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-api-examples'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-api-examples'">Public Grinnode.live API
+              <a>Public Grinnode.live API
                 examples
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
@@ -70,7 +70,7 @@
           <template v-slot:activator>
             <v-list-item link to="" v-scroll-to="'#tutorial-api-documentation'">
               <v-list-item-title class="text-h6">
-                <router-link to="">GRIN API documentation</router-link>
+                <a>GRIN API documentation</a>
               </v-list-item-title>
             </v-list-item>
           </template>
@@ -92,7 +92,7 @@
 
       <h3 class="text-h6 grey--text text--darken-2 text-left my-4" id="tutorial-wallet-connect">
 
-        Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
+        Connect your GRIN-Wallet to Grinnode.live&nbsp; <LinkButton copy-link="https://grinnode.live/tutorials#tutorial-wallet-connect"/> </h3>
 
       <p class="text-left"> There are two options to use grin-wallet with connecting to grinnode.live.</p>
 
@@ -113,11 +113,11 @@
       <h4 class="text-h6 text-left">Initialize wallet</h4>
       <p class="text-left">
         Following command creates a new folder named <b>orange</b>  on your desktop and initialize a wallet for Windows operating system. You can create and use more than one wallet for testing and other purposes by this way.
-      (Don't forget to save your recovery phrase)
+        (Don't forget to save your recovery phrase)
       </p>
       <v-card outlined dark color="grey darken-3" class="pa-4 my-4">
         <div class="code text-left">
-          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange  </span><br/>
+          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange init</span><br/>
         </div>
       </v-card>
 
@@ -158,7 +158,7 @@
 
 
       <h3 class="text-h6 grey--text text--darken-2 text-left my-4" id="tutorial-seed">Use Grinnode.live High-Available
-        Seed-Node </h3>
+        Seed-Node  <LinkButton copy-link="https://grinnode.live/tutorials#tutorial-seed" /> </h3>
       <p class="text-justify"> Connect to lot of Grin-Nodes fast using our Seed-Node by editing your grin-server.toml.
         Or download our example <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml">grin-server.toml</a>
       </p>
@@ -178,7 +178,8 @@
 
 
       <h6 class="text-h6 grey--text text--darken-2 text-left my-4" id="tutorial-node-connect">Connect your GRIN-Node to
-        Grinnode.live&nbsp;</h6>
+        Grinnode.live&nbsp;  <LinkButton copy-link="https://grinnode.live/tutorials#tutorial-node-connect" />  </h6>
+
 
 
       <p class="text-justify">Edit your Grin-Node <strong>grin-server.toml</strong></p>
@@ -282,8 +283,11 @@
 </template>
 
 <script>
+import LinkButton from "../components/LinkButton";
+
 export default {
   name: "Tutorials",
+  components:{LinkButton},
   mounted() {
     this.$dao.getAgents();
     this.$dao.ioCheck();

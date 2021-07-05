@@ -6,7 +6,7 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
     icons: {
-        iconfont: 'md',  // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
+        iconfont: 'mdiSvg',  // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
     },
     theme: {
         options: { customProperties: true }, // Enabled for accessing primary color css variable for span styling

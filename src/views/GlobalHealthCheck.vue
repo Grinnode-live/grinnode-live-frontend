@@ -31,12 +31,7 @@
           <td class="pr-4"> Grinnode.live DONATION WALLET </td>
           <td> <span class="status" :style="grinDonationWalletStyle()">{{ this.grinDonationWallet }}</span> </td>
         </tr>
-
-
       </table>
-
-
-
     </v-col>
 
 
@@ -49,13 +44,13 @@
 
       <v-sheet height="50" class="d-flex  justify-space-between">
         <v-btn     @click="$refs.calendar.prev()"      >
-          <v-icon color="primary" >west</v-icon>
+          <v-icon color="primary" >{{leftSvgPath}}</v-icon>
         </v-btn>
 
         <span> {{calendar_year}}</span>
 
         <v-btn     @click="$refs.calendar.next()"      >
-          <v-icon color="primary" >east</v-icon>
+          <v-icon color="primary" >{{rightSvgPath}}</v-icon>
         </v-btn>
 
       </v-sheet>
@@ -85,6 +80,8 @@
     data:function(){
       return{
         calendar_value : Date.now(),
+        leftSvgPath: "M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z",
+        rightSvgPath: "M4,10V14H13L9.5,17.5L11.92,19.92L19.84,12L11.92,4.08L9.5,6.5L13,10H4Z"
       }
     },
     methods: {
