@@ -2,6 +2,36 @@
 
 
   <v-row class="text-center">
+
+    <v-col col="12">
+
+      <v-banner elevation="0"  app outlined color="#1CBDFF" dark  transition="slide-y-transition" shaped v-model="banner">
+
+        <h4 class="text-h5 ">
+
+          Warning: Pool termination cancelled and incoming transfer of ownership.
+
+        </h4>
+
+
+        <blockquote class="pt-6 pb-0 mx-6 text-justify">
+          <p>
+            " As of courtesy of grinnode.live, the support for our mining pool will be extended until October, 2021. After that, we will become a community mining-pool and continue our operations to help bring more security and better distribute the hashrate of the grin network!
+          </p>
+          <p>We are not going anywhere and we encourage you to keep mining with us and spread this news! "</p>
+
+          <p class="text-right"> <a style="color:white" href="https://grinmint.com/">  grinmint.com </a></p>
+
+
+        </blockquote>
+
+<!--        <template v-slot:actions="{ dismiss }">-->
+<!--          <v-btn text color="primary" @click="dismiss">Dismiss</v-btn>-->
+
+<!--        </template>-->
+      </v-banner>
+    </v-col>
+
     <v-col cols="10" offset="1">
       <h1 class="text-h4 mb-6 text-center ">Grinnode.live high-available GRIN-API & Sync-Service</h1>
       <p class="text-justify">Grin is a privacy-preserving digital currency built openly by developers distributed all
