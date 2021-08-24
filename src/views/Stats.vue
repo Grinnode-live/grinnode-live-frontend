@@ -124,17 +124,28 @@
 
       <v-divider class="my-12"></v-divider>
 
+
       <v-row class="mb-2 ">
+
         <v-col cols="4" offset="1">
+
           <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
-          <span class="text-h4"> {{ this.$dao.currentBlockHeight.toLocaleString() }}</span>
+          <span class="text-h4"> {{ this.$dao.blockstats.blockHeight.toLocaleString() }}</span>
         </v-col>
         <v-col cols="4" offset="2">
           <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Emission</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
           <span class="text-h4"> {{grinEmission}}  </span> <span class="text--lighten-4"  >grins</span>
         </v-col>
+      </v-row>
+
+      <v-row>
+        <div class="flex justify-center">
+          <span class="pt-4 text-caption grey--text text--darken-2 text-center">
+            Last updated: {{ new Date(+this.$dao.blockstats.lastUpdated) }}
+          </span><br/>
+        </div>
       </v-row>
 
       <v-divider class="my-12"></v-divider>
@@ -236,7 +247,7 @@ export default {
       return this.convertTimeStampToDate(this.latestHealthData['check_date_ts_utc']);
     },
     grinEmission(){
-      return (this.$dao.currentBlockHeight *60).toLocaleString();
+      return (this.$dao.blockstats.emission).toLocaleString();
     }
   },
   methods: {

@@ -14,6 +14,7 @@ const AGENTS_API_URL = `${SERVER_NAME}/agents`;
 const IO_API_URL = `${SERVER_NAME}/io`;
 const GLOBAL_HEALTH_CHECK_API_URL = `${SERVER_NAME}/globalhealthcheck`;
 const GRIN_HEALTH_SCORE_URL = `${SERVER_NAME}/healthscore`;
+const GRIN_BLOCKHEIGHT_URL = `${SERVER_NAME}/api/blockstats`;
 
 const shared = new Vue({
     data: {
@@ -47,7 +48,7 @@ const shared = new Vue({
             }
         },
         grinHealthScoreData:{},
-        currentBlockHeight:0,
+        blockstats:{},
         ioTime: 0,
         stickyNav: false,
     },
@@ -101,23 +102,14 @@ const shared = new Vue({
                 });
         },
         getBlockHeight(){
-            fetch("https://grinnode.live:3413/v2/owner",
-                {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        "jsonrpc": "2.0",
-                        "method": "get_status",
-                        "params": [],
-                        "id": 1
-                    })
-                })
-                .then(response => response.json()).then( (data)=>{
-                if(data){
-                    this.currentBlockHeight= data.result.Ok.tip.height;
-                }
-            });
-
+            fetch(GRIN_BLOCKHEIGHT_URL)
+                .then(response => response.json())
+                .then((result) => {
+                     this.blockstats = result;
+                });
         },
+
+
         getGrinHealthScore(){
             fetch(GRIN_HEALTH_SCORE_URL)
                 .then(response=>response.json()
