@@ -207,6 +207,8 @@
         <li> HEALTHSCORE_API_URL : <a href="https://grinnode.live:8080/healthscore">https://grinnode.live:8080/healthscore</a></li>
         <li> PEERSCOUNTRIES_API_URL : <a href="https://grinnode.live:8080/peerscountries">https://grinnode.live:8080/peerscountries</a></li>
         <li> WALLETCHECK_API_URL : <a href="https://grinnode.live:8080/walletcheck/cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd">https://grinnode.live:8080/walletcheck/your_wallet_address_</a></li>
+        <li> BLOCKSTATS_API_URL : <a href="https://grinnode.live:8080/api/blockstats">https://grinnode.live:8080/api/blockstats</a></li>
+
 
       </ul>
 
