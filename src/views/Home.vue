@@ -9,18 +9,18 @@
 
         <h4 class="text-h5 ">
 
-          Warning: Pool termination cancelled and incoming transfer of ownership.
+          Update on transfer of  grinmint  ownership
 
         </h4>
 
 
         <blockquote class="pt-6 pb-0 mx-6 text-justify">
           <p>
-            " As of courtesy of grinnode.live, the support for our mining pool will be extended until October, 2021. After that, we will become a community mining-pool and continue our operations to help bring more security and better distribute the hashrate of the grin network!
+            Acquisition  of <a style="color:white" href="https://grinmint.com/"> grinmint </a>  by Grinnode.live is expected to close by the end of 2021. Grinnode.live is a high-available public and free API service which aims to help grin community and enhance grin ecosystem since 2019. Grinnode.live excited with this move and will continue investing in improvement of grinmint services.
           </p>
-          <p>We are not going anywhere and we encourage you to keep mining with us and spread this news! "</p>
+          <p>We would like to invite goblinpool users to try our service not only for reliable servers and profitable mining rewards but a decentralized and healthy grin ecosystem.</p>
 
-          <p class="text-right"> <a style="color:white" href="https://grinmint.com/">  grinmint.com </a></p>
+          <p class="text-right"> Grinnode.live  </p>
 
 
         </blockquote>
