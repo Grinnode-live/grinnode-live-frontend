@@ -16,7 +16,7 @@
 
         <blockquote class="pt-6 pb-0 mx-6 text-justify">
           <p>
-            Acquisition  of <a style="color:white" href="https://grinmint.com/"> grinmint </a>  by Grinnode.live is expected to close by the end of 2021. Grinnode.live is a high-available public and free API service which aims to help grin community and enhance grin ecosystem since 2019. Grinnode.live excited with this move and will continue investing in improvement of grinmint services.
+            Acquisition  of <a style="color:white" href="https://grinmint.com/"> grinmint </a>  by Grinnode.live is expected to close by the end of 2021. Grinnode.live is a high-available public and free API service which aims to help the grin community and enhance the grin ecosystem since 2019. We are excited about this move and will continue investing in the improvement of grinmint services.
           </p>
           <p>We would like to invite goblinpool users to try our service not only for reliable servers and profitable mining rewards but a decentralized and healthy grin ecosystem.</p>
 
