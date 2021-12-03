@@ -5,7 +5,7 @@
 
     <v-col col="12">
 
-      <v-banner elevation="0"  app outlined color="#1CBDFF" dark  transition="slide-y-transition" shaped v-model="banner">
+      <v-banner elevation="0"  app  color="#1CBDFF"  dark transition="slide-y-transition" shaped   >
 
         <h4 class="text-h5 ">
 
@@ -151,7 +151,8 @@ export default {
       number_of_tests:57,
       overall_prize:120,
       deadlineEpoch:0,
-      deadline:"2021-01-16 02:48:00"
+      deadline:"2021-01-16 02:48:00",
+
 
     }
   },
