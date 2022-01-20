@@ -3,7 +3,7 @@
 
   <v-row class="text-center">
 
-    <v-col col="12">
+    <v-col cols="12">
 
       <v-banner elevation="0"  app  color="#1CBDFF"  dark transition="slide-y-transition" shaped   >
 
@@ -31,7 +31,7 @@
 <!--        </template>-->
       </v-banner>
     </v-col>
-
+ 
     <v-col cols="10" offset="1">
       <h1 class="text-h4 mb-6 text-center ">Grinnode.live high-available GRIN-API & Sync-Service</h1>
       <p class="text-justify">Grin is a privacy-preserving digital currency built openly by developers distributed all
@@ -71,6 +71,43 @@
       <!--      UPDATES-->
 
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
+
+      <h6 class="text-h6 mb-3 grey--text">01/2022</h6>
+      <h6 class="text-h6 grey--text text--darken-2 " >Highly Available Grin++ Nodes</h6>
+      <p>
+        We are happy to announce that we have added 3 Grin++ nodes to our highly available node infrastructure to support stability of Main-Grin-Network.
+      </p>
+
+      <div class="mx-auto pb-8">
+
+
+        <template>
+          <v-simple-table template dense   >
+            <template v-slot:default>
+
+              <thead class="">
+              <tr>
+                <th class="text-center">
+                  Node
+                </th>
+                <th class="text-center">
+                  Location
+                </th>
+                <th class="text-center">
+                  Speed
+                </th>
+              </tr>
+              </thead>
+              <tbody class=" text-center">
+              <tr ><td>grinpp01</td><td>Europe</td><td>1 Gbit</td></tr>
+              <tr><td>grinpp02</td><td>Europe</td><td>1 Gbit</td></tr>
+              <tr><td>grinpp03</td><td>USA</td><td>1 Gbit</td></tr>
+              </tbody>
+
+            </template>
+          </v-simple-table>
+        </template>
+      </div>
 
       <h6 class="text-h6 mb-3 grey--text">08/2021</h6>
       <h6 class="text-h6 grey--text text--darken-2 " >API endpoint for block height</h6>
@@ -223,4 +260,16 @@ export default {
 ul {
   list-style: inside;
 }
+
+.nodeTable {
+  width:50%;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.red-background{
+  background-color: #FF1C45;
+}
+
 </style>
