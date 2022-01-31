@@ -131,7 +131,7 @@
 
           <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
-          <span class="text-h4"> {{ this.$dao.blockstats.blockHeight.toLocaleString() }}</span>
+          <span class="text-h4"> {{ this.$dao.blockstats.blockHeight?   this.$dao.blockstats.blockHeight.toLocaleString() : "" }}</span>
         </v-col>
         <v-col cols="4" offset="2">
           <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Emission</p>
@@ -166,6 +166,17 @@
         Last updated: {{ new Date(+this.$dao.agents.lastUpdated) }}
       </p>
       <span class="text-caption grey--text text--darken-2"> Response time: {{ this.$dao.agentsTime }}</span>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h4 class="text-h5 my-8 grey--text text--darken-2">
+        Transaction Counts
+      </h4>
+      <v-row align-content="center">
+        <TransactionCountChart/>
+
+
+      </v-row>
     </v-col>
   </v-row>
 </template>
@@ -173,12 +184,15 @@
 <script>
 import WorldMap from "@/components/WorldMap";
 import HealthScoreChart from "@/components/HealthScoreChart";
+import TransactionCountChart from "../components/TransactionCountChart";
 import {SERVER_NAME} from "../server_name";
+
+
 
 
 export default {
   name: "Stats",
-  components: {HealthScoreChart, WorldMap},
+  components: {TransactionCountChart, HealthScoreChart, WorldMap},
   mounted() {
 
     this.$dao.ioCheck();
@@ -201,6 +215,10 @@ export default {
       this.$dao.getGrinHealthScore();
 
     }, 60 * 1000)
+
+
+
+
 
   },
   data: function () {
@@ -230,7 +248,6 @@ export default {
           });
         });
       }
-
       return rows
     },
     latestHealthData() {
@@ -247,7 +264,11 @@ export default {
       return this.convertTimeStampToDate(this.latestHealthData['check_date_ts_utc']);
     },
     grinEmission(){
-      return (this.$dao.blockstats.emission).toLocaleString();
+      if (this.$dao.blockstats){
+          return (this.$dao.blockstats.emission) ?  (this.$dao.blockstats.emission).toLocaleString() : "";
+      }else{
+        return "";
+      }
     }
   },
   methods: {
