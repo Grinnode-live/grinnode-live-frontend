@@ -155,6 +155,7 @@ export default {
         xConfig: {
           tickFormat: function (d) {
             let date = new Date(d);
+            date = new Date(date.getTime() + date.getTimezoneOffset()*60*1000);
             let hours = date.getHours();
             if (hours < 10) {
               hours = "0" + hours.toString();
