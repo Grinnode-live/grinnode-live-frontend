@@ -10,6 +10,10 @@
       </v-radio-group>
     </v-layout>
     <canvas id="dailyChart" height="200"  ></canvas>
+    <p class="mt-8  text-caption grey--text text--darken-2 text-center">
+      Last updated: {{ txCountsLastUpdated }}
+    </p>
+
     </div>
 
 </template>
@@ -135,7 +139,7 @@ export default {
         .then((res) => res.json())
         .then(d => {
              console.log("fetch returned")
-             this.txCountsLastUpdated = d.lastUpdated;
+             this.txCountsLastUpdated = new Date(d.lastUpdated).toUTCString();
              let dailyCountData = d.result.daily;
              let recentCountData = d.result.recent;
 
