@@ -45,6 +45,7 @@ import {
   // TimeSeriesScale,
   Title, Tooltip
 } from "chart.js";
+import {SERVER_NAME} from "../server_name";
 
 Chart.register( ArcElement, LineElement,
     BarElement,    PointElement,    BarController,
@@ -135,7 +136,7 @@ export default {
 
     this.chart = new Chart(chartCtx,chartInput)
 
-    fetch("http://139.162.161.176:4444/api/txcounts")
+    fetch(`${SERVER_NAME}/api/txcounts`)
         .then((res) => res.json())
         .then(d => {
              console.log("fetch returned")
@@ -160,67 +161,7 @@ export default {
              // set the data
              this.recentCountData = recentCountData;
              this.dailyCountData = dailyCountData;
-
              this.updateChart();
-             // const myChart = new Chart(ctx, {
-              //   type: 'line',
-              //   data: {
-              //
-              //     datasets: [{
-              //       label: " ",
-              //       data: daily_counts,
-              //       parsing: {
-              //         xAxisKey: 'date',
-              //         yAxisKey: 'count',
-              //       }
-              //       , pointBorderColor: "hsl(57,99.2%,30.2%)"
-              //       , pointBackgroundColor: 'hsl(57,99.2%,50.2%)'
-              //     }
-              //     ]
-              //   },
-              //   // 254,241,2
-              //   options: {
-              //     plugins: {
-              //       title: {display: false, text: "custom"},
-              //       subtitle: {display: false},
-              //       legend: {display: false}
-              //     },
-              //     scales: {
-              //       x: {
-              //         type: 'time',
-              //         title: {
-              //           color: 'hsl(57,99.2%,10.2%)',
-              //           display: false,
-              //           text: 'time'
-              //         },
-              //         grid: {
-              //           tickColor: 'hsl(57,99.2%,30.2%)',
-              //           borderColor: 'hsl(57,99.2%,30.2%)'
-              //         },
-              //         time: {unit: 'month'}
-              //
-              //
-              //       },
-              //       y: {
-              //         title: {
-              //           color: 'hsl(57,99.2%,10.2%)',
-              //           display: true,
-              //           text: 'Tx count'
-              //         },
-              //         grid: {
-              //           borderColor: 'hsl(57,99.2%,30.2%)'
-              //         }
-              //       }
-              //     },
-              //     spanGaps: false,
-              //     showLine: false,
-              //     layout: {
-              //       padding: 20
-              //     }
-              //   }
-              //
-              // });
-
             }
         );
 
