@@ -6,7 +6,7 @@
         <v-radio label="All time" value="All time"></v-radio>
         <v-radio label="Last year" value="Last year"></v-radio>
         <v-radio label="Last month" value="Last month"></v-radio>
-        <v-radio label="Last days" value="Last 3 days"></v-radio>
+        <v-radio label="Last 3 days" value="Last 3 days"></v-radio>
       </v-radio-group>
     </v-layout>
     <canvas id="dailyChart" height="200"  ></canvas>
