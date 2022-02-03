@@ -169,7 +169,7 @@
 
       <v-divider class="my-12"></v-divider>
 
-      <h4 class="text-h5 my-8 grey--text text--darken-2">
+      <h4 id="tx-counts" class="text-h5 my-8 grey--text text--darken-2">
         Transaction Counts
       </h4>
       <v-row align-content="center">
