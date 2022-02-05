@@ -1,4 +1,4 @@
-const SERVER_NAME="http://139.162.161.176:4444";
+const SERVER_NAME="https://grinnode.live:8080";
 
 export {
     SERVER_NAME
