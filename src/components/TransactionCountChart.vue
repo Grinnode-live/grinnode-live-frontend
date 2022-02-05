@@ -163,7 +163,8 @@ export default {
              this.dailyCountData = dailyCountData;
              this.updateChart();
             }
-        );
+        ).catch(err=>console.log(err.message));
+    ;
 
 
   },
