@@ -72,6 +72,12 @@
 
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
+      <h6 class="text-h6 mb-3 grey--text">02/2022</h6>
+      <h6 class="text-h6 grey--text text--darken-2 " >API endpoint for Grin transaction counts</h6>
+      <p>
+        We have added a new <a href="https://grinnode.live:8080/api/txcounts"> api endpoint </a> for daily and hourly (up to last 3 days) Grin transaction count data. You can also view transaction count chart on <a href="https://grinnode.live/stats#tx-counts">stats</a> page.
+      </p>
+
       <h6 class="text-h6 mb-3 grey--text">01/2022</h6>
       <h6 class="text-h6 grey--text text--darken-2 " >Highly Available Grin++ Nodes</h6>
       <p>

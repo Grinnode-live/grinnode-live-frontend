@@ -98,6 +98,12 @@
             </v-list-item-title>
           </v-list-item>
 
+         <v-list-item link to="" v-scroll-to="'#faq-technical-txcount-procedure'">
+            <v-list-item-title>
+              <a >How are we calculating Grin transaction count?</a>
+            </v-list-item-title>
+          </v-list-item>
+
           <v-list-item link to="" v-scroll-to="'#faq-technical-rank'">
             <v-list-item-title>
               <a  >Where can I see my Grin-Node rank?</a>
@@ -208,9 +214,17 @@
         <li> PEERSCOUNTRIES_API_URL : <a href="https://grinnode.live:8080/peerscountries">https://grinnode.live:8080/peerscountries</a></li>
         <li> WALLETCHECK_API_URL : <a href="https://grinnode.live:8080/walletcheck/cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd">https://grinnode.live:8080/walletcheck/your_wallet_address_</a></li>
         <li> BLOCKSTATS_API_URL : <a href="https://grinnode.live:8080/api/blockstats">https://grinnode.live:8080/api/blockstats</a></li>
+        <li> TX_COUNTS_API_URL : <a href="https://grinnode.live:8080/api/txcounts">https://grinnode.live:8080/api/txcounts</a></li>
 
 
       </ul>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h3  class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-txcount-procedure">How are we calculating Grin transaction count? <LinkButton copy-link="https://grinnode.live/faq#faq-technical-txcount-procedure"/>  </h3>
+      <span>We are querying info for every generated block in the chain. Kernels in each block is counted neglected one 'Coinbase' kernel which is associated with blockreward & fees. We sum up kernel counts to hourly and daily aggregates and serve via our public api endpoint: <a href="https://grinnode.live:8080/api/txcounts">https://grinnode.live:8080/api/txcounts</a> </span>.
+
+
 
       <v-divider class="my-12"></v-divider>
       <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-rank">Where can I see my Grin-Node rank?  <LinkButton copy-link="https://grinnode.live/faq#faq-technical-rank"/> </h3>
