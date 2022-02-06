@@ -164,10 +164,7 @@ export default {
              this.updateChart();
             }
         ).catch(err=>console.log(err.message));
-    ;
-
-
-  },
+    },
   methods: {
     updateChart: function () {
 
