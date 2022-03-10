@@ -220,7 +220,7 @@
       <v-card outlined dark color="grey darken-3" class="pa-4">
         <div class="code text-left">
           <span class="font-weight-bold"> API v2 example: </span><br/>
-          <span>curl -d '{"id":"json","method":"get_status","params":{} }' -o - https://grinnode.live/v2/owner </span><br/>
+          <span>curl -d '{"id":1,"jsonrpc":"2.0","method":"get_status","params":{} }' -o - -X POST https://grinnode.live:3413/v2/owner </span><br/>
           <br/>
           <span class="my-4">answer: </span><br/>
           <span>{</span><br/>
