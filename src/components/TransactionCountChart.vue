@@ -139,7 +139,7 @@ export default {
     fetch(`${SERVER_NAME}/api/txcounts`)
         .then((res) => res.json())
         .then(d => {
-             console.log("fetch returned")
+             // console.log("fetch returned")
              this.txCountsLastUpdated = new Date(d.lastUpdated).toUTCString();
              let dailyCountData = d.result.daily;
              let recentCountData = d.result.recent;
@@ -147,9 +147,9 @@ export default {
              // add timezone offset to display correctly in chart
              for (let i=0;i<dailyCountData.length;i++){
                 let t = new Date(dailyCountData[i].date);
-                console.log("t before conversion:",t)
+                //console.log("t before conversion:",t)
                 t = new Date(t.getTime() + t.getTimezoneOffset() * 60*1000);
-                console.log("t after conversion:",t)
+                //console.log("t after conversion:",t)
                 dailyCountData[i].date = t;
              }
 
@@ -177,25 +177,25 @@ export default {
          chartData = this.dailyCountData;
          line_show = false;
          time_unit = 'month';
-         console.log("all time chart selected");
+         // console.log("all time chart selected");
       } else if (this.txCountChartType === "Last year") {
          chartData =  this.dailyCountData.length>365 ? this.dailyCountData.slice(-365) : this.dailyCountData;
          time_unit = 'month'
          line_show = false;
          y_name= "date";
-        console.log("last year chart selected");
+        // console.log("last year chart selected");
       } else if (this.txCountChartType === "Last month") {
          chartData =  this.dailyCountData.length>30 ? this.dailyCountData.slice(-30) : this.dailyCountData;
          time_unit = 'day';
          y_name= "date";
          line_show = true;
-         console.log("last month chart selected");
+         // console.log("last month chart selected");
       } else if (this.txCountChartType === "Last 3 days") {
         chartData = this.recentCountData;
         y_name= "time";
         time_unit = 'hour';
         line_show = true;
-        console.log("last 3 days chart selected chart selected");
+        // console.log("last 3 days chart selected chart selected");
       }
       let chartInput = {
         type: 'line',
