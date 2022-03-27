@@ -1,16 +1,12 @@
 <template>
   <div>
-
   <v-app>
-
 <!--    <v-system-bar  >-->
 <!--      <span>[03/2020] We enabled GRIN API v2 on our high-available GRIN-Node's</span>-->
 <!--    </v-system-bar>-->
-
-
 <!--  <div id="app">-->
 <!--    <Header></Header>-->
-    <Header></Header>
+    <GrinnodeHeader></GrinnodeHeader>
     <v-main class="my-6" >
 
       <v-container  >
@@ -20,22 +16,22 @@
       </v-container>
 
     </v-main>
-    <Footer></Footer>
+    <GrinnodeFooter></GrinnodeFooter>
 <!--  </div>-->
   </v-app>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import GrinnodeHeader from "@/components/GrinnodeHeader";
+import GrinnodeFooter from "@/components/GrinnodeFooter";
 
 
 export default {
   name: 'App',
   components: {
-    Footer,
-    Header
+    GrinnodeFooter,
+    GrinnodeHeader
   },
 }
 </script>

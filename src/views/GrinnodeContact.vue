@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "Contact",
+  name: "GrinnodeContact",
   mounted() {
     this.$dao.getAgents();
     this.$dao.ioCheck();
@@ -84,11 +84,7 @@ export default {
     }else{
       let index = Math.round(Math.random()*imageLinks.length);
       this.imageSrc = imageLinks[index];
-
     }
-
-
-
   },
   data : function(){
     return {

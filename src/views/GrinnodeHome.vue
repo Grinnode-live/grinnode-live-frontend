@@ -168,6 +168,7 @@
       <p>new Website done by <a href="https://github.com/WarmBeer/">@WarmBeer</a>, <a
           href="https://github.com/stakervali">@StakerVali</a>
         &nbsp;
+      </p>
       <p style="text-decoration: underline;">Use Blocks not Bombs</p>
       <p><img width="200" height="190" src="images/blocks-not-bombs-512.jpg" alt="Use Blocks not Bombs "/></p>
 
@@ -183,7 +184,7 @@
 
 
 export default {
-  name: "Home",
+  name: "GrinnodeHome",
   components: {
 
   },

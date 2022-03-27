@@ -286,7 +286,7 @@
 import LinkButton from "../components/LinkButton";
 
 export default {
-  name: "Tutorials",
+  name: "GrinnodeTutorials",
   components:{LinkButton},
   mounted() {
     this.$dao.getAgents();

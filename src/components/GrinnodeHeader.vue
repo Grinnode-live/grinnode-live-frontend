@@ -199,7 +199,7 @@ import FaqIcon from "./icons/FaqIcon";
 import ContactIcon from "./icons/ContactIcon";
 import DonationIcon from "./icons/DonationIcon";
 export default {
-  name: "Header",
+  name: "GrinnodeHeader",
   components: {DonationIcon, ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon},
   data() {
     return {

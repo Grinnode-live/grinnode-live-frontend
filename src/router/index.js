@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import Tutorials from "@/views/Tutorials";
-import Challenge from "@/views/Challenge";
-import Stats from "@/views/Stats";
+import GrinnodeHome from '../views/GrinnodeHome.vue';
+import GrinnodeTutorials from "@/views/GrinnodeTutorials";
+import GrinnodeChallenge from "@/views/GrinnodeChallenge";
+import GrinnodeStats from "@/views/GrinnodeStats";
 import FAQ from "@/views/FAQ";
-import Contact from "@/views/Contact";
+import GrinnodeContact from "@/views/GrinnodeContact";
 import ToS from "@/views/ToS";
 import PrivacyPolicy from "@/views/PrivacyPolicy";
 import GlobalHealthCheck from "@/views/GlobalHealthCheck";
@@ -20,22 +20,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    component: GrinnodeHome,
   },
   {
     path: '/tutorials',
     name: 'tutorials',
-    component: Tutorials,
+    component: GrinnodeTutorials,
   },
   {
     path: '/challenge/:tabid?',
     name: 'challenge',
-    component: Challenge,
+    component: GrinnodeChallenge,
   },
   {
     path: '/stats',
     name: 'stats',
-    component: Stats,
+    component: GrinnodeStats,
   },
   {
     path: '/faq',
@@ -60,7 +60,7 @@ const routes = [
   {
     path: '/contact',
     name: 'contact',
-    component: Contact,
+    component: GrinnodeContact,
   },
 ];
 

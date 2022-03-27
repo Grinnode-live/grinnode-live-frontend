@@ -191,7 +191,7 @@ import {SERVER_NAME} from "../server_name";
 
 
 export default {
-  name: "Stats",
+  name: "GrinnodeStats",
   components: {TransactionCountChart, HealthScoreChart, WorldMap},
   mounted() {
 
