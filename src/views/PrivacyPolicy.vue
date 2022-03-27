@@ -18,7 +18,7 @@
       </p>
 
 
-      <p>
+
         <ul  >
 
         <li>Page requested</li>
@@ -29,6 +29,7 @@
         <li>Referrer</li>
         <li>Error logs</li>
       </ul>
+
 
 
       <p class="text-justify">
