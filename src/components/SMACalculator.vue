@@ -2,7 +2,7 @@
   <v-row justify="center">
 
     <v-col cols="12" align="center" >
-      <h1 class="text-h4 text-center mb-6">Simple Moving Average Calculator</h1>
+      <h1 class="text-h4 text-center mb-6">Crypto SMA Calculator</h1>
 
     </v-col>
 

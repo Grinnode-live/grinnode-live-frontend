@@ -27,8 +27,8 @@
                 color="grey"
             >
               <img
-                  src="/images/tools/SMA-ss.png"
-                  alt="Simple Moving Average Calculator"
+                  src="/images/tools/SMA-SS.png"
+                  alt="Crypto SMA Calculator"
               >
             </v-list-item-avatar>
           </v-list-item>
