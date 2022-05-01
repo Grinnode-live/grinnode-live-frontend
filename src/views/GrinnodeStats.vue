@@ -169,12 +169,19 @@
 
       <v-divider class="my-12"></v-divider>
 
+      <h4 id="market-cap" class="text-h5 my-8 grey--text text--darken-2">
+        Market Cap Chart
+      </h4>
+      <v-row align-content="center">
+        <MarketCapChart     />
+
+      </v-row>
+
       <h4 id="tx-counts" class="text-h5 my-8 grey--text text--darken-2">
         Transaction Counts
       </h4>
       <v-row align-content="center">
-        <TransactionCountChart/>
-
+        <TransactionCountChart   />
 
       </v-row>
     </v-col>
@@ -186,13 +193,14 @@ import WorldMap from "@/components/WorldMap";
 import HealthScoreChart from "@/components/HealthScoreChart";
 import TransactionCountChart from "../components/TransactionCountChart";
 import {SERVER_NAME} from "../server_name";
+import MarketCapChart from "../components/MarketCapChart";
 
 
 
 
 export default {
   name: "GrinnodeStats",
-  components: {TransactionCountChart, HealthScoreChart, WorldMap},
+  components: {MarketCapChart, TransactionCountChart, HealthScoreChart, WorldMap},
   mounted() {
 
     this.$dao.ioCheck();
@@ -215,10 +223,6 @@ export default {
       this.$dao.getGrinHealthScore();
 
     }, 60 * 1000)
-
-
-
-
 
   },
   data: function () {

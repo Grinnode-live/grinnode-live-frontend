@@ -1,18 +1,30 @@
 <template>
     <div style="width:100%">
 
+
     <v-layout justify-center >
       <v-radio-group row v-model="txCountChartType" @change="updateChart" class="align-content-center" >
         <v-radio label="All time" value="All time"></v-radio>
         <v-radio label="Last year" value="Last year"></v-radio>
+        <v-radio label="Last 6 months" value="Last 6 months"></v-radio>
+        <v-radio label="Last 3 months" value="Last 3 months"></v-radio>
         <v-radio label="Last month" value="Last month"></v-radio>
         <v-radio label="Last 3 days" value="Last 3 days"></v-radio>
       </v-radio-group>
     </v-layout>
+
     <canvas id="dailyChart" height="200"  ></canvas>
-    <p class="mt-8  text-caption grey--text text--darken-2 text-center">
+      <v-layout justify-center >
+        <v-radio-group row v-model="txCountChartLineType" @change="updateChart"   >
+          <v-radio label="Bar" value="bar"></v-radio>
+          <v-radio label="Line" value="line"><ContactIcon/> </v-radio>
+        </v-radio-group>
+      </v-layout>
+      <p class="mt-8  text-caption grey--text text--darken-2 text-center">
       Last updated: {{ txCountsLastUpdated }}
     </p>
+
+
 
     </div>
 
@@ -46,6 +58,9 @@ import {
   Title, Tooltip
 } from "chart.js";
 import {SERVER_NAME} from "../server_name";
+import ContactIcon from "./icons/ContactIcon";
+
+
 
 Chart.register( ArcElement, LineElement,
     BarElement,    PointElement,    BarController,
@@ -65,13 +80,16 @@ Chart.register( ArcElement, LineElement,
 
 export default {
   name: "TransactionCountChart",
+  components : {ContactIcon},
   data: function(){
     return {
       txCountChartType: "All time",
       chart  : '',
       txCountsLastUpdated : '',
       dailyCountData: [],
-      recentCountData: []
+      recentCountData: [],
+      txCountChartLineType: "bar"
+
     }
   },
   mounted() {
@@ -80,7 +98,7 @@ export default {
     let chartData = [];
     let time_unit = 'month';
     let chartInput = {
-      type: 'line',
+      type:  this.txCountChartLineType,
       data: {
         datasets: [{
           label: " ",
@@ -91,6 +109,7 @@ export default {
           }
           , pointBorderColor: "hsl(57,99.2%,30.2%)"
           , pointBackgroundColor: 'hsl(57,99.2%,50.2%)'
+          , backgroundColor: 'hsl(57,99.2%,50.2%)'
         }
         ]
       },
@@ -131,7 +150,6 @@ export default {
           padding: 20
         }
       }
-
     };
 
     this.chart = new Chart(chartCtx,chartInput)
@@ -184,6 +202,18 @@ export default {
          line_show = false;
          y_name= "date";
         // console.log("last year chart selected");
+      } else if (this.txCountChartType === "Last 6 months") {
+        chartData =  this.dailyCountData.length>180 ? this.dailyCountData.slice(-180) : this.dailyCountData;
+        time_unit = 'day';
+        y_name= "date";
+        line_show = true;
+        // console.log("last month chart selected");
+      }else if (this.txCountChartType === "Last 3 months") {
+        chartData =  this.dailyCountData.length>90 ? this.dailyCountData.slice(-90) : this.dailyCountData;
+        time_unit = 'day';
+        y_name= "date";
+        line_show = true;
+        // console.log("last month chart selected");
       } else if (this.txCountChartType === "Last month") {
          chartData =  this.dailyCountData.length>30 ? this.dailyCountData.slice(-30) : this.dailyCountData;
          time_unit = 'day';
@@ -198,7 +228,7 @@ export default {
         // console.log("last 3 days chart selected chart selected");
       }
       let chartInput = {
-        type: 'line',
+        type:  this.txCountChartLineType,
         data: {
           datasets: [{
             label: " ",
@@ -210,6 +240,7 @@ export default {
             , pointBorderColor: "hsl(57,99.2%,30.2%)"
             , pointBackgroundColor: 'hsl(57,99.2%,50.2%)'
             , borderColor : 'hsl(57,99.2%,20%,0.3)'
+            , backgroundColor : 'hsl(57,99.2%,50.2%)'
           }
           ]
         },
@@ -258,8 +289,9 @@ export default {
       // this.chart.options.scales.x.time.unit = time_unit;
       this.chart.options = chartInput.options;
       this.chart.data = chartInput.data;
-      this.chart.update();
 
+      this.chart.config.type = chartInput.type;
+      this.chart.update();
     }
   }
 }

@@ -88,6 +88,10 @@
             <span class="text-subtitle-2 text--primary">FAQ</span>
             <FaqIcon />
           </v-chip>
+          <v-chip to="/tools" color="#fef102" class="rounded-0">
+            <span class="text-subtitle-2 text--primary">TOOLS</span>
+            <ToolsIcon />
+          </v-chip>
           <v-chip to="/contact" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">CONTACT</span>
             <ContactIcon />
@@ -160,6 +164,14 @@
             </v-list-item-content>
           </v-list-item>
 
+          <v-list-item router key="TOOLS" to="/tools">
+            <v-list-item-action>
+              <ToolsIcon class="black--text" />
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Tools</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
           <v-list-item router key="CONTACT" to="/contact">
             <v-list-item-action>
@@ -170,9 +182,7 @@
             </v-list-item-content>
           </v-list-item>
 
-
         </v-list-item-group>
-
       </v-list>
 
       <v-divider></v-divider>
@@ -198,9 +208,10 @@ import TutorialIcon from "./icons/TutorialIcon";
 import FaqIcon from "./icons/FaqIcon";
 import ContactIcon from "./icons/ContactIcon";
 import DonationIcon from "./icons/DonationIcon";
+import ToolsIcon  from "./icons/ToolsIcon";
 export default {
   name: "GrinnodeHeader",
-  components: {DonationIcon, ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon},
+  components: {DonationIcon, ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon,ToolsIcon},
   data() {
     return {
       tab: true,

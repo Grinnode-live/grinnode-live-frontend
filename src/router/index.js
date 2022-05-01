@@ -9,6 +9,9 @@ import GrinnodeContact from "@/views/GrinnodeContact";
 import ToS from "@/views/ToS";
 import PrivacyPolicy from "@/views/PrivacyPolicy";
 import GlobalHealthCheck from "@/views/GlobalHealthCheck";
+import SMACalculator from "../components/SMACalculator";
+import GrinnodeTools from "../views/GrinnodeTools";
+import WalletCheckerTool from "../components/WalletCheckerTool";
 
 const SITE_SUB_FOLDER = process.env.NODE_ENV === 'production'
     ? (process.env.SITE_SUB_FOLDER || '/')
@@ -62,6 +65,21 @@ const routes = [
     name: 'contact',
     component: GrinnodeContact,
   },
+  {
+    path: '/tools',
+    name: 'tools',
+    component: GrinnodeTools
+  },
+  {
+    path: '/tools/sma-calculator',
+    name: 'sma-calculator',
+    component: SMACalculator
+  },
+  {
+    path: '/tools/wallet-checker',
+    name: 'wallet-checker',
+    component: WalletCheckerTool
+  }
 ];
 
 const router = new VueRouter({
