@@ -176,7 +176,7 @@
         <MarketCapChart     />
 
       </v-row>
-
+      <v-divider class="my-12"></v-divider>s
       <h4 id="tx-counts" class="text-h5 my-8 grey--text text--darken-2">
         Transaction Counts
       </h4>
