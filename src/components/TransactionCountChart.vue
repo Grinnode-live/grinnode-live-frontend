@@ -2,8 +2,8 @@
     <div style="width:100%">
 
 
-    <v-layout justify-center >
-      <v-radio-group row v-model="txCountChartType" @change="updateChart" class="align-content-center" >
+    <v-layout  justify-center >
+      <v-radio-group row v-model="txCountChartType" @change="updateChart" class="align-content-center px-4" >
         <v-radio label="All time" value="All time"></v-radio>
         <v-radio label="Last year" value="Last year"></v-radio>
         <v-radio label="Last 6 months" value="Last 6 months"></v-radio>
