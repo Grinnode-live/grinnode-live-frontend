@@ -187,7 +187,7 @@
 
       <v-divider class="my-12"></v-divider>
 
-      <h4 id="market-cap" class="text-h5 my-8 grey--text text--darken-2">
+      <h4 id="market-cap-chart" class="text-h5 my-8 grey--text text--darken-2">
         Market Cap Chart
       </h4>
       <v-row align-content="center">
