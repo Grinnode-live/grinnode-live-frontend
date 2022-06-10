@@ -29,7 +29,7 @@
         </v-col>
       </v-row>
 
-      <v-row  >
+      <v-row>
         <v-col cols="12">
           <WorldMap/>
         </v-col>
@@ -85,25 +85,26 @@
           <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Overall
             Health Score</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
-          <p class="text-h4"> {{ latestHealthData.health_score}}</p>
+          <p class="text-h4"> {{ latestHealthData.health_score }}</p>
         </v-col>
       </v-row>
 
       <v-row class="mb-2">
         <v-col cols="12">
-          <p  >
+          <p>
             <b>Reorg score</b> calculation is based on daily reorg attack count and depth of the attack. A score of 5
             means there is no reorg attack while 0 means that network is under severe attack.
           </p>
-          <p  >
+          <p>
             <b>Nicehash score</b> calculation is based on comparison of instantenous nicehash graph rate/price to daily
             average values. Also cost of renting hashpower is analyzed with current grin/BTC value to deduce nicehash
-            profitability. Utilization of nicehash infrastructure despite being non-profit is inferred as suspicious activity.
+            profitability. Utilization of nicehash infrastructure despite being non-profit is inferred as suspicious
+            activity.
             A score of 5 is that price ratio is balanced and nicehash graph rate is small compared to overall grin
             network graph rate. A score close to zero means that nicehash hashpower is most likely used for reorg attack
             and nicehash graph rate supplies more than half of overall grin network graph rate.
           </p>
-          <p  >
+          <p>
             <b>Overall Health score</b> is calculated by taking average of reorg score and nicehash score. Scores are
             given in a range of 0 to 5. The highest score of 5 means network is healthy and there is no attack.
           </p>
@@ -111,7 +112,10 @@
             Calculation formulas are based on <a href="https://github.com/j01tz/grin-health">joltz1 algorithm</a>.
           </p>
 
-          <p > Please consider donating to <a href="https://github.com/bladedoyle/grin_nicehash_defender/">Grin Nicehash Defender </a> for protection of grin network from outside attacks. Grin Nicehash Defender activates a defensive mechanism by increasing hashpower of network when abnormal activity is detected. Grinnode.live has donated to project and also running an instance of Grin Nicehash Defender. </p>
+          <p> Please consider donating to <a href="https://github.com/bladedoyle/grin_nicehash_defender/">Grin Nicehash
+            Defender </a> for protection of grin network from outside attacks. Grin Nicehash Defender activates a
+            defensive mechanism by increasing hashpower of network when abnormal activity is detected. Grinnode.live has
+            donated to project and also running an instance of Grin Nicehash Defender. </p>
         </v-col>
 
       </v-row>
@@ -129,14 +133,18 @@
 
         <v-col cols="4" offset="1">
 
-          <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</p>
+          <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block
+            Height</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
-          <span class="text-h4"> {{ this.$dao.blockstats.blockHeight?   this.$dao.blockstats.blockHeight.toLocaleString() : "" }}</span>
+          <span class="text-h4"> {{
+              this.$dao.blockstats.blockHeight ? this.$dao.blockstats.blockHeight.toLocaleString() : ""
+            }}</span>
         </v-col>
         <v-col cols="4" offset="2">
-          <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Emission</p>
+          <p class="pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">
+            Emission</p>
           <!--            <h4 class="text-h5 my-4 grey&#45;&#45;text text&#45;&#45;darken-2 pb-2" style="border-bottom-color: darkgrey;border-bottom-style: solid;border-width: thin">Block Height</h4>-->
-          <span class="text-h4"> {{grinEmission}}  </span> <span class="text--lighten-4"  >grins</span>
+          <span class="text-h4"> {{ grinEmission }}  </span> <span class="text--lighten-4">grins</span>
         </v-col>
       </v-row>
 
@@ -169,21 +177,25 @@
 
       <v-divider class="my-12"></v-divider>
 
-      <h4 id="market-cap" class="text-h5 my-8 grey--text text--darken-2">
-        Market Cap Chart
-      </h4>
-      <v-row align-content="center">
-        <MarketCapChart     />
-
-      </v-row>
-      <v-divider class="my-12"></v-divider>s
       <h4 id="tx-counts" class="text-h5 my-8 grey--text text--darken-2">
         Transaction Counts
       </h4>
       <v-row align-content="center">
-        <TransactionCountChart   />
+        <TransactionCountChart/>
 
       </v-row>
+
+      <v-divider class="my-12"></v-divider>
+
+      <h4 id="market-cap" class="text-h5 my-8 grey--text text--darken-2">
+        Market Cap Chart
+      </h4>
+      <v-row align-content="center">
+        <MarketCapChart/>
+
+      </v-row>
+
+
     </v-col>
   </v-row>
 </template>
@@ -196,8 +208,6 @@ import {SERVER_NAME} from "../server_name";
 import MarketCapChart from "../components/MarketCapChart";
 
 
-
-
 export default {
   name: "GrinnodeStats",
   components: {MarketCapChart, TransactionCountChart, HealthScoreChart, WorldMap},
@@ -206,7 +216,6 @@ export default {
     this.$dao.ioCheck();
     this.$dao.getAgents();
     this.$dao.getBlockHeight();
-
 
 
     let agents_url = `${SERVER_NAME}/agents`;
@@ -267,10 +276,10 @@ export default {
     latestHealthDate() {
       return this.convertTimeStampToDate(this.latestHealthData['check_date_ts_utc']);
     },
-    grinEmission(){
-      if (this.$dao.blockstats){
-          return (this.$dao.blockstats.emission) ?  (this.$dao.blockstats.emission).toLocaleString() : "";
-      }else{
+    grinEmission() {
+      if (this.$dao.blockstats) {
+        return (this.$dao.blockstats.emission) ? (this.$dao.blockstats.emission).toLocaleString() : "";
+      } else {
         return "";
       }
     }
