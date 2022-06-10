@@ -2,7 +2,7 @@
   <nav>
     <v-system-bar absolute app dark class="grey darken-2">
       <span class="hidden-sm-and-down">
-        [02/2022] Grinnode.live is updated!
+        [06/2022] Grinnode.live is updated!
       </span>
       <v-spacer></v-spacer>
 
