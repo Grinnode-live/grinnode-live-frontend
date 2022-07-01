@@ -72,6 +72,13 @@
 
       <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
+      <h6 class="text-h6 mb-3 grey--text">06/2022</h6>
+      <h6 class="text-h6 grey--text text--darken-2 " >Crypto SMA Calculator </h6>
+      <p>
+        With this update,  <a href="https://grinnode.live/tools/sma-calculator"> Crypto SMA </a>  (simple moving average) calculator has been added to tools page.
+        <a href="https://grinnode.live/stats#market-cap-chart">MarketCap chart</a> has been added to stats page, also <a href="https://grinnode.live/stats#tx-counts">Transaction Count chart</a> has been updated with new options.
+      </p>
+
       <h6 class="text-h6 mb-3 grey--text">02/2022</h6>
       <h6 class="text-h6 grey--text text--darken-2 " >API endpoint for Grin transaction counts</h6>
       <p>
@@ -168,6 +175,7 @@
       <p>new Website done by <a href="https://github.com/WarmBeer/">@WarmBeer</a>, <a
           href="https://github.com/stakervali">@StakerVali</a>
         &nbsp;
+      </p>
       <p style="text-decoration: underline;">Use Blocks not Bombs</p>
       <p><img width="200" height="190" src="images/blocks-not-bombs-512.jpg" alt="Use Blocks not Bombs "/></p>
 
@@ -183,7 +191,7 @@
 
 
 export default {
-  name: "Home",
+  name: "GrinnodeHome",
   components: {
 
   },
