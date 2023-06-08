@@ -2,7 +2,7 @@
 
 
   <v-footer  app color="black" dark>
-    <span>© 2022 Grinnode.live</span>
+    <span>© 2023 Grinnode.live</span>
     <v-spacer></v-spacer>
     <div class=" mx-2" >
       <router-link class="yellow--text mx-2" exact to="/terms-of-service">Terms of Service</router-link>
