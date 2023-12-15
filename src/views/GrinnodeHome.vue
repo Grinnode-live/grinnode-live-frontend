@@ -87,6 +87,12 @@
 
             <h2 class="text-h4 mt-12 mb-6 text-center">Updates</h2>
 
+          <h6 class="text-h6 mb-3 grey--text">12/2023</h6>
+          <h6 class="text-h6 grey--text text--darken-2 ">Maintenance Update</h6>
+          <p>
+             Another maintenance update for security and performance improvement.
+          </p>
+
             <h6 class="text-h6 mb-3 grey--text">06/2023</h6>
             <h6 class="text-h6 grey--text text--darken-2 ">Maintenance Update</h6>
             <p>
