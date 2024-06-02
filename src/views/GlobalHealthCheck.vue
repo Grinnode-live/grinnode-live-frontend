@@ -110,7 +110,12 @@
         return new Date(this.calendar_value).getFullYear();
       },
       downtimeEvents(){
-        let rows = []
+        let rows = [{
+          name: 'Possible downtime due to infrastucture upgrade.',
+          start: new Date(2024,5,1),
+          end: new Date(2024,5,30)
+        }]
+
         this.$dao.globalHealthCheck.downtimes.result.forEach((dt)=>{
           rows.push({
             name : dt.reason,
