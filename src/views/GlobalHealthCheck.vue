@@ -111,9 +111,9 @@
       },
       downtimeEvents(){
         let rows = [{
-          name: 'Possible downtime due to infrastucture upgrade.',
-          start: new Date(2024,5,1),
-          end: new Date(2024,5,30)
+          name: 'Downtime due to infrastucture upgrade.',
+          start: new Date(2024,5,27),
+          end: new Date(2024,6,1)
         }]
 
         this.$dao.globalHealthCheck.downtimes.result.forEach((dt)=>{
